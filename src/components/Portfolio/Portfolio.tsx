@@ -158,7 +158,7 @@ export const Portfolio = ( props:PortfolioProps ) => {
                                         </CardContent>
                                     </CardActionArea>
                                     <CardActions>
-                                        <Button size="small" href="https://github.com/merobi-hub/lantern-library-online">Github</Button>
+                                        <Button size="small" href="https://github.com/merobi-hub/portfolio">Github</Button>
                                         
                                     </CardActions>
                                 </Card>
