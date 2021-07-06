@@ -184,6 +184,8 @@ export const Resume = ( props:ResumeProps ) => {
                                                 <li>Python</li> 
                                                 
                                                 <li>JavaScript</li> 
+
+                                                <li>TypeScript</li>
                                                 
                                                 </ul>
                                             </Typography>
@@ -216,6 +218,14 @@ export const Resume = ( props:ResumeProps ) => {
                                                 <li>Material-UI</li> 
                                                 
                                                 <li>OO Design Patterns</li> 
+
+                                                <li>VS Code</li>
+
+                                                <li>Git</li>
+
+                                                <li>Github</li>
+
+                                                <li>Google Cloud</li>
                                                 </ul>
                                             </Typography>
                                             <Typography variant="h5" color="textSecondary">
@@ -254,6 +264,16 @@ export const Resume = ( props:ResumeProps ) => {
                                                 <li>French</li>
                                                                                                 
                                                 <li>MS Office</li>
+
+                                                <li>Adobe Suite</li>
+
+                                                <li>OS: Windows, Linux</li>
+
+                                                <li>WordPress, WiX</li>
+
+                                                <li>LMS: Blackboard, Blackbaud, Google Classroom, Sakai, Brightspace</li>
+
+                                                <li>PeopleSoft</li>
                                                 </ul>
                                             </Typography>
                                         </CardContent>
@@ -263,7 +283,7 @@ export const Resume = ( props:ResumeProps ) => {
                                     <Card className={classes.experienceCardDims}>
                                         <CardContent>
                                             <Typography className={classes.skillsCardSpacing} variant="h4" component="h2">
-                                                Capstone Project
+                                                Recent Personal Project
                                             </Typography>
                                             <Typography variant="h5" color="textSecondary">
                                                 <a href="https://lantern-library-online.herokuapp.com/" className={classes.portfolioLink}>Lantern Free Library Online Web App</a>
@@ -289,23 +309,21 @@ export const Resume = ( props:ResumeProps ) => {
                                                 </ul>
                                             </Typography>
                                             <Typography className={classes.capstoneSpacing} variant="h5" color="textSecondary">
-                                                Capstone Technologies
+                                                Project Technologies
                                             </Typography>
                                             <Typography variant="body2" component="p">
-                                                Python, Flask, Bootstrap, Werkzeug, Gunicorn, Psycopg2, Heroku, PostgreSQL, URLLib, Regex, Jinja
+                                                Python, Flask, Bootstrap, Werkzeug, Gunicorn, Psycopg2, Heroku, PostgreSQL, URLLib, Regex, Jinja, Material-UI
                                             </Typography>
                                             <Typography className={classes.experienceTitle} variant="h4" component="h2">
-                                                Professional Experience
+                                                Experience
                                             </Typography>
                                             <Typography variant="h5" color="textSecondary">
                                                 Full-stack Software Engineer, April 2021-present
                                             </Typography>
                                             <Typography variant="body2" component="p">
-                                                Coding Temple, Chicago, IL
-                                            </Typography>
-                                            <Typography variant="body2" component="p">
                                                 <ul>
-                                                <li><b>Car Collector API</b>: React, Firebase, Typescript, Material-UI, Heroku</li>
+                                                <li><b>Developer Portfolio</b>: React, Firebase, TypeScript, Material-UI, Emailjs</li>
+                                                <li><b>Car Collector API</b>: React, Firebase, TypeScript, Material-UI, Heroku</li>
                                                 <li><b>Weather App</b>: JavaScript, Axios, Regex, OpenWeatherMap API</li>
                                                 <li><b>F1 Racer Data App</b>: JavaScript, Axios, Regex, Ergast Developer API</li>
                                                 <li><b>Law Firm Website</b>: React, Typescript, Material-UI, Bootstrap</li>
@@ -316,7 +334,7 @@ export const Resume = ( props:ResumeProps ) => {
                                                 </ul>
                                             </Typography>
                                             <Typography className={classes.capstoneSpacing} variant="h5" color="textSecondary">
-                                                English and Writing Professor/Consultant, 2010-2021
+                                                English and Writing Program Admin/Professor/Consultant, 2010-2021
                                             </Typography>
                                             <Typography variant="body2" component="p">
                                                 <ul>
@@ -342,6 +360,12 @@ export const Resume = ( props:ResumeProps ) => {
                                                 Education
                                             </Typography>
                                             <Typography className={classes.capstoneSpacing} variant="h5" color="textSecondary">
+                                                Certificate in Python and Web Development (Bootcamp)
+                                            </Typography>
+                                            <Typography variant="body2" component="p">
+                                                Coding Temple, Chicago, IL (Remote)
+                                            </Typography>
+                                            <Typography className={classes.capstoneSpacing} variant="h5" color="textSecondary">
                                                 Certificate in Data Science for Business Strategy
                                             </Typography>
                                             <Typography variant="body2" component="p">
@@ -352,6 +376,9 @@ export const Resume = ( props:ResumeProps ) => {
                                             </Typography>
                                             <Typography variant="body2" component="p">
                                                 USC, Los Angeles, CA
+                                            </Typography>
+                                            <Typography variant="body2" component="p">
+                                                Honors: Andrew M. Mellon grantee, Department dissertation fellow
                                             </Typography>
                                             <Typography className={classes.capstoneSpacing} variant="h5" color="textSecondary">
                                                 M.A. in English
@@ -364,6 +391,9 @@ export const Resume = ( props:ResumeProps ) => {
                                             </Typography>
                                             <Typography variant="body2" component="p">
                                                 University of Florida, Gainesville, FL
+                                            </Typography>
+                                            <Typography variant="body2" component="p">
+                                                Honors: summa cum laude, sigma tau delta, Bright Futures Scholar
                                             </Typography>
                                         </CardContent>
                                     </Card>

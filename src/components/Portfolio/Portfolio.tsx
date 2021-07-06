@@ -151,7 +151,7 @@ export const Portfolio = ( props:PortfolioProps ) => {
                                             Personal portfolio website with form 
                                             </Typography>
                                             <Typography variant="body2" component="p">
-                                            Typescript/Javascript, React, Bootstrap 
+                                            TypeScript/JavaScript, React, Bootstrap 
                                             <br />
                                             Material-UI, Emailjs, Firebase
                                             </Typography>
@@ -182,7 +182,7 @@ export const Portfolio = ( props:PortfolioProps ) => {
                                             User-generated API for collectors 
                                             </Typography>
                                             <Typography variant="body2" component="p">
-                                            Typescript/Javascript, Material-UI
+                                            TypeScript/JavaScript, Material-UI
                                             <br />
                                             Firebase, VS Code, Insomnia
                                             <br />
@@ -245,7 +245,7 @@ export const Portfolio = ( props:PortfolioProps ) => {
                                             Searchable weather app
                                             </Typography>
                                             <Typography variant="body2" component="p">
-                                            Typescript/JavaScript, Axios
+                                            JavaScript, Axios
                                             <br />
                                             VS Code, Regex
                                             <br />
@@ -277,7 +277,7 @@ export const Portfolio = ( props:PortfolioProps ) => {
                                             Searchable sports data app
                                             </Typography>
                                             <Typography variant="body2" component="p">
-                                            Typescript/JavaScript, Axios
+                                            JavaScript, Axios
                                             <br />
                                             VS Code, Regex
                                             <br />
@@ -309,7 +309,7 @@ export const Portfolio = ( props:PortfolioProps ) => {
                                             Mock website for law firm
                                             </Typography>
                                             <Typography variant="body2" component="p">
-                                            Typescript/JavaScript, Material-UI
+                                            TypeScript/JavaScript, Material-UI
                                             <br />
                                             Bootstrap, VS Code, React
                                             </Typography>
