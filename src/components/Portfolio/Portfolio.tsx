@@ -35,7 +35,6 @@ interface PortfolioProps{
 const useStyles = makeStyles({
     body: {
         display: 'flex',
-        // position: 'fixed',
         backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${karma_typewriter});`,
         backgroundSize: 'fill',
         backgroundRepeat: 'repeat-y',
@@ -50,28 +49,16 @@ const useStyles = makeStyles({
     },
     main: {
         display: 'flex',
-        // flexDirection: 'row',
-        //backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${karma_typewriter});`,
         width: '100%',
         height: '100%',
-        // backgroundSize: 'cover',
-        // backgroundRepeat: 'repeat-y',
-        // backgroundPosition: 'center',
         position: 'relative',
         zIndex: 1
     },
-    container: {
-        
-        // position: 'relative'
-    },
+    container: {},
     card_dims: {
-        // flex: 1,
-        // minWidth: 275,
-        // maxWidth: 275,
-        // minHeight: 250,
         minWidth: 550,
         minHeight: 550,
-        // maxHeight: '25em',
+        maxWidth: 425,
         marginTop: 75,
     },
     title: {
@@ -290,36 +277,7 @@ export const Portfolio = ( props:PortfolioProps ) => {
                                     </CardActions>
                                 </Card>
                             </Col>
-                            <Col md sm>
-                                <Card className={classes.card_dims}>
-                                    <CardActionArea>
-                                    <CardMedia 
-                                            className={classes.media}
-                                            image={nza_screenshot}
-                                            title="Screenshot of app"
-                                        />
-                                        <CardContent>
-                                            <Typography className={classes.title} color="textSecondary" gutterBottom>
-                                            React Web Application
-                                            </Typography>
-                                            <Typography variant="h5" component="h2">
-                                            Law Firm Website
-                                            </Typography>
-                                            <Typography className={classes.pos} color="textSecondary">
-                                            Mock website for law firm
-                                            </Typography>
-                                            <Typography variant="body2" component="p">
-                                            TypeScript/JavaScript, Material-UI
-                                            <br />
-                                            Bootstrap, VS Code, React
-                                            </Typography>
-                                        </CardContent>
-                                        <CardActions>
-                                            <Button size="small" href="https://github.com/merobi-hub/operators-week8-nza-react">Github</Button>
-                                        </CardActions>
-                                    </CardActionArea>
-                                </Card>
-                            </Col>
+                            
                             <Col md sm>
                                 <Card className={classes.card_dims}>
                                 <CardActionArea>
