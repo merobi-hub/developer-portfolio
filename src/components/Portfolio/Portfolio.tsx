@@ -25,6 +25,7 @@ import roi_screenshot from '../../assets/images/realestate.png';
 import blackjack_screenshot from '../../assets/images/blackjack.png';
 import theater_screenshot from '../../assets/images/theaterERD.png';
 import dealer_screenshot from '../../assets/images/dealership.png';
+import atten_screenshot from '../../assets/images/atten_flash.png';
 
 interface PortfolioProps{
     history: RouteComponentProps['history'], //stores info needed for user navigation of site
@@ -98,7 +99,7 @@ export const Portfolio = ( props:PortfolioProps ) => {
                                         />
                                         <CardContent>
                                             <Typography className={classes.title} color="textSecondary" gutterBottom>
-                                            Flask/API Web Application
+                                            Flask/API Web Application - Individual Project
                                             </Typography>
                                             <Typography variant="h5" component="h2">
                                             Lantern Free Library Online
@@ -129,7 +130,7 @@ export const Portfolio = ( props:PortfolioProps ) => {
                                         />
                                         <CardContent>
                                             <Typography className={classes.title} color="textSecondary" gutterBottom>
-                                            React Web Application
+                                            React Web Application - Individual Project
                                             </Typography>
                                             <Typography variant="h5" component="h2">
                                             Web Developer Portfolio
@@ -160,7 +161,7 @@ export const Portfolio = ( props:PortfolioProps ) => {
                                             />
                                         <CardContent>
                                             <Typography className={classes.title} color="textSecondary" gutterBottom>
-                                            React Web Application
+                                            React Web Application - Individual Project
                                             </Typography>
                                             <Typography variant="h5" component="h2">
                                             Car Inventory
@@ -188,15 +189,45 @@ export const Portfolio = ( props:PortfolioProps ) => {
                                     <CardActionArea>                                    
                                         <CardMedia 
                                             className={classes.media}
+                                            image={atten_screenshot}
+                                            title="Screenshot of app"
+                                        />
+                                        <CardContent>
+                                            <Typography className={classes.title} color="textSecondary" gutterBottom>
+                                            Python Web App - Individual Project
+                                            </Typography>
+                                            <Typography variant="h5" component="h2">
+                                            Attendance Keeper
+                                            </Typography>
+                                            <Typography className={classes.pos} color="textSecondary">
+                                            Minimalist attendance tracker that calculates attendance by repeat users
+                                            </Typography>
+                                            <Typography variant="body2" component="p">
+                                            Python, Flask, Heroku, SQLAlchemy, Psycopg2, Datetime 
+                                            <br />
+                                            Jinja, Bootstrap, WTF, Werkzeug, Login, Flash
+                                            </Typography>
+                                        </CardContent>
+                                    </CardActionArea>
+                                    <CardActions>
+                                        <Button size="small" href="https://github.com/merobi-hub/attendance_tracker">Github</Button>
+                                    </CardActions>
+                                </Card>
+                            </Col>
+                            <Col md sm>
+                                <Card className={classes.card_dims}>
+                                    <CardActionArea>                                    
+                                        <CardMedia 
+                                            className={classes.media}
                                             image={bibliomania_screenshot}
                                             title="Screenshot of app"
                                         />
                                         <CardContent>
                                             <Typography className={classes.title} color="textSecondary" gutterBottom>
-                                            twitter Bot
+                                            twitter Bot - Individual Project
                                             </Typography>
                                             <Typography variant="h5" component="h2">
-                                            bibliomania
+                                            Work in progress: bibliomania
                                             </Typography>
                                             <Typography className={classes.pos} color="textSecondary">
                                             Bot that posts excerpts of ebooks to twitter on a schedule
@@ -209,7 +240,7 @@ export const Portfolio = ( props:PortfolioProps ) => {
                                         </CardContent>
                                     </CardActionArea>
                                     <CardActions>
-                                        <Button size="small" href="https://github.com/merobi-hub/bibliomania">Github</Button>
+                                        {/* <Button size="small" href="https://github.com/merobi-hub/bibliomania">Github</Button> */}
                                     </CardActions>
                                 </Card>
                             </Col>
@@ -223,7 +254,7 @@ export const Portfolio = ( props:PortfolioProps ) => {
                                         />
                                         <CardContent>
                                             <Typography className={classes.title} color="textSecondary" gutterBottom>
-                                            API Web Application
+                                            React Web Application with API - Individual Project
                                             </Typography>
                                             <Typography variant="h5" component="h2">
                                             Today's Weather
@@ -232,9 +263,9 @@ export const Portfolio = ( props:PortfolioProps ) => {
                                             Searchable weather app
                                             </Typography>
                                             <Typography variant="body2" component="p">
-                                            JavaScript, Axios
+                                            JavaScript, Axios, React
                                             <br />
-                                            VS Code, Regex
+                                            VS Code, Regex, Firebase
                                             <br />
                                             OpenWeatherMap API
                                             </Typography>
@@ -242,6 +273,7 @@ export const Portfolio = ( props:PortfolioProps ) => {
                                     </CardActionArea>
                                     <CardActions>
                                         <Button size="small" href="https://github.com/merobi-hub/operators-week7-weather-api">Github</Button>
+                                        <Button size="small" href="https://weather-df750.web.app/">Firebase</Button>
                                     </CardActions>
                                 </Card>
                             </Col>
@@ -255,7 +287,7 @@ export const Portfolio = ( props:PortfolioProps ) => {
                                         />
                                         <CardContent>
                                             <Typography className={classes.title} color="textSecondary" gutterBottom>
-                                            API Web Application
+                                            React Web Application with API - Individual Project
                                             </Typography>
                                             <Typography variant="h5" component="h2">
                                             F1 Driver Data 
@@ -266,14 +298,15 @@ export const Portfolio = ( props:PortfolioProps ) => {
                                             <Typography variant="body2" component="p">
                                             JavaScript, Axios
                                             <br />
-                                            VS Code, Regex
+                                            React, VS Code, Regex
                                             <br />
-                                            Ergast Developer API
+                                            Firebase, Ergast Developer API
                                             </Typography>
                                         </CardContent>
                                     </CardActionArea>
                                     <CardActions>
                                         <Button size="small" href="https://github.com/merobi-hub/operators-week7-day3-hw">Github</Button>
+                                        <Button size="small" href="https://racer-data-b0f20.web.app/">Firebase</Button>
                                     </CardActions>
                                 </Card>
                             </Col>
@@ -288,7 +321,7 @@ export const Portfolio = ( props:PortfolioProps ) => {
                                         />
                                     <CardContent>
                                         <Typography className={classes.title} color="textSecondary" gutterBottom>
-                                        Object-Oriented Program
+                                        Object-Oriented Program - Individual Project
                                         </Typography>
                                         <Typography variant="h5" component="h2">
                                         E-commerce Parking Garage
@@ -318,7 +351,7 @@ export const Portfolio = ( props:PortfolioProps ) => {
                                         />
                                     <CardContent>
                                         <Typography className={classes.title} color="textSecondary" gutterBottom>
-                                        Object-Oriented Program
+                                        Object-Oriented Program - Individual Project
                                         </Typography>
                                         <Typography variant="h5" component="h2">
                                         Real Estate ROI Calculator
@@ -348,7 +381,7 @@ export const Portfolio = ( props:PortfolioProps ) => {
                                         />
                                     <CardContent>
                                         <Typography className={classes.title} color="textSecondary" gutterBottom>
-                                        Object-Oriented Program
+                                        Object-Oriented Program - Individual Project
                                         </Typography>
                                         <Typography variant="h5" component="h2">
                                         Blackjack Game
@@ -366,66 +399,6 @@ export const Portfolio = ( props:PortfolioProps ) => {
                                     </CardContent>
                                     <CardActions>
                                         <Button size="small" href="https://github.com/merobi-hub/operators61-week3-blackjack">Github</Button>
-                                    </CardActions>
-                                    </CardActionArea>
-                                </Card>
-                            </Col>
-                            <Col md sm>
-                                <Card className={classes.card_dims}>
-                                <CardActionArea>
-                                    <CardMedia 
-                                            className={classes.media}
-                                            image={theater_screenshot}
-                                            title="Screenshot of app"
-                                        />
-                                    <CardContent>
-                                        <Typography className={classes.title} color="textSecondary" gutterBottom>
-                                        ERD
-                                        </Typography>
-                                        <Typography variant="h5" component="h2">
-                                        Movie Theater Database
-                                        </Typography>
-                                        <Typography className={classes.pos} color="textSecondary">
-                                        Database Schematic for hypothetical movie theater software
-                                        </Typography>
-                                        <Typography variant="body2" component="p">
-                                        Lucidchart, PostgreSQL
-                                        <br />
-                                        SQL, PGAdmin
-                                        </Typography>
-                                    </CardContent>
-                                    <CardActions>
-                                        <Button size="small" href="https://github.com/merobi-hub/operators61-week4-day3-hw">Github</Button>
-                                    </CardActions>
-                                    </CardActionArea>
-                                </Card>
-                            </Col>
-                            <Col md sm>
-                                <Card className={classes.card_dims}>
-                                <CardActionArea>
-                                    <CardMedia 
-                                            className={classes.media}
-                                            image={dealer_screenshot}
-                                            title="Screenshot of app"
-                                        />
-                                    <CardContent>
-                                        <Typography className={classes.title} color="textSecondary" gutterBottom>
-                                        ERD
-                                        </Typography>
-                                        <Typography variant="h5" component="h2">
-                                        Car Dealership Database
-                                        </Typography>
-                                        <Typography className={classes.pos} color="textSecondary">
-                                        Database Schematic for hypothetical dealership software
-                                        </Typography>
-                                        <Typography variant="body2" component="p">
-                                        Lucidchart, PostgreSQL
-                                        <br />
-                                        SQL, PGAdmin
-                                        </Typography>
-                                    </CardContent>
-                                    <CardActions>
-                                        <Button size="small" href="https://github.com/merobi-hub/operators61-week4-project-dealership">Github</Button>
                                     </CardActions>
                                     </CardActionArea>
                                 </Card>

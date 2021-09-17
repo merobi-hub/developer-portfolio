@@ -324,13 +324,13 @@ export const Resume = ( props:ResumeProps ) => {
                                                 <ul>
                                                 <li><b>Developer Portfolio</b>: React, Firebase, TypeScript, Material-UI, Emailjs</li>
                                                 <li><b>Car Collector API</b>: React, Firebase, TypeScript, Material-UI, Heroku</li>
-                                                <li><b>Weather App</b>: JavaScript, Axios, Regex, OpenWeatherMap API</li>
-                                                <li><b>F1 Racer Data App</b>: JavaScript, Axios, Regex, Ergast Developer API</li>
-                                                <li><b>Law Firm Website</b>: React, Typescript, Material-UI, Bootstrap</li>
+                                                <li><b>Weather App</b>: React, Firebase, JavaScript, Axios, Regex, OpenWeatherMap API</li>
+                                                <li><b>F1 Racer Data App</b>: React, Firebase, JavaScript, Axios, Regex, Ergast Developer API</li>
+                                                <li><b>Law Firm Website</b>: React, TypeScript, Material-UI, Bootstrap</li>
                                                 <li><b>Parking Garage E-comm App</b>: Python, SQLite3, Jupyter Notebook</li>
                                                 <li><b>Real Estate ROI Calculator</b>: Python, Jupyter Notebook</li>
                                                 <li><b>Blackjack Game</b>: Python, Jupyter Notebook</li>
-                                                <li><b>Movie Theater DB ERD</b>: Lucidchart, PostgreSQL, PGAdmin</li>
+                                                <li><b>Movie Theater DB ERD</b>: Lucidchart, PostgreSQL, PGadmin</li>
                                                 </ul>
                                             </Typography>
                                             <Typography className={classes.capstoneSpacing} variant="h5" color="textSecondary">
