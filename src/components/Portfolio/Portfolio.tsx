@@ -211,6 +211,7 @@ export const Portfolio = ( props:PortfolioProps ) => {
                                     </CardActionArea>
                                     <CardActions>
                                         <Button size="small" href="https://github.com/merobi-hub/attendance_tracker">Github</Button>
+                                        <Button size="small" href="https://attendance-keeper.herokuapp.com/">Heroku</Button>
                                     </CardActions>
                                 </Card>
                             </Col>
