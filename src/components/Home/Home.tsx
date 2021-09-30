@@ -69,7 +69,7 @@ export const Home = ( props:Props ) => {
                 <Avatar alt="Michael Robinson thumbnail pic" className={classes.profile_pic} src={profile_pic}></Avatar>
                 <div className={classes.main_text}>
                     <h1>{ props.title }</h1>
-                    <p>Full-stack Web Developer</p>
+                    <p>Full Stack Software and Developer Relations Engineer</p>
                     <Link to="https://twitter.com/prosaicdrmr" className={classes.links}>
                         <TwitterIcon className={classes.icons} />
                     </Link>

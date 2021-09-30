@@ -197,15 +197,15 @@ export const Portfolio = ( props:PortfolioProps ) => {
                                             Python Web App - Individual Project
                                             </Typography>
                                             <Typography variant="h5" component="h2">
-                                            Attendance Keeper
+                                            Attendance Keeper (in development)
                                             </Typography>
                                             <Typography className={classes.pos} color="textSecondary">
-                                            Minimalist attendance tracker that calculates attendance by repeat users
+                                            Minimalist attendance tracker that calculates attendance of repeat users
                                             </Typography>
                                             <Typography variant="body2" component="p">
                                             Python, Flask, Heroku, SQLAlchemy, Psycopg2, Datetime 
                                             <br />
-                                            Jinja, Bootstrap, WTF, Werkzeug, Login, Flash
+                                            Jinja, Bootstrap, WTF, Werkzeug, Login, Flash, Oauthlib
                                             </Typography>
                                         </CardContent>
                                     </CardActionArea>
