@@ -70,9 +70,9 @@ export const Home = ( props:Props ) => {
                 <div className={classes.main_text}>
                     <h1>{ props.title }</h1>
                     <p>Full Stack Software and Developer Relations Engineer</p>
-                    <Link to="https://twitter.com/prosaicdrmr" className={classes.links}>
+                    {/* <Link to="https://twitter.com/prosaicdrmr" className={classes.links}>
                         <TwitterIcon className={classes.icons} />
-                    </Link>
+                    </Link> */}
                     <Link to="https://www.linkedin.com/in/michael-robinson/" className={classes.links}>
                         <LinkedInIcon className={classes.icons} />
                     </Link>

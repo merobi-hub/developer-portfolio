@@ -25,7 +25,7 @@ import roi_screenshot from '../../assets/images/realestate.png';
 import blackjack_screenshot from '../../assets/images/blackjack.png';
 import theater_screenshot from '../../assets/images/theaterERD.png';
 import dealer_screenshot from '../../assets/images/dealership.png';
-import atten_screenshot from '../../assets/images/atten_flash.png';
+import atten_screenshot from '../../assets/images/attendance_home.png';
 
 interface PortfolioProps{
     history: RouteComponentProps['history'], //stores info needed for user navigation of site
@@ -200,12 +200,14 @@ export const Portfolio = ( props:PortfolioProps ) => {
                                             Attendance Keeper
                                             </Typography>
                                             <Typography className={classes.pos} color="textSecondary">
-                                            Lightweight attendance tracker with Google login option
+                                            Lightweight attendance tracker with Google login
                                             </Typography>
                                             <Typography variant="body2" component="p">
-                                            OAuthLib, Python, Flask, Heroku, SQLAlchemy, Psycopg2 
+                                            OAuthLib, Python, Flask, SQLAlchemy, Psycopg2 
                                             <br />
-                                            Jinja, Bootstrap, WTF, Werkzeug, Login, Flash, Datetime
+                                            Jinja, Bootstrap, WTF, Werkzeug, Login, Flash 
+                                            <br />
+                                            Datetime, Heroku
                                             </Typography>
                                         </CardContent>
                                     </CardActionArea>
