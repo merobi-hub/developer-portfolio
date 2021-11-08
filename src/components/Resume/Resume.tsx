@@ -20,7 +20,6 @@ interface ResumeProps{
 const useStyles = makeStyles({
     body: {
         display: 'flex',
-        // position: 'fixed',
         backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${karma_typewriter});`,
         backgroundSize: 'fill',
         backgroundRepeat: 'repeat-y',
@@ -35,13 +34,8 @@ const useStyles = makeStyles({
     },
     main: {
         display: 'flex',
-        // flexDirection: 'row',
-        //backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${karma_typewriter});`,
         width: '100%',
         height: '100%',
-        // backgroundSize: 'cover',
-        // backgroundRepeat: 'repeat-y',
-        // backgroundPosition: 'center',
         position: 'relative',
         zIndex: 1
     },
@@ -113,7 +107,6 @@ const useStyles = makeStyles({
 
 const theme = createMuiTheme({
     typography: { 
-        // fontFamily: 'Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace'
         fontFamily: 'Arial, Helvetica, sans-serif'
     },
   });
@@ -135,7 +128,7 @@ export const Resume = ( props:ResumeProps ) => {
                                                 Michael Robinson
                                             </Typography>
                                             <Typography className={classes.nameCardSpacing} variant="h5" color="textSecondary">
-                                                Full-stack Software Engineer
+                                                Developer Relations Engineer
                                             </Typography>
                                         </CardContent>
                                     </Card>
@@ -150,10 +143,7 @@ export const Resume = ( props:ResumeProps ) => {
                                                 213.215.1897
                                             </Typography>
                                             <Typography variant="body2" component="p">
-                                                <a href="mailto:merobi@gmail.com" className={classes.contactText}>merobi@gmail.com</a>
-                                            </Typography>
-                                            <Typography  variant="body2" component="p">
-                                                <a href="https://twitter.com/prosaicdrmr" className={classes.contactText}>@prosaicdrmr</a>
+                                                <a href="mailto:michael@datakin.com" className={classes.contactText}>michael@datakin.com</a>
                                             </Typography>
                                             <Typography variant="body2" component="p">
                                                 <a href="https://www.linkedin.com/in/michael-robinson/" className={classes.contactText}>linkedin.com/in/michael-robinson</a>
@@ -283,7 +273,7 @@ export const Resume = ( props:ResumeProps ) => {
                                     <Card className={classes.experienceCardDims}>
                                         <CardContent>
                                             <Typography className={classes.skillsCardSpacing} variant="h4" component="h2">
-                                                Recent Personal Project
+                                                Recent Personal Projects
                                             </Typography>
                                             <Typography variant="h5" color="textSecondary">
                                                 <a href="https://lantern-library-online.herokuapp.com/" className={classes.portfolioLink}>Lantern Free Library Online Web App</a>
@@ -314,11 +304,54 @@ export const Resume = ( props:ResumeProps ) => {
                                             <Typography variant="body2" component="p">
                                                 Python, Flask, Bootstrap, Werkzeug, Gunicorn, Psycopg2, Heroku, PostgreSQL, URLLib, Regex, Jinja, Material-UI
                                             </Typography>
+                                            <Typography className={classes.capstoneSpacing} variant="h5" color="textSecondary">
+                                                <a href="https://attendance-keeper.herokuapp.com/" className={classes.portfolioLink}>Attendance Keeper Event Management App</a>
+                                            </Typography>
+                                            <Typography variant="body2" component="p">
+                                                <ul>
+
+                                                <li>A minimalist attendance tracker that permits user check-ins without site registration <br/>
+                                                while allowing hosts to monitor attendance over time.</li>
+                                                
+                                                <li>OAuthLib used to support logging in with Google in addition to native signup/logins</li> 
+                                                
+                                                <li>Datetime used to convert and filter form data for display</li>
+                                                
+                                                <li>All events made editable and removable by hosts in a login-protected profile route</li>
+                                                
+                                                <li>User-friendly design allows for event check-ins without attendee site registration</li> 
+                                                
+                                                <li>SQL join used in calculation of attendance by repeat attendees of similar events</li>
+
+                                                <li>Forms and logins kept secure by Flask WTF and Werkzeug</li>
+
+                                                <li>Flash messages update users about form submissions and auth events</li>
+
+                                                <li>Optional passkey enables hosts to restrict event access if desired</li>
+                                        
+                                                </ul>
+                                            </Typography>
+                                            <Typography className={classes.capstoneSpacing} variant="h5" color="textSecondary">
+                                                Project Technologies
+                                            </Typography>
+                                            <Typography variant="body2" component="p">
+                                                Python, Datetime, OAuthLib, Login, Requests, Flask, Bootstrap4, Werkzeug, Gunicorn, Psycopg2, Heroku, PostgreSQL, Jinja2
+                                            </Typography>
                                             <Typography className={classes.experienceTitle} variant="h4" component="h2">
                                                 Experience
                                             </Typography>
                                             <Typography variant="h5" color="textSecondary">
-                                                Full-stack Software Engineer, April 2021-present
+                                                Developer Relations Engineer, Datakin, November 2021-present
+                                            </Typography>
+                                            <Typography variant="body2" component="p">
+                                                <ul>
+                                                <li>Advocate for OpenSource initiatives in conferences and blog posts</li>
+                                                <li>Facilitate discussions and answer technical questions in the community</li>
+                                                <li>Improve the developer and user experience on the projects</li>
+                                                </ul>
+                                            </Typography>
+                                            <Typography variant="h5" color="textSecondary">
+                                                Full Stack Software Engineer, April 2021-present
                                             </Typography>
                                             <Typography variant="body2" component="p">
                                                 <ul>
