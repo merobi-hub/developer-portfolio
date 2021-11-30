@@ -108,9 +108,9 @@ export const Portfolio = ( props:PortfolioProps ) => {
                                             User-generated catalog with data from Google Books API, Blog
                                             </Typography>
                                             <Typography variant="body2" component="p">
-                                            Python, Flask, Bootstrap, Gunicorn
+                                            Python, Flask, Bootstrap, Gunicorn, Postgres
                                             <br />
-                                            PostgreSQL, Psycopg2, Werkzeug, Google Books API
+                                            SQLAlchemy, Werkzeug, Google Books API, Great Expectations
                                             </Typography>
                                         </CardContent>
                                     </CardActionArea>

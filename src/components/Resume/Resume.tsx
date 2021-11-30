@@ -128,7 +128,7 @@ export const Resume = ( props:ResumeProps ) => {
                                                 Michael Robinson
                                             </Typography>
                                             <Typography className={classes.nameCardSpacing} variant="h5" color="textSecondary">
-                                                Developer Relations Engineer
+                                                Software Engineer, Developer Relations
                                             </Typography>
                                         </CardContent>
                                     </Card>
@@ -143,7 +143,7 @@ export const Resume = ( props:ResumeProps ) => {
                                                 213.215.1897
                                             </Typography>
                                             <Typography variant="body2" component="p">
-                                                <a href="mailto:michael@datakin.com" className={classes.contactText}>michael@datakin.com</a>
+                                                <a href="mailto:michael@datakin.com" className={classes.contactText}>michael.robinson@astronomer.io</a>
                                             </Typography>
                                             <Typography variant="body2" component="p">
                                                 <a href="https://www.linkedin.com/in/michael-robinson/" className={classes.contactText}>linkedin.com/in/michael-robinson</a>
@@ -244,6 +244,10 @@ export const Resume = ( props:ResumeProps ) => {
                                                 <li>Numpy</li> 
 
                                                 <li>Jupyter Notebook</li>
+
+                                                <li>Preset</li>
+                                                <li>dbt</li>
+                                                <li>Datakin</li>
                                                 </ul>
                                             </Typography>
                                             <Typography className={classes.skillsCardSpacing} variant="h4" component="h2">
@@ -302,7 +306,7 @@ export const Resume = ( props:ResumeProps ) => {
                                                 Project Technologies
                                             </Typography>
                                             <Typography variant="body2" component="p">
-                                                Python, Flask, Bootstrap, Werkzeug, Gunicorn, Psycopg2, Heroku, PostgreSQL, URLLib, Regex, Jinja, Material-UI
+                                                Python, Flask, Bootstrap, Werkzeug, Gunicorn, Psycopg2, Heroku, PostgreSQL, URLLib, Regex, Jinja, Material-UI, Great Expectations
                                             </Typography>
                                             <Typography className={classes.capstoneSpacing} variant="h5" color="textSecondary">
                                                 <a href="https://attendance-keeper.herokuapp.com/" className={classes.portfolioLink}>Attendance Keeper Event Management App</a>
@@ -341,7 +345,7 @@ export const Resume = ( props:ResumeProps ) => {
                                                 Experience
                                             </Typography>
                                             <Typography variant="h5" color="textSecondary">
-                                                Developer Relations Engineer, Datakin, November 2021-present
+                                                Software Engineer, Developer Relations, Astronomer, November 2021-present
                                             </Typography>
                                             <Typography variant="body2" component="p">
                                                 <ul>
