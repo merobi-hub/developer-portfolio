@@ -143,7 +143,7 @@ export const Resume = ( props:ResumeProps ) => {
                                                 213.215.1897
                                             </Typography>
                                             <Typography variant="body2" component="p">
-                                                <a href="mailto:michael@datakin.com" className={classes.contactText}>michael.robinson@astronomer.io</a>
+                                                <a href="mailto:michael.robinson@astronomer.io" className={classes.contactText}>michael.robinson@astronomer.io</a>
                                             </Typography>
                                             <Typography variant="body2" component="p">
                                                 <a href="https://www.linkedin.com/in/michael-robinson/" className={classes.contactText}>linkedin.com/in/michael-robinson</a>
