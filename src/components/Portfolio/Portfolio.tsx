@@ -26,6 +26,8 @@ import blackjack_screenshot from '../../assets/images/blackjack.png';
 import theater_screenshot from '../../assets/images/theaterERD.png';
 import dealer_screenshot from '../../assets/images/dealership.png';
 import atten_screenshot from '../../assets/images/attendance_home.png';
+import add_copyright_screenshot from '../../assets/images/add_copyright.png';
+import license_updater_screenshot from '../../assets/images/license_updater.png';
 
 interface PortfolioProps{
     history: RouteComponentProps['history'], //stores info needed for user navigation of site
@@ -147,7 +149,66 @@ export const Portfolio = ( props:PortfolioProps ) => {
                                     </CardActionArea>
                                     <CardActions>
                                         <Button size="small" href="https://github.com/merobi-hub/portfolio">Github</Button>
-                                        
+                                    </CardActions>
+                                </Card>
+                            </Col>
+                            <Col md sm>
+                                <Card className={classes.card_dims}>
+                                    <CardActionArea>                                    
+                                        <CardMedia 
+                                            className={classes.media}
+                                            image={add_copyright_screenshot}
+                                            title="Screenshot of app"
+                                        />
+                                        <CardContent>
+                                            <Typography className={classes.title} color="textSecondary" gutterBottom>
+                                            OSS Project Utility - Individual Project
+                                            </Typography>
+                                            <Typography variant="h5" component="h2">
+                                            Add Copyright Tool
+                                            </Typography>
+                                            <Typography className={classes.pos} color="textSecondary">
+                                            Script for adding a copyright to an open-source project 
+                                            </Typography>
+                                            <Typography variant="body2" component="p">
+                                            Python, OS, Sys 
+                                            <br />
+                                            Bash, Markdown
+                                            </Typography>
+                                        </CardContent>
+                                    </CardActionArea>
+                                    <CardActions>
+                                        <Button size="small" href="https://github.com/merobi-hub/add-copyright">Github</Button>
+                                    </CardActions>
+                                </Card>
+                            </Col>
+                            <Col md sm>
+                                <Card className={classes.card_dims}>
+                                    <CardActionArea>                                    
+                                        <CardMedia 
+                                            className={classes.media}
+                                            image={license_updater_screenshot}
+                                            title="Screenshot of app"
+                                        />
+                                        <CardContent>
+                                            <Typography className={classes.title} color="textSecondary" gutterBottom>
+                                            OSS Project Utility - Individual Project
+                                            </Typography>
+                                            <Typography variant="h5" component="h2">
+                                            License Updater Tool
+                                            </Typography>
+                                            <Typography className={classes.pos} color="textSecondary">
+                                            Script for updating an open-source project's license 
+                                            </Typography>
+                                            <Typography variant="body2" component="p">
+                                            Python, OS
+                                            <br />
+                                            Bash, Markdown
+                                            </Typography>
+                                        </CardContent>
+                                    </CardActionArea>
+                                    <CardActions>
+                                        <Button size="small" href="https://github.com/merobi-hub/license-updater">Github</Button>
                                     </CardActions>
                                 </Card>
                             </Col>
