@@ -199,6 +199,12 @@ export const Resume = ( props:ResumeProps ) => {
                                             <Typography className={classes.skillsText} variant="body2" component="p">
                                                 <ul>
                                                 
+                                                <li>OpenLineage</li>
+                                                
+                                                <li>Marquez</li>
+                                                
+                                                <li>Airflow</li>
+                                                
                                                 <li>Firebase</li>
                                                 
                                                 <li>Heroku</li>
@@ -350,12 +356,16 @@ export const Resume = ( props:ResumeProps ) => {
                                             <Typography variant="body2" component="p">
                                                 <ul>
                                                 <li>Advocate for OpenSource initiatives in conferences and blog posts</li>
+                                                <li>Coordinate and lead open-source project community meetings</li>
+                                                <li>Serve as release manager for open-source projects</li>
+                                                <li>Co-edit monthly Airflow newsletter</li>
+                                                <li>Contribute to project source code and documentation</li>
                                                 <li>Facilitate discussions and answer technical questions in the community</li>
-                                                <li>Improve the developer and user experience on the projects</li>
+                                                <li>Improve the developer and user experience on projects</li>
                                                 </ul>
                                             </Typography>
                                             <Typography variant="h5" color="textSecondary">
-                                                Full Stack Software Engineer, April 2021-present
+                                                Full Stack Software Developer, April 2021-present
                                             </Typography>
                                             <Typography variant="body2" component="p">
                                                 <ul>
@@ -387,7 +397,7 @@ export const Resume = ( props:ResumeProps ) => {
                                                 </ul>
                                             </Typography>
                                             <Typography className={classes.capstoneSpacing} variant="h5" color="textSecondary">
-                                                Author/Researcher, 2012-present
+                                                Author/Researcher, 2012-2021
                                             </Typography>
                                             <Typography variant="body2" component="p">
                                                 <a href="https://rowman.com/ISBN/9781793607935/The-Queer-Bookishness-of-Romanticism-Ornamental-Community" className={classes.bookLink}>Book</a> 
