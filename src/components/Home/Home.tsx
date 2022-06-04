@@ -12,6 +12,7 @@ import ThreeDRotation from '@material-ui/icons/ThreeDRotation';
 import TwitterIcon from '@material-ui/icons/Twitter';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import EmailIcon from '@material-ui/icons/Email';
+import GithubIcon from '@material-ui/icons/Github';
 
 interface Props{
     title: string;
@@ -73,6 +74,9 @@ export const Home = ( props:Props ) => {
                     {/* <Link to="https://twitter.com/prosaicdrmr" className={classes.links}>
                         <TwitterIcon className={classes.icons} />
                     </Link> */}
+                    <Link to="https://github.com/merobi-hub" className={classes.links}>
+                        <GithubIcon className={classes.icons} />
+                    </Link>
                     <Link to="https://www.linkedin.com/in/michael-robinson/" className={classes.links}>
                         <LinkedInIcon className={classes.icons} />
                     </Link>
