@@ -128,7 +128,7 @@ export const Resume = ( props:ResumeProps ) => {
                                                 Michael Robinson
                                             </Typography>
                                             <Typography className={classes.nameCardSpacing} variant="h5" color="textSecondary">
-                                                Software Engineer, Developer Relations
+                                                Community Manager
                                             </Typography>
                                         </CardContent>
                                     </Card>
@@ -261,7 +261,6 @@ export const Resume = ( props:ResumeProps ) => {
                                             </Typography>
                                             <Typography className={classes.skillsText} variant="body2" component="p">
                                                 <ul>
-                                                <li>French</li>
                                                                                                 
                                                 <li>MS Office</li>
 
@@ -282,76 +281,17 @@ export const Resume = ( props:ResumeProps ) => {
                                 <Col md sm>
                                     <Card className={classes.experienceCardDims}>
                                         <CardContent>
-                                            <Typography className={classes.skillsCardSpacing} variant="h4" component="h2">
-                                                Recent Personal Projects
-                                            </Typography>
-                                            <Typography variant="h5" color="textSecondary">
-                                                <a href="https://lantern-library-online.herokuapp.com/" className={classes.portfolioLink}>Lantern Free Library Online Web App</a>
-                                            </Typography>
-                                            <Typography variant="body2" component="p">
-                                                <ul>
-
-                                                <li>A user-tailored catalog that makes a little free library’s inventory viewable and modifiable <br/>
-                                                online with customized profile routing and a separate blog, all with full CRUD functionality</li>
-                                                
-                                                <li>Catalog takes in minimal user input and searches the Google Books API to output more <br/>
-                                                detailed, complete and standardized output, including images</li> 
-                                                
-                                                <li>Db operations in catalog and blog performed with SQLAlchemy/PostgreSQL</li> 
-                                                
-                                                <li>Flask WTF extension handles forms for catalog and blog</li>
-                                                
-                                                <li>Flask Werkzeug extension secures user passwords</li>
-                                                
-                                                <li>Flask Login extension and Jinja templates make the nav dynamic</li> 
-                                                
-                                                <li>Bootstrap and Material-UI cards create a clean, well-organized and inviting interface</li>
-                                                </ul>
-                                            </Typography>
-                                            <Typography className={classes.capstoneSpacing} variant="h5" color="textSecondary">
-                                                Project Technologies
-                                            </Typography>
-                                            <Typography variant="body2" component="p">
-                                                Python, Flask, Bootstrap, Werkzeug, Gunicorn, Psycopg2, Heroku, PostgreSQL, URLLib, Regex, Jinja, Material-UI, Great Expectations
-                                            </Typography>
-                                            <Typography className={classes.capstoneSpacing} variant="h5" color="textSecondary">
-                                                <a href="https://attendance-keeper.herokuapp.com/" className={classes.portfolioLink}>Attendance Keeper Event Management App</a>
-                                            </Typography>
-                                            <Typography variant="body2" component="p">
-                                                <ul>
-
-                                                <li>A minimalist attendance tracker that permits user check-ins without site registration <br/>
-                                                while allowing hosts to monitor attendance over time.</li>
-                                                
-                                                <li>OAuthLib used to support logging in with Google in addition to native signup/logins</li> 
-                                                
-                                                <li>Datetime used to convert and filter form data for display</li>
-                                                
-                                                <li>All events made editable and removable by hosts in a login-protected profile route</li>
-                                                
-                                                <li>User-friendly design allows for event check-ins without attendee site registration</li> 
-                                                
-                                                <li>SQL join used in calculation of attendance by repeat attendees of similar events</li>
-
-                                                <li>Forms and logins kept secure by Flask WTF and Werkzeug</li>
-
-                                                <li>Flash messages update users about form submissions and auth events</li>
-
-                                                <li>Optional passkey enables hosts to restrict event access if desired</li>
-                                        
-                                                </ul>
-                                            </Typography>
-                                            <Typography className={classes.capstoneSpacing} variant="h5" color="textSecondary">
-                                                Project Technologies
-                                            </Typography>
-                                            <Typography variant="body2" component="p">
-                                                Python, Datetime, OAuthLib, Login, Requests, Flask, Bootstrap4, Werkzeug, Gunicorn, Psycopg2, Heroku, PostgreSQL, Jinja2
-                                            </Typography>
                                             <Typography className={classes.experienceTitle} variant="h4" component="h2">
                                                 Experience
                                             </Typography>
                                             <Typography variant="h5" color="textSecondary">
-                                                Software Engineer, Developer Relations, Astronomer, November 2021-present
+                                                Astronomer
+                                            </Typography>
+                                            <Typography variant="h6" color="textSecondary">
+                                                Community Manager, May 2023-present
+                                            </Typography>
+                                            <Typography variant="h6" color="textSecondary">
+                                                Software Engineer, Developer Relations, March 2022-May 2023
                                             </Typography>
                                             <Typography variant="body2" component="p">
                                                 <ul>
@@ -365,22 +305,22 @@ export const Resume = ( props:ResumeProps ) => {
                                                 </ul>
                                             </Typography>
                                             <Typography variant="h5" color="textSecondary">
-                                                Full Stack Software Developer, April 2021-present
+                                                Datakin
+                                            </Typography>
+                                            <Typography variant="h6" color="textSecondary">
+                                                Developer Relations Engineer, November 2021-March 2022
                                             </Typography>
                                             <Typography variant="body2" component="p">
-                                                <ul>
-                                                <li><b>Developer Portfolio</b>: React, Firebase, TypeScript, Material-UI, Emailjs</li>
-                                                <li><b>Car Collector API</b>: React, Firebase, TypeScript, Material-UI, Heroku</li>
-                                                <li><b>Weather App</b>: React, Firebase, JavaScript, Axios, Regex, OpenWeatherMap API</li>
-                                                <li><b>F1 Racer Data App</b>: React, Firebase, JavaScript, Axios, Regex, Ergast Developer API</li>
-                                                <li><b>Law Firm Website</b>: React, TypeScript, Material-UI, Bootstrap</li>
-                                                <li><b>Parking Garage E-comm App</b>: Python, SQLite3, Jupyter Notebook</li>
-                                                <li><b>Real Estate ROI Calculator</b>: Python, Jupyter Notebook</li>
-                                                <li><b>Blackjack Game</b>: Python, Jupyter Notebook</li>
-                                                <li><b>Movie Theater DB ERD</b>: Lucidchart, PostgreSQL, PGadmin</li>
+                                            <ul>
+                                                <li>Advocate for OpenSource initiatives in conferences and blog posts</li>
+                                                <li>Facilitate discussions and answer technical questions in the community</li>
+                                                <li>Improve the developer and user experience on projects</li>
                                                 </ul>
                                             </Typography>
-                                            <Typography className={classes.capstoneSpacing} variant="h5" color="textSecondary">
+                                            <Typography variant="h5" color="textSecondary">
+                                                Universities and Colleges
+                                            </Typography>
+                                            <Typography variant="h6" color="textSecondary">
                                                 English and Writing Program Admin/Professor/Consultant, 2010-2021
                                             </Typography>
                                             <Typography variant="body2" component="p">

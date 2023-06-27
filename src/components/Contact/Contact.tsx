@@ -1,4 +1,4 @@
-import React, { useState, Ref } from 'react';
+import React, { useState, useRef } from 'react';
 import { useSelector, useDispatch, useStore } from 'react-redux';
 import { useForm } from 'react-hook-form';
 import {
@@ -15,9 +15,9 @@ import { createMuiTheme, ThemeProvider } from '@material-ui/core';
 import Typography from '@material-ui/core/Typography';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from "yup";
-import emailjs from 'emailjs-com';
+import emailjs from '@emailjs/browser';
 import { init } from 'emailjs-com';
-init("user_3eDu2d7iqithquFxQ8lSb");
+init("PYuvALLMBhd_vI3FU");
 
 
 interface ContactProps{
@@ -80,19 +80,21 @@ export const Contact = ( props:ContactProps ) => {
         resolver: yupResolver(schema)
     });
 
+    const form: any = useRef();
+
     // Send the form data via email
     function sendEmail(e: any) {
         e.preventDefault();
 
-        emailjs.sendForm('service_jdsyfvk', 'template_mxxbg4c', e.target)
-            .then(function(response) {
-            console.log('SUCCESS!', response.status, response.text);
+        emailjs.sendForm('service_ofbf6mt', 'template_58ca9cw', form.current, 'PYuvALLMBhd_vI3FU')
+            .then(function(response: any) {
+            console.log('SUCCESS!', response.text);
             
             // Redirect to home
             props.history.push("/thanks");
             
-            }, function(error) {
-            console.log('FAILED...', error);
+            }, function(error: any) {
+            console.log('FAILED...', error.text);
             });
     }
 
@@ -107,25 +109,25 @@ export const Contact = ( props:ContactProps ) => {
                             <Col md="6" sm="4">
                                 <Card className={classes.formCardDims}>
                                     <CardContent>
-                                        <form id="contactForm" onSubmit={sendEmail}>
+                                        <form ref={form} onSubmit={sendEmail}>
                                             <Typography className={classes.formTitle} variant="h4" component="h2">
                                                 Contact Form
                                             </Typography>
                                             <Typography className={classes.formSpacing} variant="h5" component="h2" color="textSecondary">
-                                                <label htmlFor="name">Name</label>
+                                                <label htmlFor="from_name">Name</label>
                                                 <br />
                                                 <input
-                                                id="name"
+                                                id="from_name"
                                                 placeholder="name"
                                                 {...register("name", { required: true, maxLength: 60, pattern: /^[ A-Za-z]+$/i })} /> 
                                                 { errors.name?.message }                                           
                                             </Typography>
                                             <Typography className={classes.formSpacing} variant="h5" component="h2" color="textSecondary">
-                                                <label htmlFor="email">E-mail</label>
+                                                <label htmlFor="from_email">E-mail</label>
                                                 <br />
                                                 <input 
-                                                id="email"
-                                                type="email" 
+                                                id="from_email"
+                                                type="email"
                                                 placeholder="e-mail address" 
                                                 {...register("email", { required: true })} />
                                                 { errors.email?.message }
@@ -152,11 +154,11 @@ export const Contact = ( props:ContactProps ) => {
                 </Container>
             </div>
             <script type="text/javascript"
-                src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js">
+                src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
             </script>
             <script type="text/javascript">
                 (function(){
-                    emailjs.init("user_3eDu2d7iqithquFxQ8lSb")
+                    emailjs.init("PYuvALLMBhd_vI3FU")
                 })();
             </script>
         </div>
