@@ -70,16 +70,13 @@ export const Home = ( props:Props ) => {
                 <Avatar alt="Michael Robinson thumbnail pic" className={classes.profile_pic} src={profile_pic}></Avatar>
                 <div className={classes.main_text}>
                     <h1>{ props.title }</h1>
-                    <p>Full Stack Software and Developer Relations Engineer</p>
-                    {/* <Link to="https://twitter.com/prosaicdrmr" className={classes.links}>
-                        <TwitterIcon className={classes.icons} />
-                    </Link> */}
-                    <Link to="https://github.com/merobi-hub" className={classes.links}>
+                    <p>Community Manager and Full Stack Developer</p>
+                    <a href="https://github.com/merobi-hub" className={classes.links}>
                         <GitHubIcon className={classes.icons} />
-                    </Link>
-                    <Link to="https://www.linkedin.com/in/michael-robinson/" className={classes.links}>
+                    </a>
+                    <a href="https://www.linkedin.com/in/michael-robinson/" className={classes.links}>
                         <LinkedInIcon className={classes.icons} />
-                    </Link>
+                    </a>
                     <a href="mailto:merobi@gmail.com" className={classes.links}>
                         <EmailIcon className={classes.icons}/>
                     </a>
