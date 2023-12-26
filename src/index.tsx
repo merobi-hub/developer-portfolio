@@ -5,7 +5,6 @@ import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles.css';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import firebase from 'firebase';
 
 ReactDOM.render(
   <React.StrictMode>

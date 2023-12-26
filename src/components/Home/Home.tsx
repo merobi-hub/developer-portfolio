@@ -1,15 +1,8 @@
 import React from 'react';
 import { makeStyles, Avatar } from '@material-ui/core';
-import Button from '@material-ui/core/Button';
-import classes from '*.module.css';
 import karma_typewriter from '../../assets/images/karma_typewriter.jpg';
 import profile_pic from '../../assets/images/profile_pic.jpg';
-import { Link } from 'react-router-dom';
-import { relative } from 'path';
 import { Navbar } from '../../components';
-import AccessAlarmIcon from '@material-ui/icons/AccessAlarm';
-import ThreeDRotation from '@material-ui/icons/ThreeDRotation';
-import TwitterIcon from '@material-ui/icons/Twitter';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import EmailIcon from '@material-ui/icons/Email';
 import GitHubIcon from '@material-ui/icons/GitHub.js';

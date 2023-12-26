@@ -1,13 +1,11 @@
-import React from 'react';
 import { Container, Row, Col } from 'reactstrap';
-import { RouteComponentProps, withRouter, Switch, Route } from 'react-router-dom';
+import { RouteComponentProps } from 'react-router-dom';
 import karma_typewriter from '../../assets/images/karma_typewriter.jpg';
 import { Navbar } from '../../components';
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
-import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
-import { createMuiTheme, ThemeProvider } from '@material-ui/core';
+import { createTheme, ThemeProvider } from '@material-ui/core';
 import Typography from '@material-ui/core/Typography';
 
 
@@ -105,7 +103,7 @@ const useStyles = makeStyles({
     }
 });
 
-const theme = createMuiTheme({
+const theme = createTheme({
     typography: { 
         fontFamily: 'Arial, Helvetica, sans-serif'
     },
@@ -143,7 +141,7 @@ export const Resume = ( props:ResumeProps ) => {
                                                 213.215.1897
                                             </Typography>
                                             <Typography variant="body2" component="p">
-                                                <a href="mailto:michael.robinson@astronomer.io" className={classes.contactText}>michael.robinson@astronomer.io</a>
+                                                <a href="mailto:merobi@gmail.com" className={classes.contactText}>merobi@gmail.com</a>
                                             </Typography>
                                             <Typography variant="body2" component="p">
                                                 <a href="https://www.linkedin.com/in/michael-robinson/" className={classes.contactText}>linkedin.com/in/michael-robinson</a>
@@ -188,9 +186,11 @@ export const Resume = ( props:ResumeProps ) => {
                                                 
                                                 <li>React</li>
                                                 
-                                                <li>Axios</li> 
+                                                <li>Gatsby</li> 
                                                  
-                                                <li>Node.js</li> 
+                                                <li>Hugo</li>
+
+                                                <li>Docusaurus</li> 
                                                 </ul>
                                             </Typography>
                                             <Typography variant="h5" color="textSecondary">
@@ -209,51 +209,26 @@ export const Resume = ( props:ResumeProps ) => {
                                                 
                                                 <li>Heroku</li>
                                                 
-                                                <li>Bootstrap</li>
+                                                <li>Git/GitHub</li>
                                                 
-                                                <li>Material-UI</li> 
+                                                <li>Docker</li>
+
+                                                <li>Google Cloud</li> 
                                                 
-                                                <li>OO Design Patterns</li> 
-
-                                                <li>VS Code</li>
-
-                                                <li>Git</li>
-
-                                                <li>Github</li>
-
-                                                <li>Google Cloud</li>
                                                 </ul>
                                             </Typography>
                                             <Typography variant="h5" color="textSecondary">
-                                                Database
+                                                Community
                                             </Typography>
                                             <Typography className={classes.skillsText} variant="body2" component="p">
                                                 <ul>
-                                                <li>SQL</li>
-                                                
-                                                <li>PostgreSQL</li>
-                                                
-                                                <li>PGAdmin</li> 
-                                                </ul>
-                                            </Typography>
-                                            <Typography variant="h5" color="textSecondary">
-                                                Data
-                                            </Typography>
-                                            <Typography className={classes.skillsText} variant="body2" component="p">
-                                                <ul>
-                                                 
-                                                <li>R</li> 
-                                                <li>R Studio</li>
-                                                
-                                                <li>Tableau</li>
-                                                
-                                                <li>Numpy</li> 
+                                                    <li>Adobe Illustrator</li>
 
-                                                <li>Jupyter Notebook</li>
+                                                    <li>Adobe Premiere Pro</li>
 
-                                                <li>Preset</li>
-                                                <li>dbt</li>
-                                                <li>Datakin</li>
+                                                    <li>Slack</li>
+
+                                                    <li>Orbit</li>
                                                 </ul>
                                             </Typography>
                                             <Typography className={classes.skillsCardSpacing} variant="h4" component="h2">
@@ -262,17 +237,18 @@ export const Resume = ( props:ResumeProps ) => {
                                             <Typography className={classes.skillsText} variant="body2" component="p">
                                                 <ul>
                                                                                                 
-                                                <li>MS Office</li>
+                                                <li>Agile methodology</li>
 
-                                                <li>Adobe Suite</li>
+                                                <li>Experienced presenter</li>
 
-                                                <li>OS: Windows, Linux</li>
+                                                <li>Experienced editor</li>
 
-                                                <li>WordPress, WiX</li>
+                                                <li>Experienced teacher</li>
 
-                                                <li>LMS: Blackboard, Blackbaud, Google Classroom, Sakai, Brightspace</li>
+                                                <li>OS: Windows, Linux, MacOS</li>
 
-                                                <li>PeopleSoft</li>
+                                                <li>Published author</li>
+
                                                 </ul>
                                             </Typography>
                                         </CardContent>
@@ -295,11 +271,14 @@ export const Resume = ( props:ResumeProps ) => {
                                             </Typography>
                                             <Typography variant="body2" component="p">
                                                 <ul>
+                                                <li>Supported <b>222+%</b> growth in the OpenLineage community</li>
+                                                <li>Facilitated <b>54%</b> growth in the OpenLineage ecosystem (new partners include Google, Atlan, Manta)</li>
+                                                <li>Contribute actively to projects and docs (<b>960+</b> contributions in 2023 alone)</li>
+                                                <li>Led process of earning graduation of OpenLineage and Marquez from the LFAI & Data's incubator</li>
                                                 <li>Advocate for OpenSource initiatives in conferences and blog posts</li>
-                                                <li>Coordinate and lead open-source project community meetings</li>
-                                                <li>Serve as release manager for open-source projects</li>
-                                                <li>Co-edit monthly Airflow newsletter</li>
-                                                <li>Contribute to project source code and documentation</li>
+                                                <li>Coordinate and lead project community meetings</li>
+                                                <li>Serve as release manager for projects</li>
+                                                <li>Launched, edit and publish monthly newsletter</li>
                                                 <li>Facilitate discussions and answer technical questions in the community</li>
                                                 <li>Improve the developer and user experience on projects</li>
                                                 </ul>
@@ -315,6 +294,7 @@ export const Resume = ( props:ResumeProps ) => {
                                                 <li>Advocate for OpenSource initiatives in conferences and blog posts</li>
                                                 <li>Facilitate discussions and answer technical questions in the community</li>
                                                 <li>Improve the developer and user experience on projects</li>
+                                                <li>Datakin was acquired by Astronomer in March 2022</li>
                                                 </ul>
                                             </Typography>
                                             <Typography variant="h5" color="textSecondary">

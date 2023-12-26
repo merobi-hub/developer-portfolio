@@ -1,15 +1,13 @@
-import React, { useState, useRef } from 'react';
-import { useSelector, useDispatch, useStore } from 'react-redux';
+import React, { useRef } from 'react';
 import { useForm } from 'react-hook-form';
 import {
     makeStyles,
     Card
 } from '@material-ui/core';
-import { Redirect, useHistory, RouteComponentProps, withRouter, Switch, Route } from 'react-router-dom';
+import { RouteComponentProps } from 'react-router-dom';
 import karma_typewriter from '../../assets/images/karma_typewriter.jpg';
 import { Navbar } from '../../components';
 import { Container, Row, Col } from 'reactstrap';
-import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import { createMuiTheme, ThemeProvider } from '@material-ui/core';
 import Typography from '@material-ui/core/Typography';
@@ -76,7 +74,7 @@ type FormData = {
 
 export const Contact = ( props:ContactProps ) => {
 
-    const { register, setValue, handleSubmit, formState: { errors } } = useForm<FormData> ({
+    const { register, formState: { errors } } = useForm<FormData> ({
         resolver: yupResolver(schema)
     });
 

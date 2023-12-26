@@ -1,8 +1,6 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core';
-import classes from '*.module.css';
 import { Link } from 'react-router-dom';
-import { relative } from 'path';
 
 // interface NavbarProps{
 //     title: string;

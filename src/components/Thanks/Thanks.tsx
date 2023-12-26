@@ -1,11 +1,9 @@
 import React from 'react';
 import { Container, Row, Col } from 'reactstrap';
 import { makeStyles } from '@material-ui/core/styles';
-import Card from '@material-ui/core/Card';
-import { RouteComponentProps, withRouter, Switch, Route } from 'react-router-dom';
+import { RouteComponentProps } from 'react-router-dom';
 import { Navbar } from '../../components';
 import { createMuiTheme, ThemeProvider } from '@material-ui/core';
-import { findByLabelText } from '@testing-library/dom';
 import karma_typewriter from '../../assets/images/karma_typewriter.jpg';
 import Typography from '@material-ui/core/Typography';
 

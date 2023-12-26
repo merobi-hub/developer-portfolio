@@ -2,7 +2,7 @@ import React from 'react';
 import { Container, Row, Col } from 'reactstrap';
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
-import { RouteComponentProps, withRouter, Switch, Route } from 'react-router-dom';
+import { RouteComponentProps } from 'react-router-dom';
 import CardActionArea from '@material-ui/core/CardActionArea';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
@@ -12,10 +12,8 @@ import Typography from '@material-ui/core/Typography';
 import karma_typewriter from '../../assets/images/karma_typewriter.jpg';
 import { Navbar } from '../../components';
 import { createMuiTheme, ThemeProvider } from '@material-ui/core';
-import { findByLabelText } from '@testing-library/dom';
 import bibliomania_screenshot from '../../assets/images/bibliomania_output_screenshot.png'; 
 import weather_screenshot from '../../assets/images/weather_app_screenshot.png';
-import nza_screenshot from '../../assets/images/nza_screenshot.png';
 import car_screenshot from '../../assets/images/car_api.png';
 import racer_screenshot from '../../assets/images/racer.png';
 import library_screenshot from '../../assets/images/library_scrnshot.png';
@@ -23,11 +21,10 @@ import portfolio_screenshot from '../../assets/images/portfolio.png';
 import garage_screenshot from '../../assets/images/garage.png';
 import roi_screenshot from '../../assets/images/realestate.png';
 import blackjack_screenshot from '../../assets/images/blackjack.png';
-import theater_screenshot from '../../assets/images/theaterERD.png';
-import dealer_screenshot from '../../assets/images/dealership.png';
 import atten_screenshot from '../../assets/images/attendance_home.png';
 import add_copyright_screenshot from '../../assets/images/add_copyright.png';
 import license_updater_screenshot from '../../assets/images/license_updater.png';
+import ecosystem_screenshot from '../../assets/images/OL_ecosystem.png';
 
 interface PortfolioProps{
     history: RouteComponentProps['history'], //stores info needed for user navigation of site
@@ -96,6 +93,37 @@ export const Portfolio = ( props:PortfolioProps ) => {
                                     <CardActionArea>                                    
                                         <CardMedia 
                                             className={classes.media}
+                                            image={ecosystem_screenshot}
+                                            title="Screenshot of app"
+                                        />
+                                        <CardContent>
+                                            <Typography className={classes.title} color="textSecondary" gutterBottom>
+                                            Landing Page - OSS Contribution
+                                            </Typography>
+                                            <Typography variant="h5" component="h2">
+                                            OpenLineage Ecosystem Page
+                                            </Typography>
+                                            <Typography className={classes.pos} color="textSecondary">
+                                            Responsive webpage for displaying integrations 
+                                            </Typography>
+                                            <Typography variant="body2" component="p">
+                                            React, TypeScript 
+                                            <br />
+                                            MaterialUI
+                                            </Typography>
+                                        </CardContent>
+                                    </CardActionArea>
+                                    <CardActions>
+                                        <Button size="small" href="https://github.com/OpenLineage/docs/blob/main/src/pages/ecosystem.tsx">Github</Button>
+                                        <Button size="small" href="https://openlineage.io/ecosystem">Website</Button>
+                                    </CardActions>
+                                </Card>
+                            </Col>
+                            <Col md sm>
+                                <Card className={classes.card_dims}>
+                                    <CardActionArea>                                    
+                                        <CardMedia 
+                                            className={classes.media}
                                             image={library_screenshot}
                                             title="Screenshot of app"
                                         />
@@ -143,7 +171,7 @@ export const Portfolio = ( props:PortfolioProps ) => {
                                             <Typography variant="body2" component="p">
                                             TypeScript/JavaScript, React, Bootstrap 
                                             <br />
-                                            Material-UI, Emailjs, Firebase
+                                            MaterialUI, Emailjs, Firebase
                                             </Typography>
                                         </CardContent>
                                     </CardActionArea>
@@ -233,7 +261,7 @@ export const Portfolio = ( props:PortfolioProps ) => {
                                             <Typography variant="body2" component="p">
                                             TypeScript/JavaScript, Material-UI
                                             <br />
-                                            Firebase, VS Code, Insomnia
+                                            Firebase, Insomnia
                                             <br />
                                             React
                                             </Typography>
@@ -280,36 +308,6 @@ export const Portfolio = ( props:PortfolioProps ) => {
                             </Col>
                             <Col md sm>
                                 <Card className={classes.card_dims}>
-                                    <CardActionArea>                                    
-                                        <CardMedia 
-                                            className={classes.media}
-                                            image={bibliomania_screenshot}
-                                            title="Screenshot of app"
-                                        />
-                                        <CardContent>
-                                            <Typography className={classes.title} color="textSecondary" gutterBottom>
-                                            twitter Bot - Individual Project
-                                            </Typography>
-                                            <Typography variant="h5" component="h2">
-                                            Work in progress: bibliomania
-                                            </Typography>
-                                            <Typography className={classes.pos} color="textSecondary">
-                                            Bot that posts excerpts of ebooks to twitter on a schedule
-                                            </Typography>
-                                            <Typography variant="body2" component="p">
-                                            Python, Tweepy, Firebase, Project Gutenberg 
-                                            <br />
-                                            BeautifulSoup, GS Cloud blobs, Regex, Cron
-                                            </Typography>
-                                        </CardContent>
-                                    </CardActionArea>
-                                    <CardActions>
-                                        {/* <Button size="small" href="https://github.com/merobi-hub/bibliomania">Github</Button> */}
-                                    </CardActions>
-                                </Card>
-                            </Col>
-                            <Col md sm>
-                                <Card className={classes.card_dims}>
                                     <CardActionArea>
                                     <CardMedia 
                                             className={classes.media}
@@ -329,7 +327,7 @@ export const Portfolio = ( props:PortfolioProps ) => {
                                             <Typography variant="body2" component="p">
                                             JavaScript, Axios, React
                                             <br />
-                                            VS Code, Regex, Firebase
+                                            Regex, Firebase
                                             <br />
                                             OpenWeatherMap API
                                             </Typography>
@@ -362,7 +360,7 @@ export const Portfolio = ( props:PortfolioProps ) => {
                                             <Typography variant="body2" component="p">
                                             JavaScript, Axios
                                             <br />
-                                            React, VS Code, Regex
+                                            React, Regex
                                             <br />
                                             Firebase, Ergast Developer API
                                             </Typography>
@@ -424,7 +422,7 @@ export const Portfolio = ( props:PortfolioProps ) => {
                                         Console app that calculates ROI for real estate investment based on user input
                                         </Typography>
                                         <Typography variant="body2" component="p">
-                                        Python, VS Code
+                                        Python
                                         <br />
                                         Jupyter Notebook
                                         </Typography>
