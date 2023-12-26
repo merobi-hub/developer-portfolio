@@ -11,7 +11,8 @@ import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import karma_typewriter from '../../assets/images/karma_typewriter.jpg';
 import { Navbar } from '../../components';
-import { createMuiTheme, ThemeProvider } from '@material-ui/core';
+import { ThemeProvider } from '@material-ui/core';
+import { createTheme } from '@material-ui/core/styles';
 import weather_screenshot from '../../assets/images/weather_app_screenshot.png';
 import car_screenshot from '../../assets/images/car_api.png';
 import racer_screenshot from '../../assets/images/racer.png';
@@ -71,7 +72,7 @@ const useStyles = makeStyles({
     }
   });
 
-const theme = createMuiTheme({
+const theme = createTheme({
     typography: { 
         fontFamily: 'Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace'
     },

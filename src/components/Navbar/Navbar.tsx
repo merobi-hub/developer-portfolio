@@ -1,10 +1,5 @@
-import React from 'react';
 import { makeStyles } from '@material-ui/core';
 import { Link } from 'react-router-dom';
-
-// interface NavbarProps{
-//     title: string;
-// }
 
 const useStyles = makeStyles({
     root: {
