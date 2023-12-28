@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 import { Container, Row, Col } from 'reactstrap';
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
@@ -82,6 +83,9 @@ export const Portfolio = ( props:PortfolioProps ) => {
     const classes = useStyles();
     return (
         <div className={classes.root}>
+        <Helmet>
+            <title>Robinson | Portfolio</title>
+        </Helmet>
             <Navbar />
             <div className={classes.body}>
                 <div className={classes.main}>

@@ -6,6 +6,7 @@ import { Navbar } from '../../components';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import EmailIcon from '@material-ui/icons/Email';
 import GitHubIcon from '@material-ui/icons/GitHub.js';
+import { Helmet } from 'react-helmet';
 
 interface Props{
     title: string;
@@ -57,6 +58,9 @@ export const Home = ( props:Props ) => {
     const classes = useStyles();
     return (
         <div className={classes.root}>
+        <Helmet>
+            <title>Robinson | Home</title>
+        </Helmet>
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
             <Navbar />  
             <main className={classes.main}>

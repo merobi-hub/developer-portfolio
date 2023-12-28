@@ -8,6 +8,7 @@ import CardContent from '@material-ui/core/CardContent';
 import { ThemeProvider } from '@material-ui/core';
 import { createTheme } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
+import { Helmet } from 'react-helmet';
 
 
 interface ResumeProps{
@@ -114,6 +115,9 @@ export const Resume = ( props:ResumeProps ) => {
     const classes = useStyles();
     return (
         <div className={classes.root}>
+        <Helmet>
+            <title>Robinson | Resume</title>
+        </Helmet>
             <Navbar />
             <div className={classes.body}>
                 <div className={classes.main}>

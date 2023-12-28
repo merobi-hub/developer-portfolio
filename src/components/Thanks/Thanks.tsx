@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 import { Container, Row, Col } from 'reactstrap';
 import { makeStyles } from '@material-ui/core/styles';
 import { RouteComponentProps } from 'react-router-dom';
@@ -61,6 +62,9 @@ export const Thanks = ( props:ThanksProps ) => {
     const classes = useStyles();
     return (
         <div className={classes.root}>
+        <Helmet>
+            <title>Robinson | Thanks</title>
+        </Helmet>
             <Navbar />
             <div className={classes.main}>
                 <Container>

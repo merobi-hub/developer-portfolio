@@ -1,4 +1,5 @@
 import React, { useRef } from 'react';
+import { Helmet } from 'react-helmet';
 import { useForm } from 'react-hook-form';
 import {
     makeStyles,
@@ -100,6 +101,9 @@ export const Contact = ( props:ContactProps ) => {
     const classes = useStyles();
     return (
         <div className={classes.root}>
+        <Helmet>
+            <title>Robinson | Contact</title>
+        </Helmet>
             <Navbar />
             <div className={classes.main}>
                 <Container>
