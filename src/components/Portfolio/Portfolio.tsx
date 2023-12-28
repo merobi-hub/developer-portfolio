@@ -26,6 +26,7 @@ import atten_screenshot from '../../assets/images/attendance_home.png';
 import add_copyright_screenshot from '../../assets/images/add_copyright.png';
 import license_updater_screenshot from '../../assets/images/license_updater.png';
 import ecosystem_screenshot from '../../assets/images/OL_ecosystem.png';
+import airflow_screenshot from '../../assets/images/airflow_dev.png';
 import { auto } from '@popperjs/core';
 
 interface PortfolioProps{
@@ -61,6 +62,13 @@ const useStyles = makeStyles({
         minHeight: 550,
         maxWidth: 425,
         marginTop: 75,
+    },
+    last_row: {
+        minWidth: 550,
+        minHeight: 550,
+        maxWidth: 425,
+        marginTop: 75,
+        marginBottom: 75,
     },
     title: {
         fontSize: 14,
@@ -102,7 +110,7 @@ export const Portfolio = ( props:PortfolioProps ) => {
                                         />
                                         <CardContent>
                                             <Typography className={classes.title} color="textSecondary" gutterBottom>
-                                            Landing Page - OSS Contribution
+                                            Landing Page - Individual OSS Contribution
                                             </Typography>
                                             <Typography variant="h5" component="h2">
                                             OpenLineage Ecosystem Page
@@ -128,12 +136,42 @@ export const Portfolio = ( props:PortfolioProps ) => {
                                     <CardActionArea>                                    
                                         <CardMedia 
                                             className={classes.media}
+                                            image={airflow_screenshot}
+                                            title="Screenshot of app"
+                                        />
+                                        <CardContent>
+                                            <Typography className={classes.title} color="textSecondary" gutterBottom>
+                                            Dev Tool - Collaborative OSS Contribution
+                                            </Typography>
+                                            <Typography variant="h5" component="h2">
+                                            Apache Airflow Dev Tool
+                                            </Typography>
+                                            <Typography className={classes.pos} color="textSecondary">
+                                            Outputs contributor stats for a given timeframe 
+                                            </Typography>
+                                            <Typography variant="body2" component="p">
+                                            Python, Pickle 
+                                            <br />
+                                            Typing, GitHub API
+                                            </Typography>
+                                        </CardContent>
+                                    </CardActionArea>
+                                    <CardActions>
+                                        <Button size="small" href="https://github.com/apache/airflow/blob/main/dev/stats/get_important_pr_candidates.py">Github</Button>
+                                    </CardActions>
+                                </Card>
+                            </Col>
+                            <Col md sm>
+                                <Card className={classes.card_dims}>
+                                    <CardActionArea>                                    
+                                        <CardMedia 
+                                            className={classes.media}
                                             image={library_screenshot}
                                             title="Screenshot of app"
                                         />
                                         <CardContent>
                                             <Typography className={classes.title} color="textSecondary" gutterBottom>
-                                            Flask/API Web Application - Individual Project
+                                            Flask Web App - Individual Project
                                             </Typography>
                                             <Typography variant="h5" component="h2">
                                             Lantern Free Library Online
@@ -164,7 +202,7 @@ export const Portfolio = ( props:PortfolioProps ) => {
                                         />
                                         <CardContent>
                                             <Typography className={classes.title} color="textSecondary" gutterBottom>
-                                            React Web Application - Individual Project
+                                            React Web App - Individual Project
                                             </Typography>
                                             <Typography variant="h5" component="h2">
                                             Web Developer Portfolio
@@ -173,7 +211,7 @@ export const Portfolio = ( props:PortfolioProps ) => {
                                             Personal portfolio website with form 
                                             </Typography>
                                             <Typography variant="body2" component="p">
-                                            TypeScript/JavaScript, React, Bootstrap 
+                                            TypeScript, React, Bootstrap 
                                             <br />
                                             MaterialUI, Emailjs, Firebase
                                             </Typography>
@@ -254,7 +292,7 @@ export const Portfolio = ( props:PortfolioProps ) => {
                                             />
                                         <CardContent>
                                             <Typography className={classes.title} color="textSecondary" gutterBottom>
-                                            React Web Application - Individual Project
+                                            React Web App - Individual Project
                                             </Typography>
                                             <Typography variant="h5" component="h2">
                                             Car Inventory
@@ -263,7 +301,7 @@ export const Portfolio = ( props:PortfolioProps ) => {
                                             User-generated API for collectors 
                                             </Typography>
                                             <Typography variant="body2" component="p">
-                                            TypeScript/JavaScript, Material-UI
+                                            TypeScript/JavaScript, MaterialUI
                                             <br />
                                             Firebase, Insomnia
                                             <br />
@@ -320,7 +358,7 @@ export const Portfolio = ( props:PortfolioProps ) => {
                                         />
                                         <CardContent>
                                             <Typography className={classes.title} color="textSecondary" gutterBottom>
-                                            React Web Application with API - Individual Project
+                                            React Web App - Individual Project
                                             </Typography>
                                             <Typography variant="h5" component="h2">
                                             Today's Weather
@@ -353,7 +391,7 @@ export const Portfolio = ( props:PortfolioProps ) => {
                                         />
                                         <CardContent>
                                             <Typography className={classes.title} color="textSecondary" gutterBottom>
-                                            React Web Application with API - Individual Project
+                                            React Web App - Individual Project
                                             </Typography>
                                             <Typography variant="h5" component="h2">
                                             F1 Driver Data 
@@ -438,7 +476,7 @@ export const Portfolio = ( props:PortfolioProps ) => {
                                 </Card>
                             </Col>
                             <Col md sm>
-                                <Card className={classes.card_dims}>
+                                <Card className={classes.last_row}>
                                 <CardActionArea>
                                     <CardMedia 
                                             className={classes.media}
