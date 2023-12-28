@@ -1,6 +1,6 @@
 # Portfolio App with a Contact Form
 
-Language: TypeScript  
+Languages: TypeScript, HTML, CSS  
 Framework: React  
 Select libraries: EmailJS, MaterialUI  
 Webhost: Firebase  
