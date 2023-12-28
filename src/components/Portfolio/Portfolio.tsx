@@ -51,7 +51,7 @@ const useStyles = makeStyles({
     },
     main: {
         display: 'flex',
-        margin: 'auto',
+        margin: '0 auto',
         position: 'relative',
         zIndex: 1
     },

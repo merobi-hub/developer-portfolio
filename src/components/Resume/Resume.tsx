@@ -41,7 +41,7 @@ const useStyles = makeStyles({
     },
     nameCardDims: {
         marginTop: '5em',
-        marginBottom: '5em',
+        marginBottom: '0em',
         width: '16em',
         height: '16em',
         padding: '1.5em'
@@ -51,6 +51,7 @@ const useStyles = makeStyles({
     },
     contactCardDims: {
         marginTop: '5em',
+        marginBottom: '0em',
         minWidth: '56em',
         height: '16em',
         padding: '1.5em'
@@ -64,8 +65,8 @@ const useStyles = makeStyles({
         marginBottom: '0.5em'
     },
     skillsCardDims: {
-        marginTop: '0em',
-        marginBottom: '5em',
+        marginTop: '5em',
+        marginBottom: '0em',
         width: '16em',
         minHeight: '50em',
         padding: '1.5em'
@@ -78,7 +79,7 @@ const useStyles = makeStyles({
         marginBottom: '0.5em'
     },
     experienceCardDims: {
-        marginTop: '0em',
+        marginTop: '5em',
         marginBottom: '5em',
         minWidth: '56em',
         minHeight: '50em',
@@ -155,7 +156,7 @@ export const Resume = ( props:ResumeProps ) => {
                                                 <a href="https://github.com/merobi-hub" className={classes.contactText}>github.com/merobi-hub</a>
                                             </Typography>
                                             <Typography variant="body2" component="p">
-                                                <a href="https://michaelrobinson.dev" className={classes.contactText}>michaelrobinson.dev</a>
+                                                <a href="https://" className={classes.contactText}>michaelrobinson.dev</a>
                                             </Typography>
                                         </CardContent>
                                     </Card>
