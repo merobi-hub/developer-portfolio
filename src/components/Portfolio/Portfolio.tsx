@@ -26,6 +26,7 @@ import atten_screenshot from '../../assets/images/attendance_home.png';
 import add_copyright_screenshot from '../../assets/images/add_copyright.png';
 import license_updater_screenshot from '../../assets/images/license_updater.png';
 import ecosystem_screenshot from '../../assets/images/OL_ecosystem.png';
+import { auto } from '@popperjs/core';
 
 interface PortfolioProps{
     history: RouteComponentProps['history'], //stores info needed for user navigation of site
@@ -50,8 +51,7 @@ const useStyles = makeStyles({
     },
     main: {
         display: 'flex',
-        width: '100%',
-        height: '100%',
+        margin: 'auto',
         position: 'relative',
         zIndex: 1
     },
