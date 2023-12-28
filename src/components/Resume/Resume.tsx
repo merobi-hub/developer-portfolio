@@ -154,6 +154,9 @@ export const Resume = ( props:ResumeProps ) => {
                                             <Typography variant="body2" component="p">
                                                 <a href="https://github.com/merobi-hub" className={classes.contactText}>github.com/merobi-hub</a>
                                             </Typography>
+                                            <Typography variant="body2" component="p">
+                                                <a href="https://michaelrobinson.dev" className={classes.contactText}>michaelrobinson.dev</a>
+                                            </Typography>
                                         </CardContent>
                                     </Card>
                                 </Col>
