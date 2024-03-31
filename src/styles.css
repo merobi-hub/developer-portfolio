@@ -3,3 +3,28 @@
     margin: 0;
     box-sizing: inherit;
 }
+
+.hamburger {
+    border: '0';
+    height: '40px';
+    width: '40px';
+    border-radius: '50%';
+    background-color: '#283b8b';
+    cursor: 'pointer';
+    transition: 'background-color 0.2s ease-in-out';
+    position: 'absolute';
+    top: '50%';
+    transform: 'translateY(-50%)';
+    display: 'none';
+}
+
+.button {
+    height: '5px';
+    width: '5px';
+}   
+
+@media screen and (max-width: '768px') {
+    .hamburger {
+        display: 'block';
+    }
+}

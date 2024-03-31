@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import { useRef } from 'react';
 import { Helmet } from 'react-helmet';
 import { useForm } from 'react-hook-form';
 import {
@@ -6,7 +6,7 @@ import {
     Card
 } from '@material-ui/core';
 import { RouteComponentProps } from 'react-router-dom';
-import karma_typewriter from '../../assets/images/karma_typewriter.jpg';
+import karma_typewriter from '../../assets/images/karma_typewriter.webp';
 import { Navbar } from '../../components';
 import { Container, Row, Col } from 'reactstrap';
 import CardContent from '@material-ui/core/CardContent';
@@ -33,7 +33,6 @@ const useStyles = makeStyles({
     },
     main: {
         display: 'flex',
-        // flexDirection: 'row',
         backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${karma_typewriter});`,
         width: '100%',
         height: '100%',
@@ -46,7 +45,7 @@ const useStyles = makeStyles({
         textAlign: 'center',
         width: 325,
         marginTop: 75,
-        marginLeft: '35%'
+        margin: '0 auto',
     },
     formTitle: {
         marginBottom: 20
@@ -54,6 +53,9 @@ const useStyles = makeStyles({
     formSpacing: {
         marginBottom: 10
     },
+    contact_col: {
+        display: 'flex'
+    }
 });
 
 const theme = createTheme({
@@ -109,44 +111,48 @@ export const Contact = ( props:ContactProps ) => {
                 <Container>
                     <ThemeProvider theme={theme}>
                         <Row className="justify-content-md-center">
-                            <Col md="6" sm="4">
+                            <Col md="6" sm="4" className={classes.contact_col}>
                                 <Card className={classes.formCardDims}>
                                     <CardContent>
                                         <form ref={form} onSubmit={sendEmail}>
                                             <Typography className={classes.formTitle} variant="h4" component="h2">
-                                                Contact Form
+                                                Contact
                                             </Typography>
                                             <Typography className={classes.formSpacing} variant="h5" component="h2" color="textSecondary">
                                                 <label htmlFor="from_name">Name</label>
                                                 <br />
                                                 <input
-                                                id="from_name"
-                                                placeholder="name"
-                                                {...register("name", { required: true, maxLength: 60, pattern: /^[ A-Za-z]+$/i })} /> 
+                                                    id="from_name"
+                                                    placeholder="name"
+                                                    {...register("name", { required: true, maxLength: 60, pattern: /^[ A-Za-z]+$/i })} 
+                                                /> 
                                                 { errors.name?.message }                                           
                                             </Typography>
                                             <Typography className={classes.formSpacing} variant="h5" component="h2" color="textSecondary">
                                                 <label htmlFor="from_email">E-mail</label>
                                                 <br />
                                                 <input 
-                                                id="from_email"
-                                                type="email"
-                                                placeholder="e-mail address" 
-                                                {...register("email", { required: true })} />
+                                                    id="from_email"
+                                                    type="email"
+                                                    placeholder="e-mail address" 
+                                                    {...register("email", { required: true })} 
+                                                />
                                                 { errors.email?.message }
                                             </Typography>
                                             <Typography className={classes.formSpacing} variant="h5" component="h2" color="textSecondary">
                                                 <label htmlFor="message">Message</label>
                                                 <br />
                                                 <textarea 
-                                                id="message"
-                                                placeholder="message"
-                                                {...register("message", { required: true, maxLength: 1500, pattern: /^[ A-Za-z]+$/i })}/>
+                                                    id="message"
+                                                    placeholder="message"
+                                                    {...register("message", { required: true, maxLength: 1500, pattern: /^[ A-Za-z]+$/i })}
+                                                />
                                                 { errors.message?.message }
                                             </Typography>
                                             <input
                                                 type="submit"
-                                                className="btn btn-primary"                                               
+                                                className="btn btn-primary"
+                                                value="Submit"                                               
                                             />
                                         </form>
                                     </CardContent>

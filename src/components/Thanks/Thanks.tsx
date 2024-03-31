@@ -1,4 +1,3 @@
-import React from 'react';
 import { Helmet } from 'react-helmet';
 import { Container, Row, Col } from 'reactstrap';
 import { makeStyles } from '@material-ui/core/styles';
@@ -6,7 +5,7 @@ import { RouteComponentProps } from 'react-router-dom';
 import { Navbar } from '../../components';
 import { ThemeProvider } from '@material-ui/core';
 import { createTheme } from '@material-ui/core/styles';
-import karma_typewriter from '../../assets/images/karma_typewriter.jpg';
+import karma_typewriter from '../../assets/images/karma_typewriter.webp';
 import Typography from '@material-ui/core/Typography';
 
 interface ThanksProps{
@@ -51,12 +50,11 @@ const useStyles = makeStyles({
     }
 });
 
-
 const theme = createTheme({
     typography: { 
         fontFamily: 'Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace'
     },
-  });
+});
 
 export const Thanks = ( props:ThanksProps ) => {
     const classes = useStyles();

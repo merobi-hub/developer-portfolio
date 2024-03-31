@@ -1,6 +1,6 @@
 import { Container, Row, Col } from 'reactstrap';
 import { RouteComponentProps } from 'react-router-dom';
-import karma_typewriter from '../../assets/images/karma_typewriter.jpg';
+import karma_typewriter from '../../assets/images/karma_typewriter.webp';
 import { Navbar } from '../../components';
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
@@ -9,7 +9,8 @@ import { ThemeProvider } from '@material-ui/core';
 import { createTheme } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import { Helmet } from 'react-helmet';
-
+import resume_pdf from '../../assets/files/Robinson_TechCommMng_Resume.pdf';
+import { FaFileDownload } from "react-icons/fa";
 
 interface ResumeProps{
     history: RouteComponentProps['history'], //stores info needed for user navigation of site
@@ -44,7 +45,7 @@ const useStyles = makeStyles({
         marginBottom: '5em',
         width: '16em',
         height: '16em',
-        padding: '1.5em'
+        padding: '1.5em',
     },
     nameCardSpacing: {
         marginBottom: '0.5em'
@@ -53,7 +54,7 @@ const useStyles = makeStyles({
         marginTop: '5em',
         minWidth: '56em',
         height: '16em',
-        padding: '1.5em'
+        padding: '1.5em',
     },
     contactText: {
         color: 'black',
@@ -68,7 +69,7 @@ const useStyles = makeStyles({
         marginBottom: '5em',
         width: '16em',
         minHeight: '50em',
-        padding: '1.5em'
+        padding: '1.5em',
     },
     skillsText: {
         fontSize: 15,
@@ -82,7 +83,7 @@ const useStyles = makeStyles({
         marginBottom: '5em',
         minWidth: '56em',
         minHeight: '50em',
-        padding: '1.5em' 
+        padding: '1.5em',
     },
     experienceTitle: {
         marginTop: '1em',
@@ -102,6 +103,27 @@ const useStyles = makeStyles({
     articlesLink: {
         color: 'black',
         textDecorationLine: 'none'
+    },
+    download_col: {
+        display: 'flex'
+    },
+    download_a: {
+        marginTop: '5em',
+        marginLeft: 'auto',
+        marginRight: 'auto',
+        padding: '1.5em 1.5em',
+        backgroundColor: '#0d6efd',
+        color: 'white',
+        border: 'none',
+        borderRadius: '0.35em',
+        textDecoration: 'none',
+        fontFamily: 'Arial, Helvetica, sans-serif',
+        '&:hover': {
+            backgroundColor: '#0a53be'
+        }
+    },
+    download_icon: {
+        color: 'white',
     }
 });
 
@@ -109,7 +131,7 @@ const theme = createTheme({
     typography: { 
         fontFamily: 'Arial, Helvetica, sans-serif'
     },
-  });
+});
 
 export const Resume = ( props:ResumeProps ) => {
     const classes = useStyles();
@@ -124,6 +146,11 @@ export const Resume = ( props:ResumeProps ) => {
                     <Container>
                         <ThemeProvider theme={theme}>
                             <Row>
+                                <Col md sm className={classes.download_col}>
+                                    <a className={classes.download_a} href={resume_pdf} download="Robinson_resume"><FaFileDownload className={classes.download_icon}/> Download</a>
+                                </Col>
+                            </Row>
+                            <Row>
                                 <Col md sm>
                                     <Card className={classes.nameCardDims}>
                                         <CardContent>
@@ -131,7 +158,7 @@ export const Resume = ( props:ResumeProps ) => {
                                                 Michael Robinson
                                             </Typography>
                                             <Typography className={classes.nameCardSpacing} variant="h5" color="textSecondary">
-                                                Community Manager
+                                                Technical Community Manager
                                             </Typography>
                                         </CardContent>
                                     </Card>
@@ -242,19 +269,19 @@ export const Resume = ( props:ResumeProps ) => {
                                             <Typography className={classes.skillsText} variant="body2" component="p">
                                                 <ul>
                                                                                                 
-                                                <li>Agile methodology</li>
+                                                    <li>Agile methodology</li>
 
-                                                <li>Experienced presenter</li>
+                                                    <li>Experienced presenter</li>
 
-                                                <li>Experienced editor</li>
+                                                    <li>Experienced editor</li>
 
-                                                <li>Experienced teacher</li>
+                                                    <li>Experienced teacher</li>
 
-                                                <li>OS: Windows, Linux, MacOS</li>
+                                                    <li>OS: Windows, Linux, MacOS</li>
 
-                                                <li>Published author</li>
+                                                    <li>Published author</li>
 
-                                                </ul>
+                                                </ul>                                                
                                             </Typography>
                                         </CardContent>
                                     </Card>
@@ -269,7 +296,7 @@ export const Resume = ( props:ResumeProps ) => {
                                                 Astronomer
                                             </Typography>
                                             <Typography variant="h6" color="textSecondary">
-                                                Community Manager, May 2023-present
+                                                Community Manager (promotion with add'l responsibilities), May 2023-present
                                             </Typography>
                                             <Typography variant="h6" color="textSecondary">
                                                 Software Engineer, Developer Relations, March 2022-May 2023

@@ -5,6 +5,13 @@ import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles.css';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import ReactGA from 'react-ga4';
+
+ReactGA.initialize(
+  'G-R4RZ145T3T', {
+    gaOptions: {cookie_flags: 'SameSite=none; Secure'}
+  }
+);
 
 ReactDOM.render(
   <React.StrictMode>
@@ -23,7 +30,4 @@ ReactDOM.render(
   document.getElementById('root')
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+reportWebVitals(console.log);
