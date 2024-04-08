@@ -11,23 +11,29 @@ const useStyles = makeStyles({
     },
     nav: {
         display: 'block',
+        borderRadius: 5,
+        marginTop: '1em',
+        marginBottom: '1em',
         padding: '1em',
         color: 'black',
         textDecoration: 'none',
         textTransform: 'uppercase',
-        // "&:hover": {
-        //     background: 'gray'
-        // },
+        "&:hover": {
+            background: '#f0f0f0'
+        },
     },
     nav_a: {
         display: 'block',
+        borderRadius: 5,
+        marginTop: '1em',
+        marginBottom: '1em',
         padding: '1em',
         color: 'black',
         textDecoration: 'none',
         textTransform: 'uppercase',
-        // "&:hover": {
-        //     background: 'gray'
-        // },
+        "&:hover": {
+            background: '#f0f0f0'
+        },
     },
     navbar_container: {
         display: 'flex',
