@@ -1,9 +1,3 @@
-// export type Project =
-//   "img_path" | "description_general" | "title" | "description_specific" | "tools_1" | "tools_2", 
-//   string,
-//   "links",
-//   Array<string>;
-
 export type Project = {
   "img_path": string,
   "description_general": string,
