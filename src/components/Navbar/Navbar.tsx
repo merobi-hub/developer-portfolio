@@ -15,6 +15,9 @@ const useStyles = makeStyles({
         color: 'black',
         textDecoration: 'none',
         textTransform: 'uppercase',
+        // "&:hover": {
+        //     background: 'gray'
+        // },
     },
     nav_a: {
         display: 'block',
@@ -22,6 +25,9 @@ const useStyles = makeStyles({
         color: 'black',
         textDecoration: 'none',
         textTransform: 'uppercase',
+        // "&:hover": {
+        //     background: 'gray'
+        // },
     },
     navbar_container: {
         display: 'flex',
@@ -35,7 +41,7 @@ const useStyles = makeStyles({
     },
     nav_div: {
         margin: '0 auto'
-    }
+    },
 });                
             
 export const Navbar = () => {

@@ -41,11 +41,13 @@ const useStyles = makeStyles({
         backgroundPosition: 'center center',
         position: 'absolute'
     },
+    submain: {
+        margin: '0 auto',
+    },
     formCardDims: {
         textAlign: 'center',
-        width: 325,
+        width: 350,
         marginTop: 75,
-        margin: '0 auto',
     },
     formTitle: {
         marginBottom: 20
@@ -55,7 +57,7 @@ const useStyles = makeStyles({
     },
     contact_col: {
         display: 'flex'
-    }
+    },
 });
 
 const theme = createTheme({
@@ -74,12 +76,12 @@ type FormData = {
     name: string;
     email: string;
     message: string;
-}
+};
 
 export const Contact = ( props:ContactProps ) => {
 
     const { register, formState: { errors } } = useForm<FormData> ({
-        resolver: yupResolver(schema)
+        resolver: yupResolver(schema),
     });
 
     const form: any = useRef();
@@ -108,10 +110,10 @@ export const Contact = ( props:ContactProps ) => {
         </Helmet>
             <Navbar />
             <div className={classes.main}>
-                <Container>
+                <div className={classes.submain}>
                     <ThemeProvider theme={theme}>
-                        <Row className="justify-content-md-center">
-                            <Col md="6" sm="4" className={classes.contact_col}>
+                        <div className="justify-content-md-center">
+                            <Col md sm className={classes.contact_col}>
                                 <Card className={classes.formCardDims}>
                                     <CardContent>
                                         <form ref={form} onSubmit={sendEmail}>
@@ -158,19 +160,18 @@ export const Contact = ( props:ContactProps ) => {
                                     </CardContent>
                                 </Card>  
                             </Col>
-                        </Row>
+                        </div>
                     </ThemeProvider>
-                </Container>
+                </div>
             </div>
             <script type="text/javascript"
                 src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
             </script>
             <script type="text/javascript">
-                (function(){
-                    emailjs.init("PYuvALLMBhd_vI3FU")
-                })();
+                {/*(function(){*/}
+                    emailjs.init("PYuvALLMBhd_vI3FU");
+                {/*})();*/}
             </script>
         </div>
     );
 }
-

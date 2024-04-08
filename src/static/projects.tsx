@@ -1,7 +1,18 @@
-export type Project = Record<
-  "img_path" | "description_general" | "title" | "description_specific" | "tools_1" | "tools_2" | "github" | "website", 
-  string
->
+// export type Project =
+//   "img_path" | "description_general" | "title" | "description_specific" | "tools_1" | "tools_2", 
+//   string,
+//   "links",
+//   Array<string>;
+
+export type Project = {
+  "img_path": string,
+  "description_general": string,
+  "title": string, 
+  "description_specific": string,
+  "tools_1": string,
+  "tools_2": string,
+  "links":  { [key: string]: string }
+};
 
 export const Projects: Array<Project> = [
   {
@@ -11,8 +22,7 @@ export const Projects: Array<Project> = [
     description_specific: 'Webpage redesign and project marketing improvements',
     tools_1: 'React, Typescript',
     tools_2: 'MaterialUI, Docusaurus',
-    github: 'https://github.com/MarquezProject/marquez/tree/main/docs/v2',
-    website: 'https://marquezproject.ai'
+    links: {'github': 'https://github.com/MarquezProject/marquez/tree/main/docs/v2', 'website': 'https://marquezproject.ai'}
   },
   {
     img_path: './images/OL_ecosystem.png',
@@ -21,8 +31,7 @@ export const Projects: Array<Project> = [
     description_specific: 'Responsive webpage for displaying integrations',
     tools_1: 'React, Typescript',
     tools_2: 'MaterialUI, Docusaurus',
-    github: 'https://github.com/OpenLineage/docs/blob/main/src/pages/ecosystem.tsx',
-    website: 'https://openlineage.io/ecosystem'
+    links: {'github': 'https://github.com/OpenLineage/docs/blob/main/src/pages/ecosystem.tsx', 'website': 'https://openlineage.io/ecosystem'}
   },
   {
     img_path: './images/openlineage_quickstart.png',
@@ -31,8 +40,7 @@ export const Projects: Array<Project> = [
     description_specific: 'Guide for getting started with OpenLineage+Marquez',
     tools_1: 'Docker, OpenLineage, Marquez, Astro',
     tools_2: 'Markdown, Docusaurus',
-    github: 'https://github.com/OpenLineage/docs/blob/main/docs/guides/airflow-quickstart.md',
-    website: 'https://openlineage.io/docs/guides/airflow-quickstart'
+    links: {'github': 'https://github.com/OpenLineage/docs/blob/main/docs/guides/airflow-quickstart.md', 'website': 'https://openlineage.io/docs/guides/airflow-quickstart'}
   },
   {
     img_path: './images/slack_archive.png',
@@ -41,8 +49,7 @@ export const Projects: Array<Project> = [
     description_specific: 'Slack history site created using OSS tools',
     tools_1: 'slack-export-viewer, GitHub',
     tools_2: 'Slack',
-    github: 'https://github.com/OpenLineage/slack-archives',
-    website: 'https://openlineage.github.io/slack-archives/'
+    links: {'github': 'https://github.com/OpenLineage/slack-archives', 'website': 'https://openlineage.github.io/slack-archives/'}
   },
   {
     img_path: './images/ol_survey_form.png',
@@ -51,8 +58,7 @@ export const Projects: Array<Project> = [
     description_specific: 'Annual community survey',
     tools_1: 'Google forms',
     tools_2: 'Slack',
-    github: 'https://openlineage.io/blog/ecosystem-survey', //blog
-    website: 'https://docs.google.com/forms/d/e/1FAIpQLSd967NQ6avQcbkXGVy5I5X549yzDJUXsjeOvt9u1ENepkWwXg/viewform?pli=1', //survey
+    links: {'blog': 'https://openlineage.io/blog/ecosystem-survey', 'survey': 'https://docs.google.com/forms/d/e/1FAIpQLSd967NQ6avQcbkXGVy5I5X549yzDJUXsjeOvt9u1ENepkWwXg/viewform?pli=1'}
   },
   {
     img_path: './images/ol_survey_page.png',
@@ -61,8 +67,7 @@ export const Projects: Array<Project> = [
     description_specific: 'Static webpage for displaying infographic',
     tools_1: 'Typescript, Docusaurus',
     tools_2: 'CSS',
-    github: 'https://github.com/OpenLineage/docs/blob/main/src/pages/survey/index.tsx',
-    website: 'https://openlineage.io/survey',
+    links: {'github': 'https://github.com/OpenLineage/docs/blob/main/src/pages/survey/index.tsx', 'website': 'https://openlineage.io/survey'}
   },
   {
     img_path: './images/survey_crop.png',
@@ -71,8 +76,7 @@ export const Projects: Array<Project> = [
     description_specific: 'Static webpage for displaying infographic',
     tools_1: 'Javascript, Hugo',
     tools_2: 'CSS',
-    github: 'https://github.com/apache/airflow-site/blob/main/landing-pages/site/content/en/survey/_index.html',
-    website: 'https://airflow.apache.org/survey',
+    links: {'github': 'https://github.com/apache/airflow-site/blob/main/landing-pages/site/content/en/survey/_index.html', 'website': 'https://airflow.apache.org/survey'}
   },
   {
     img_path: './images/airflow_community_crop.png',
@@ -81,8 +85,7 @@ export const Projects: Array<Project> = [
     description_specific: 'Redesign of static webpage employing CSS grid ',
     tools_1: 'Javascript, Hugo',
     tools_2: 'CSS',
-    github: 'https://github.com/apache/airflow-site/blob/main/landing-pages/site/content/en/community/_index.html',
-    website: 'https://airflow.apache.org/community',
+    links: {'github': 'https://github.com/apache/airflow-site/blob/main/landing-pages/site/content/en/community/_index.html', 'website': 'https://airflow.apache.org/community'}
   },
   {
     img_path: './images/changes_screenshot.png',
@@ -91,8 +94,7 @@ export const Projects: Array<Project> = [
     description_specific: 'Script for adding changes to a changelog',
     tools_1: 'Python, GitHub API',
     tools_2: 'Click, Typing',
-    github: 'https://github.com/OpenLineage/OpenLineage/blob/main/dev/get_changes.py',
-    website: '',
+    links: {'github': 'https://github.com/OpenLineage/OpenLineage/blob/main/dev/get_changes.py'}
   },
   {
     img_path: './images/contributors_screenshot.png',
@@ -101,8 +103,7 @@ export const Projects: Array<Project> = [
     description_specific: 'Script for getting & exporting contributor stats',
     tools_1: 'Python, GitHub API',
     tools_2: 'Pendulum, CSV',
-    github: 'https://github.com/OpenLineage/OpenLineage/blob/main/dev/get_contributor_stats.py',
-    website: '',
+    links: {'github': 'https://github.com/OpenLineage/OpenLineage/blob/main/dev/get_contributor_stats.py'}
   },
   {
     img_path: './images/flights_screenshot.png',
@@ -111,8 +112,7 @@ export const Projects: Array<Project> = [
     description_specific: 'Script for streaming IFOs with the OpenSky API',
     tools_1: 'Python, Requests, Click, Datetime',
     tools_2: 'OpenSky API, country-bounding-boxes',
-    github: 'https://github.com/merobi-hub/get-local-flights',
-    website: '',
+    links: {'github': 'https://github.com/merobi-hub/get-local-flights'}
   },
   {
     img_path: '/images/library_scrnshot.png',
@@ -121,8 +121,7 @@ export const Projects: Array<Project> = [
     description_specific: 'Catalog with data from Google Books API, Blog',
     tools_1: 'Python, Flask, Bootstrap, Gunicorn, Postgres',
     tools_2: 'SQLAlchemy, Werkzeug, Google Books API, Great Expectations',
-    github: 'https://github.com/merobi-hub/lantern-library-online',
-    website: 'https://lantern-library-online.herokuapp.com',
+    links: {'github': 'https://github.com/merobi-hub/lantern-library-online', 'website': 'https://lantern-library-online.herokuapp.com'}
   },
   {
     img_path: '/images/portfolio.png',
@@ -131,8 +130,7 @@ export const Projects: Array<Project> = [
     description_specific: 'Personal portfolio website with form',
     tools_1: 'TypeScript, React, Bootstrap',
     tools_2: 'MaterialUI, Emailjs, Firebase',
-    github: 'https://github.com/merobi-hub/portfolio',
-    website: '',
+    links: {'github': 'https://github.com/merobi-hub/portfolio'}
   },
   {
     img_path: '/images/add_copyright.png',
@@ -141,8 +139,7 @@ export const Projects: Array<Project> = [
     description_specific: 'Script for adding a copyright to a project',
     tools_1: 'Python, OS, Sys',
     tools_2: 'Bash, Markdown',
-    github: 'https://github.com/merobi-hub/add-copyright',
-    website: '',
+    links: {'github': 'https://github.com/merobi-hub/add-copyright'}
   },
   {
     img_path: '/images/license_updater.png',
@@ -151,8 +148,7 @@ export const Projects: Array<Project> = [
     description_specific: "Script for updating an open-source project's license",
     tools_1: 'Python, OS',
     tools_2: 'Bash, Markdown',
-    github: 'https://github.com/merobi-hub/license-updater',
-    website: '',
+    links: {'github': 'https://github.com/merobi-hub/license-updater'}
   },
   {
     img_path: '/images/car_api.png',
@@ -161,8 +157,7 @@ export const Projects: Array<Project> = [
     description_specific: 'User-generated API for collectors',
     tools_1: 'TypeScript, MaterialUI',
     tools_2: 'Firebase, Insomnia, React',
-    github: 'https://github.com/merobi-hub/operators61-week8-car-inventory-react',
-    website: 'https://car-inventory-mr.web.app/', //Heroku
+    links: {'github': 'https://github.com/merobi-hub/operators61-week8-car-inventory-react', 'heroku': 'https://car-inventory-mr.web.app/'}
   },
   {
     img_path: '/images/attendance_home.png',
@@ -171,8 +166,7 @@ export const Projects: Array<Project> = [
     description_specific: 'Lightweight attendance tracker with Google login',
     tools_1: 'OAuthLib, Python, Flask, SQLAlchemy, Psycopg2, Datetime',
     tools_2: 'Jinja, Bootstrap, WTF, Werkzeug, Login, Flash, Heroku',
-    github: 'https://github.com/merobi-hub/attendance_tracker',
-    website: 'https://attendance-keeper.herokuapp.com/', //Heroku
+    links: {'github': 'https://github.com/merobi-hub/attendance_tracker', 'heroku': 'https://attendance-keeper.herokuapp.com/'}
   },
   {
     img_path: '/images/weather_app_screenshot.png',
@@ -181,8 +175,7 @@ export const Projects: Array<Project> = [
     description_specific: 'Searchable weather app',
     tools_1: 'JavaScript, Axios, React',
     tools_2: 'Regex, Firebase, OpenWeatherMap API',
-    github: 'https://github.com/merobi-hub/operators-week7-weather-api',
-    website: 'https://weather-df750.web.app/', //Firebase
+    links: {'github': 'https://github.com/merobi-hub/operators-week7-weather-api', 'firebase': 'https://weather-df750.web.app/'}
   },
   {
     img_path: '/images/racer.png',
@@ -191,9 +184,6 @@ export const Projects: Array<Project> = [
     description_specific: 'Searchable sports data app',
     tools_1: 'JavaScript, Axios, React, Regex',
     tools_2: 'Firebase, Ergast Developer API',
-    github: 'https://github.com/merobi-hub/operators-week7-day3-hw',
-    website: 'https://racer-data-b0f20.web.app/', //Firebase
+    links: {'github': 'https://github.com/merobi-hub/operators-week7-day3-hw', 'firebase': 'https://racer-data-b0f20.web.app/'}
   },
-
-
 ]

@@ -12,7 +12,7 @@ import karma_typewriter from '../../assets/images/karma_typewriter.webp';
 import { Navbar } from '../../components';
 import { ThemeProvider } from '@material-ui/core';
 import { createTheme } from '@material-ui/core/styles';
-import { Projects, Project } from '../../static/projects';
+import { Project, Projects } from '../../static/projects';
 
 interface PortfolioProps{
     history: RouteComponentProps['history'], //stores info needed for user navigation of site
@@ -95,25 +95,24 @@ export const Portfolio = ( props:PortfolioProps ) => {
                                                 />
                                                 <CardContent>
                                                     <Typography className={classes.title} color="textSecondary" gutterBottom>
-                                                    {project.description_general}
+                                                        {project.description_general}
                                                     </Typography>
                                                     <Typography variant="h5" component="h2">
-                                                    {project.title}
+                                                        {project.title}
                                                     </Typography>
                                                     <Typography className={classes.pos} color="textSecondary">
-                                                    {project.description_specific}
+                                                        {project.description_specific}
                                                     </Typography>
                                                     <Typography variant="body2" component="p">
-                                                    {project.tools_1}
-                                                    <br />
-                                                    {project.tools_2}
+                                                        {project.tools_1}
+                                                        <br />
+                                                        {project.tools_2}
                                                     </Typography>
                                                 </CardContent>
                                                 <CardActions>
-                                                    <Button size="small" href={project.github}>GitHub</Button>
-                                                    {project.website?
-                                                    <Button size="small" href={project.website}>Website</Button>
-                                                    :''}
+                                                    {Object.entries(project.links).map(([key, value]) =>
+                                                        <Button size="small" href={value}>{key}</Button>
+                                                    )}
                                                 </CardActions>
                                             </Card>
                                         </Col>
