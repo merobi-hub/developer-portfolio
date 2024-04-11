@@ -57,7 +57,7 @@ export const Projects: Array<Project> = [
   {
     img_path: './images/ol_survey_page.png',
     description_general: 'Landing Page - OSS Contribution',
-    title: 'OpenLineage Ecosystem Survey Results Page',
+    title: 'Ecosystem Survey Results Page',
     description_specific: 'Static webpage for displaying infographic',
     tools_1: 'Typescript, Docusaurus',
     tools_2: 'CSS',
