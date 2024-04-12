@@ -9,7 +9,7 @@ import { ThemeProvider } from '@material-ui/core';
 import { createTheme } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import { Helmet } from 'react-helmet';
-import resume_pdf from '../../assets/files/Robinson_TechCommMng_Resume.pdf';
+import resume_pdf from '../../assets/files/Robinson_TechCommMng_Resume_web.pdf';
 import { FaFileDownload } from "react-icons/fa";
 
 interface ResumeProps{
@@ -54,7 +54,7 @@ const useStyles = makeStyles({
         marginTop: '5em',
         minWidth: '56em',
         height: '16em',
-        padding: '1.5em',
+        padding: '1.5em', 
     },
     contactText: {
         color: 'black',
@@ -63,6 +63,9 @@ const useStyles = makeStyles({
     contactCardSpacing: {
         marginTop: '2em',
         marginBottom: '0.5em'
+    },
+    contactCardContent: {
+        paddingTop: '3em'
     },
     skillsCardDims: {
         marginTop: '0em',
@@ -165,16 +168,16 @@ export const Resume = ( props:ResumeProps ) => {
                                 </Col>
                                 <Col md sm>
                                     <Card className={classes.contactCardDims}>
-                                        <CardContent >
+                                        <CardContent className={classes.contactCardContent}>
                                             <Typography className={classes.contactCardSpacing} variant="h4" component="h2">
                                                 Contact
                                             </Typography>
-                                            <Typography variant="body2" component="p">
+{/*                                            <Typography variant="body2" component="p">
                                                 213.215.1897
                                             </Typography>
                                             <Typography variant="body2" component="p">
                                                 <a href="mailto:merobi@gmail.com" className={classes.contactText}>merobi@gmail.com</a>
-                                            </Typography>
+                                            </Typography>*/}
                                             <Typography variant="body2" component="p">
                                                 <a href="https://www.linkedin.com/in/michael-robinson/" className={classes.contactText}>linkedin.com/in/michael-robinson</a>
                                             </Typography>

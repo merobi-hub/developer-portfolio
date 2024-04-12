@@ -14,7 +14,7 @@ const useStyles = makeStyles({
         borderRadius: 5,
         marginTop: '0.5em',
         marginBottom: '0.5em',
-        padding: '0.5em 1em',
+        padding: '0.5em 2em',
         color: 'black',
         textDecoration: 'none',
         textTransform: 'uppercase',
@@ -27,7 +27,7 @@ const useStyles = makeStyles({
         borderRadius: 5,
         marginTop: '0.5em',
         marginBottom: '0.5em',
-        padding: '0.5em 1em',
+        padding: '0.5em 2em',
         color: 'black',
         textDecoration: 'none',
         textTransform: 'uppercase',
@@ -37,7 +37,6 @@ const useStyles = makeStyles({
     },
     navbar_container: {
         display: 'flex',
-        alignItems: 'right',
         listStyle: 'none',
         font: 'American Typewriter',
     },
@@ -46,7 +45,7 @@ const useStyles = makeStyles({
         width: '100%'
     },
     nav_div: {
-        margin: '0 auto'
+        margin: '0 auto',
     },
 });                
             

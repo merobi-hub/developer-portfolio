@@ -23,10 +23,10 @@ const useStyles = makeStyles({
         color: 'white',
         width: '100%',
         margin: '0 auto',
-        textAlign: 'center'
+        textAlign: 'center',
     },
     main_text_links: {
-        margin: '0 auto'
+        margin: '0 auto',
     },
     main: {
         backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${karma_typewriter});`,
