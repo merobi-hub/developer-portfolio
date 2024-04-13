@@ -26,6 +26,12 @@ interface ContactProps{
     match: RouteComponentProps['match']
 }
 
+const theme = createTheme({
+    typography: { 
+        fontFamily: 'Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace'
+    },
+});
+
 const useStyles = makeStyles({
     root: {
         padding: '0',
@@ -48,6 +54,9 @@ const useStyles = makeStyles({
         textAlign: 'center',
         width: 350,
         marginTop: 75,
+        [theme.breakpoints.down('sm')]: {
+            width: 330,
+        },
     },
     formTitle: {
         marginBottom: 20
@@ -57,12 +66,6 @@ const useStyles = makeStyles({
     },
     contact_col: {
         display: 'flex'
-    },
-});
-
-const theme = createTheme({
-    typography: { 
-        fontFamily: 'Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace'
     },
 });
 

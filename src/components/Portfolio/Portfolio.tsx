@@ -20,6 +20,27 @@ interface PortfolioProps{
     match: RouteComponentProps['match']
 }
 
+// type breakpoints = {
+//     "values": { "xs": number, "sm": number, "m": number, "l": number, "xl": number }
+// }
+
+// const breakpoints: BreakpointValues = {
+//     values: {
+//       xs: 0,
+//       sm: 640,
+//       m: 1024,
+//       l: 1200,
+//       xl: 1536
+//     }
+// };
+
+const theme = createTheme({
+    typography: { 
+        fontFamily: 'Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace'
+    },
+  });
+
+
 const useStyles = makeStyles({
     body: {
         display: 'flex',
@@ -47,9 +68,12 @@ const useStyles = makeStyles({
     card_dims: {
         minWidth: 550,
         minHeight: 550,
-        maxWidth: 425,
         marginTop: 75,
         margin: '0 auto',
+        [theme.breakpoints.down('sm')]: {
+            minWidth: 300,
+            minHeight: 'auto',
+        },
     },
     title: {
         fontSize: 14,
@@ -58,7 +82,10 @@ const useStyles = makeStyles({
         marginBottom: 12,
     },
     media: {
-        height: '20em'
+        height: '20em',
+        [theme.breakpoints.down('sm')]: {
+            height: '12em',
+        },
     },
     col: {
         display: 'flex',
@@ -66,11 +93,6 @@ const useStyles = makeStyles({
     },
   });
 
-const theme = createTheme({
-    typography: { 
-        fontFamily: 'Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace'
-    },
-  });
 
 export const Portfolio = ( props:PortfolioProps ) => {
     const classes = useStyles();
@@ -82,11 +104,12 @@ export const Portfolio = ( props:PortfolioProps ) => {
                 <Navbar />
                     <div className={classes.body}>
                         <div className={classes.main}>
+                        <ThemeProvider theme={theme}>
                             <Container className={classes.container}>
-                                <ThemeProvider theme={theme}>
+                                
                                     <Row>
                                     {Projects.map(project => 
-                                        <Col md sm className={classes.col}>
+                                        <Col className={classes.col}>
                                             <Card className={classes.card_dims}>                                  
                                                 <CardMedia 
                                                     className={classes.media}
@@ -118,8 +141,9 @@ export const Portfolio = ( props:PortfolioProps ) => {
                                         </Col>
                                     )}
                                     </Row>
-                                </ThemeProvider>
+                                
                             </Container>
+                        </ThemeProvider>
                         </div>
                     </div>
         </div>

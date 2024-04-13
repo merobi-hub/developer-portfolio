@@ -18,6 +18,12 @@ interface ResumeProps{
     match: RouteComponentProps['match']
 };
 
+const theme = createTheme({
+    typography: { 
+        fontFamily: 'Arial, Helvetica, sans-serif'
+    },
+});
+
 const useStyles = makeStyles({
     body: {
         display: 'flex',
@@ -46,15 +52,22 @@ const useStyles = makeStyles({
         width: '16em',
         height: '16em',
         padding: '1.5em',
+        [theme.breakpoints.down('sm')]: {
+            marginBottom: 0,
+        }, 
     },
     nameCardSpacing: {
         marginBottom: '0.5em'
     },
     contactCardDims: {
         marginTop: '5em',
-        minWidth: '56em',
+        width: '56em',
         height: '16em',
-        padding: '1.5em', 
+        padding: '1.5em',
+        [theme.breakpoints.down('sm')]: {
+            width: '16em !important',
+            marginBottom: '5em',
+        }, 
     },
     contactText: {
         color: 'black',
@@ -84,9 +97,12 @@ const useStyles = makeStyles({
     experienceCardDims: {
         marginTop: '0em',
         marginBottom: '5em',
-        minWidth: '56em',
+        width: '56em',
         minHeight: '50em',
         padding: '1.5em',
+        [theme.breakpoints.down('sm')]: {
+            width: '16em',
+        }, 
     },
     experienceTitle: {
         marginTop: '1em',
@@ -130,11 +146,6 @@ const useStyles = makeStyles({
     }
 });
 
-const theme = createTheme({
-    typography: { 
-        fontFamily: 'Arial, Helvetica, sans-serif'
-    },
-});
 
 export const Resume = ( props:ResumeProps ) => {
     const classes = useStyles();
