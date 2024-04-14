@@ -20,9 +20,7 @@ const useStyles = makeStyles({
     },
     nav: {
         borderRadius: 5,
-        marginTop: '0.5em',
-        marginBottom: '0.5em',
-        padding: '0.5em 2em',
+        margin: '0.25em 0',
         color: 'black',
         textDecoration: 'none',
         textTransform: 'uppercase',
@@ -30,8 +28,7 @@ const useStyles = makeStyles({
     },
     nav_a: {
         borderRadius: 5,
-        marginTop: '0.5em',
-        marginBottom: '0.5em',
+        margin: '0.25em 0',
         padding: '0 1em',
         color: 'black',
         textDecoration: 'none',
