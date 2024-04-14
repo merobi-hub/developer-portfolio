@@ -20,20 +20,6 @@ interface PortfolioProps{
     match: RouteComponentProps['match']
 }
 
-// type breakpoints = {
-//     "values": { "xs": number, "sm": number, "m": number, "l": number, "xl": number }
-// }
-
-// const breakpoints: BreakpointValues = {
-//     values: {
-//       xs: 0,
-//       sm: 640,
-//       m: 1024,
-//       l: 1200,
-//       xl: 1536
-//     }
-// };
-
 const theme = createTheme({
     typography: { 
         fontFamily: 'Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace'

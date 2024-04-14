@@ -6,8 +6,8 @@ Steps:
 
 ```
 nvm use 16
-npm run start
-npm run build
+npm run start // for local development
+npm run build 
 nvm use 18
 firebase deploy --only-hosting
 ```

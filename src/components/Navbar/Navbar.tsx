@@ -1,5 +1,14 @@
 import { makeStyles } from '@material-ui/core';
 import { Link } from 'react-router-dom';
+import { Nav, NavItem, NavLink } from 'reactstrap';
+import { ThemeProvider } from '@material-ui/core';
+import { createTheme } from '@material-ui/core/styles';
+
+const theme = createTheme({
+    typography: { 
+        fontFamily: 'Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace'
+    },
+});
 
 const useStyles = makeStyles({
     root: {
@@ -10,7 +19,6 @@ const useStyles = makeStyles({
         fontFamily: 'Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace',
     },
     nav: {
-        display: 'block',
         borderRadius: 5,
         marginTop: '0.5em',
         marginBottom: '0.5em',
@@ -18,16 +26,13 @@ const useStyles = makeStyles({
         color: 'black',
         textDecoration: 'none',
         textTransform: 'uppercase',
-        "&:hover": {
-            background: '#f0f0f0'
-        },
+
     },
     nav_a: {
-        display: 'block',
         borderRadius: 5,
         marginTop: '0.5em',
         marginBottom: '0.5em',
-        padding: '0.5em 2em',
+        padding: '0 1em',
         color: 'black',
         textDecoration: 'none',
         textTransform: 'uppercase',
@@ -35,10 +40,10 @@ const useStyles = makeStyles({
             background: '#f0f0f0'
         },
     },
-    navbar_container: {
-        display: 'flex',
-        listStyle: 'none',
-        font: 'American Typewriter',
+    nav_link: {
+        color: 'black',
+        textDecoration: 'none',
+        textTransform: 'uppercase',
     },
     outer: {
         display: 'flex',
@@ -46,27 +51,55 @@ const useStyles = makeStyles({
     },
     nav_div: {
         margin: '0 auto',
+        font: 'American Typewriter',
     },
 });                
             
 export const Navbar = () => {
     const classes = useStyles();
     return (
-        <div className={classes.root}>
-            <div className={classes.main}>
-                <div className={classes.outer}>
-                    <div className={classes.nav_div}>  
-                    <nav>
-                        <div className={classes.navbar_container}>
-                            <li><Link to="/" className={classes.nav}>Home</Link></li>
-                            <li><Link to="/portfolio" className={classes.nav_a}>Portfolio</Link></li>
-                            <li><Link to="/resume" className={classes.nav_a}>Resume</Link></li>
-                            <li><Link to="/contact" className={classes.nav_a}>Contact</Link></li>
+        <ThemeProvider theme={theme}>
+            <div className={classes.root}>
+                <div className={classes.main}>
+                    <div className={classes.outer}>
+                        <div className={classes.nav_div}>
+                            <Nav
+                                className={classes.nav} 
+                                vertical={theme.breakpoints.down('sm')}
+                            >
+                              <NavItem className={classes.nav_a}>
+                                <NavLink className={classes.nav_link}
+                                  href="/"
+                                >
+                                  Home
+                                </NavLink>
+                              </NavItem>
+                              <NavItem className={classes.nav_a}>
+                                <NavLink className={classes.nav_link} 
+                                  href="/portfolio"
+                                >
+                                  Portfolio
+                                </NavLink>
+                              </NavItem>
+                              <NavItem className={classes.nav_a}>
+                                <NavLink className={classes.nav_link} 
+                                  href="/resume"
+                                >
+                                  Resume
+                                </NavLink>
+                              </NavItem>
+                              <NavItem className={classes.nav_a}>
+                                <NavLink className={classes.nav_link}
+                                  href="/contact"
+                                >
+                                  Contact
+                                </NavLink>
+                              </NavItem>
+                            </Nav>
                         </div>
-                    </nav>
                     </div>
                 </div>
             </div>
-        </div>
+        </ThemeProvider>
     )
 };
