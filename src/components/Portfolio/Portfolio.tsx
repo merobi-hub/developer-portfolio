@@ -12,7 +12,7 @@ import karma_typewriter from '../../assets/images/karma_typewriter.webp';
 import { Navbar } from '../../components';
 import { ThemeProvider } from '@material-ui/core';
 import { createTheme } from '@material-ui/core/styles';
-import { Project, Projects } from '../../static/projects';
+import { Projects } from '../../static/projects';
 
 interface PortfolioProps{
     history: RouteComponentProps['history'], //stores info needed for user navigation of site
@@ -92,8 +92,7 @@ export const Portfolio = ( props:PortfolioProps ) => {
                         <div className={classes.main}>
                         <ThemeProvider theme={theme}>
                             <Container className={classes.container}>
-                                
-                                    <Row>
+                                <Row>
                                     {Projects.map(project => 
                                         <Col className={classes.col}>
                                             <Card className={classes.card_dims}>                                  
@@ -126,8 +125,7 @@ export const Portfolio = ( props:PortfolioProps ) => {
                                             </Card>
                                         </Col>
                                     )}
-                                    </Row>
-                                
+                                </Row>
                             </Container>
                         </ThemeProvider>
                         </div>

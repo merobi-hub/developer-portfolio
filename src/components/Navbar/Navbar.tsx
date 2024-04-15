@@ -1,14 +1,9 @@
 import { makeStyles } from '@material-ui/core';
-import { Link } from 'react-router-dom';
 import { Nav, NavItem, NavLink } from 'reactstrap';
 import { ThemeProvider } from '@material-ui/core';
 import { createTheme } from '@material-ui/core/styles';
 
-const theme = createTheme({
-    typography: { 
-        fontFamily: 'Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace'
-    },
-});
+const theme = createTheme({});
 
 const useStyles = makeStyles({
     root: {
@@ -16,7 +11,7 @@ const useStyles = makeStyles({
         margin: '0',
     },
     main: {
-        fontFamily: 'Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace',
+        fontFamily: 'Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace'
     },
     nav: {
         borderRadius: 5,
@@ -64,34 +59,34 @@ export const Navbar = () => {
                                 className={classes.nav} 
                                 vertical={theme.breakpoints.down('sm')}
                             >
-                              <NavItem className={classes.nav_a}>
-                                <NavLink className={classes.nav_link}
-                                  href="/"
-                                >
-                                  Home
-                                </NavLink>
-                              </NavItem>
-                              <NavItem className={classes.nav_a}>
-                                <NavLink className={classes.nav_link} 
-                                  href="/portfolio"
-                                >
-                                  Portfolio
-                                </NavLink>
-                              </NavItem>
-                              <NavItem className={classes.nav_a}>
-                                <NavLink className={classes.nav_link} 
-                                  href="/resume"
-                                >
-                                  Resume
-                                </NavLink>
-                              </NavItem>
-                              <NavItem className={classes.nav_a}>
-                                <NavLink className={classes.nav_link}
-                                  href="/contact"
-                                >
-                                  Contact
-                                </NavLink>
-                              </NavItem>
+                                <NavItem className={classes.nav_a}>
+                                    <NavLink className={classes.nav_link}
+                                        href="/"
+                                    >
+                                        Home
+                                    </NavLink>
+                                </NavItem>
+                                <NavItem className={classes.nav_a}>
+                                    <NavLink className={classes.nav_link} 
+                                        href="/portfolio"
+                                    >
+                                        Portfolio
+                                    </NavLink>
+                                </NavItem>
+                                <NavItem className={classes.nav_a}>
+                                    <NavLink className={classes.nav_link} 
+                                        href="/resume"
+                                    >
+                                        Resume
+                                    </NavLink>
+                                </NavItem>
+                                <NavItem className={classes.nav_a}>
+                                    <NavLink className={classes.nav_link}
+                                        href="/contact"
+                                    >
+                                        Contact
+                                    </NavLink>
+                                </NavItem>
                             </Nav>
                         </div>
                     </div>

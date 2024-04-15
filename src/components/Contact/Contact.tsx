@@ -1,14 +1,11 @@
 import { useRef } from 'react';
 import { Helmet } from 'react-helmet';
 import { useForm } from 'react-hook-form';
-import {
-    makeStyles,
-    Card
-} from '@material-ui/core';
+import { makeStyles, Card } from '@material-ui/core';
 import { RouteComponentProps } from 'react-router-dom';
 import karma_typewriter from '../../assets/images/karma_typewriter.webp';
 import { Navbar } from '../../components';
-import { Container, Row, Col } from 'reactstrap';
+import { Col } from 'reactstrap';
 import CardContent from '@material-ui/core/CardContent';
 import { ThemeProvider } from '@material-ui/core';
 import { createTheme } from '@material-ui/core/styles';
