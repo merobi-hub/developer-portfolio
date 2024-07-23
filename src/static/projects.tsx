@@ -10,6 +10,15 @@ export type Project = {
 
 export const Projects: Array<Project> = [
   {
+    img_path: './images/astro-best-practices.png',
+    description_general: 'Docs - Private Contribution',
+    title: 'Astro Best Practices Guides',
+    description_specific: 'Create & maintain Astro Best Practices guides',
+    tools_1: 'Astro, Airflow',
+    tools_2: 'Markdown, Docusaurus',
+    links: {'website': 'https://www.astronomer.io/docs/astro/'}
+  },
+  {
     img_path: './images/marquez_screenshot.svg',
     description_general: 'Landing Page - OSS Contribution',
     title: 'Marquez Header & Messaging Upgrades',
