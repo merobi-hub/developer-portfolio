@@ -10,8 +10,17 @@ export type Project = {
 
 export const Projects: Array<Project> = [
   {
+    img_path: './images/youtube.png',
+    description_general: 'Presentation - Community',
+    title: 'OpenLineage Update & Demo',
+    description_specific: 'Project update, config guidance, and demo',
+    tools_1: 'Astro, Airflow, Postgres, S3',
+    tools_2: 'Marquez, Colima, Zoom',
+    links: {'youtube': 'https://youtu.be/dm1Jqa0EGKE?feature=shared'}
+  },
+  {
     img_path: './images/astro-best-practices.png',
-    description_general: 'Docs - Private Contribution',
+    description_general: 'Docs - Public Contribution',
     title: 'Astro Best Practices Guides',
     description_specific: 'Create & maintain Astro Best Practices guides',
     tools_1: 'Astro, Airflow',
