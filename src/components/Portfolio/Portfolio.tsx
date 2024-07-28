@@ -52,6 +52,8 @@ const useStyles = makeStyles({
     },
     container: {},
     card_dims: {
+        backgroundColor: 'black',
+        color: 'white',
         minWidth: 550,
         minHeight: 550,
         marginTop: 75,
@@ -62,10 +64,20 @@ const useStyles = makeStyles({
         },
     },
     title: {
+        color: 'white',
         fontSize: 14,
+        borderWidth: '0px 0px 1px 0px', 
+        borderStyle: 'solid',
+        borderColor: 'light gray',
     },
     pos: {
         marginBottom: 12,
+    },
+    actions: {
+        color: 'white',
+        "&:hover": {
+            background: '#2e2e2e'
+        },
     },
     media: {
         height: '20em',
@@ -119,7 +131,7 @@ export const Portfolio = ( props:PortfolioProps ) => {
                                                 </CardContent>
                                                 <CardActions>
                                                     {Object.entries(project.links).map(([key, value]) =>
-                                                        <Button size="small" href={value}>{key}</Button>
+                                                        <Button className={classes.actions} size="small" href={value}>{key}</Button>
                                                     )}
                                                 </CardActions>
                                             </Card>

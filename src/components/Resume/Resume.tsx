@@ -47,6 +47,8 @@ const useStyles = makeStyles({
         zIndex: 1
     },
     nameCardDims: {
+        backgroundColor: 'black',
+        color: 'white',
         marginTop: '5em',
         marginBottom: '5em',
         width: '16em',
@@ -60,6 +62,7 @@ const useStyles = makeStyles({
         marginBottom: '0.5em'
     },
     contactCardDims: {
+        backgroundColor: 'black',
         marginTop: '5em',
         width: '56em',
         height: '16em',
@@ -70,7 +73,8 @@ const useStyles = makeStyles({
         }, 
     },
     contactText: {
-        color: 'black',
+        backgroundColor: 'black',
+        color: 'white',
         textDecoration: 'none'
     },
     contactCardSpacing: {
@@ -78,9 +82,12 @@ const useStyles = makeStyles({
         marginBottom: '0.5em'
     },
     contactCardContent: {
+        backgroundColor: 'black',
+        color: 'white',
         paddingTop: '3em'
     },
     skillsCardDims: {
+        backgroundColor: 'black',
         marginTop: '0em',
         marginBottom: '5em',
         width: '16em',
@@ -88,13 +95,20 @@ const useStyles = makeStyles({
         padding: '1.5em',
     },
     skillsText: {
+        color: 'white',
         fontSize: 15,
         marginBottom: '1.5em'
     },
     skillsCardSpacing: {
-        marginBottom: '0.5em'
+        marginBottom: '0.5em',
+        color: 'white',
+    },
+    skillsHeader: {
+        color: 'white',
     },
     experienceCardDims: {
+        backgroundColor: 'black',
+        color: 'white',
         marginTop: '0em',
         marginBottom: '5em',
         width: '56em',
@@ -171,7 +185,7 @@ export const Resume = ( props:ResumeProps ) => {
                                             <Typography className={classes.nameCardSpacing} variant="h3" component="h2">
                                                 Michael Robinson
                                             </Typography>
-                                            <Typography className={classes.nameCardSpacing} variant="h5" color="textSecondary">
+                                            <Typography className={classes.nameCardSpacing} variant="h5">
                                                 Technical Community Manager
                                             </Typography>
                                         </CardContent>
@@ -206,7 +220,7 @@ export const Resume = ( props:ResumeProps ) => {
                                             <Typography className={classes.skillsCardSpacing} variant="h4" component="h2">
                                                 Technical Skills
                                             </Typography>
-                                            <Typography variant="h5" color="textSecondary">
+                                            <Typography className={classes.skillsHeader} variant="h5">
                                                 Software Languages
                                             </Typography>
                                             <Typography className={classes.skillsText} variant="body2" component="p">
@@ -223,7 +237,7 @@ export const Resume = ( props:ResumeProps ) => {
                                                 
                                                 </ul>
                                             </Typography>
-                                            <Typography variant="h5" color="textSecondary">
+                                            <Typography className={classes.skillsHeader} variant="h5">
                                                 Frameworks
                                             </Typography>
                                             <Typography className={classes.skillsText} variant="body2" component="p">
@@ -239,7 +253,7 @@ export const Resume = ( props:ResumeProps ) => {
                                                 <li>Docusaurus</li> 
                                                 </ul>
                                             </Typography>
-                                            <Typography variant="h5" color="textSecondary">
+                                            <Typography className={classes.skillsHeader} variant="h5">
                                                 Design / Infra
                                             </Typography>
                                             <Typography className={classes.skillsText} variant="body2" component="p">
@@ -263,7 +277,7 @@ export const Resume = ( props:ResumeProps ) => {
                                                 
                                                 </ul>
                                             </Typography>
-                                            <Typography variant="h5" color="textSecondary">
+                                            <Typography className={classes.skillsHeader} variant="h5">
                                                 Community
                                             </Typography>
                                             <Typography className={classes.skillsText} variant="body2" component="p">
@@ -306,13 +320,13 @@ export const Resume = ( props:ResumeProps ) => {
                                             <Typography className={classes.experienceTitle} variant="h4" component="h2">
                                                 Experience
                                             </Typography>
-                                            <Typography variant="h5" color="textSecondary">
+                                            <Typography variant="h5">
                                                 Astronomer
                                             </Typography>
-                                            <Typography variant="h6" color="textSecondary">
+                                            <Typography variant="h6">
                                                 Community Manager (promotion with add'l responsibilities), May 2023-present
                                             </Typography>
-                                            <Typography variant="h6" color="textSecondary">
+                                            <Typography variant="h6">
                                                 Software Engineer, Developer Relations, March 2022-May 2023
                                             </Typography>
                                             <Typography variant="body2" component="p">
@@ -329,10 +343,10 @@ export const Resume = ( props:ResumeProps ) => {
                                                 <li>Improve the developer and user experience on projects</li>
                                                 </ul>
                                             </Typography>
-                                            <Typography variant="h5" color="textSecondary">
+                                            <Typography variant="h5">
                                                 Datakin
                                             </Typography>
-                                            <Typography variant="h6" color="textSecondary">
+                                            <Typography variant="h6">
                                                 Developer Relations Engineer, November 2021-March 2022
                                             </Typography>
                                             <Typography variant="body2" component="p">
@@ -343,10 +357,10 @@ export const Resume = ( props:ResumeProps ) => {
                                                 <li>Datakin was acquired by Astronomer in March 2022</li>
                                                 </ul>
                                             </Typography>
-                                            <Typography variant="h5" color="textSecondary">
+                                            <Typography variant="h5">
                                                 Universities and Colleges
                                             </Typography>
-                                            <Typography variant="h6" color="textSecondary">
+                                            <Typography variant="h6">
                                                 English and Writing Program Admin/Professor/Consultant, 2010-2021
                                             </Typography>
                                             <Typography variant="body2" component="p">
@@ -362,7 +376,7 @@ export const Resume = ( props:ResumeProps ) => {
                                                 <li><b>Writing Consultant</b>: Brown University Writing Center</li>
                                                 </ul>
                                             </Typography>
-                                            <Typography className={classes.capstoneSpacing} variant="h5" color="textSecondary">
+                                            <Typography className={classes.capstoneSpacing} variant="h5">
                                                 Author/Researcher, 2012-2021
                                             </Typography>
                                             <Typography variant="body2" component="p">
@@ -372,19 +386,19 @@ export const Resume = ( props:ResumeProps ) => {
                                             <Typography className={classes.experienceTitle} variant="h4" component="h2">
                                                 Education
                                             </Typography>
-                                            <Typography className={classes.capstoneSpacing} variant="h5" color="textSecondary">
+                                            <Typography className={classes.capstoneSpacing} variant="h5">
                                                 Certificate in Python and Web Development (Bootcamp)
                                             </Typography>
                                             <Typography variant="body2" component="p">
                                                 Coding Temple, Chicago, IL (Remote)
                                             </Typography>
-                                            <Typography className={classes.capstoneSpacing} variant="h5" color="textSecondary">
+                                            <Typography className={classes.capstoneSpacing} variant="h5">
                                                 Certificate in Data Science for Business Strategy
                                             </Typography>
                                             <Typography variant="body2" component="p">
                                                 University of Virginia Darden School of Business, Arlington, VA
                                             </Typography>
-                                            <Typography className={classes.capstoneSpacing} variant="h5" color="textSecondary">
+                                            <Typography className={classes.capstoneSpacing} variant="h5">
                                                 Ph.D. in English
                                             </Typography>
                                             <Typography variant="body2" component="p">
@@ -393,13 +407,13 @@ export const Resume = ( props:ResumeProps ) => {
                                             <Typography variant="body2" component="p">
                                                 Honors: Andrew M. Mellon grantee, Department dissertation fellow
                                             </Typography>
-                                            <Typography className={classes.capstoneSpacing} variant="h5" color="textSecondary">
+                                            <Typography className={classes.capstoneSpacing} variant="h5">
                                                 M.A. in English
                                             </Typography>
                                             <Typography variant="body2" component="p">
                                                 USC, Los Angeles, CA
                                             </Typography>
-                                            <Typography className={classes.capstoneSpacing} variant="h5" color="textSecondary">
+                                            <Typography className={classes.capstoneSpacing} variant="h5">
                                                 B.A. in English, summa cum laude
                                             </Typography>
                                             <Typography variant="body2" component="p">

@@ -7,6 +7,7 @@ const theme = createTheme({});
 
 const useStyles = makeStyles({
     root: {
+        backgroundColor: 'black',
         padding: '0',
         margin: '0',
     },
@@ -14,28 +15,21 @@ const useStyles = makeStyles({
         fontFamily: 'Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace'
     },
     nav: {
+        backgroundColor: 'black',
         borderRadius: 5,
         margin: '0.25em 0',
-        color: 'black',
-        textDecoration: 'none',
         textTransform: 'uppercase',
-
     },
     nav_a: {
         borderRadius: 5,
         margin: '0.25em 0',
         padding: '0 1em',
-        color: 'black',
-        textDecoration: 'none',
-        textTransform: 'uppercase',
         "&:hover": {
-            background: '#f0f0f0'
+            background: '#2e2e2e'
         },
     },
     nav_link: {
-        color: 'black',
-        textDecoration: 'none',
-        textTransform: 'uppercase',
+        color: 'white',
     },
     outer: {
         display: 'flex',

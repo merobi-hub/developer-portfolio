@@ -48,6 +48,8 @@ const useStyles = makeStyles({
         margin: '0 auto',
     },
     formCardDims: {
+        backgroundColor: 'black',
+        color: 'white',
         textAlign: 'center',
         width: 350,
         marginTop: 75,
@@ -64,6 +66,10 @@ const useStyles = makeStyles({
     contact_col: {
         display: 'flex'
     },
+    input: {
+        backgroundColor: 'black',
+        color: 'white',
+    }
 });
 
 const schema = yup.object().shape({
@@ -120,20 +126,22 @@ export const Contact = ( props:ContactProps ) => {
                                             <Typography className={classes.formTitle} variant="h4" component="h2">
                                                 Contact
                                             </Typography>
-                                            <Typography className={classes.formSpacing} variant="h5" component="h2" color="textSecondary">
+                                            <Typography className={classes.formSpacing} variant="h5" component="h2">
                                                 <label htmlFor="from_name">Name</label>
                                                 <br />
                                                 <input
+                                                    className={classes.input}
                                                     id="from_name"
                                                     placeholder="name"
                                                     {...register("name", { required: true, maxLength: 60, pattern: /^[ A-Za-z]+$/i })} 
                                                 /> 
                                                 { errors.name?.message }                                           
                                             </Typography>
-                                            <Typography className={classes.formSpacing} variant="h5" component="h2" color="textSecondary">
+                                            <Typography className={classes.formSpacing} variant="h5" component="h2">
                                                 <label htmlFor="from_email">E-mail</label>
                                                 <br />
-                                                <input 
+                                                <input
+                                                    className={classes.input} 
                                                     id="from_email"
                                                     type="email"
                                                     placeholder="e-mail address" 
@@ -141,10 +149,11 @@ export const Contact = ( props:ContactProps ) => {
                                                 />
                                                 { errors.email?.message }
                                             </Typography>
-                                            <Typography className={classes.formSpacing} variant="h5" component="h2" color="textSecondary">
+                                            <Typography className={classes.formSpacing} variant="h5" component="h2">
                                                 <label htmlFor="message">Message</label>
                                                 <br />
-                                                <textarea 
+                                                <textarea
+                                                    className={classes.input}
                                                     id="message"
                                                     placeholder="message"
                                                     {...register("message", { required: true, maxLength: 1500, pattern: /^[ A-Za-z]+$/i })}
