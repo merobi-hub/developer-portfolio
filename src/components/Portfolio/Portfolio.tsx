@@ -110,6 +110,7 @@ const useStyles = makeStyles({
         padding: '2px 4px',
         margin: '16px 16px',
         borderColor: 'white',
+        fontWeight: 'bold',
     },
     unselected_cat: {
         color: 'white',
@@ -130,7 +131,7 @@ export const Portfolio = ( props:PortfolioProps ) => {
         });
         currCat === "all" ? setItems(Projects) : setItems(selection);
     };
-    const Buttons = ({ filterItem, setItem, projectCategories }: any) => {
+    const Buttons = ({ filterItem }: any) => {
         return (
             <div>
                 {projectCategories.map((val: any) => {
@@ -168,11 +169,7 @@ export const Portfolio = ( props:PortfolioProps ) => {
                         <ThemeProvider theme={theme}>
                             <Row className={classes.buttons_row}>
                                 <Col md sm  className={classes.buttons_div}>
-                                    <Buttons 
-                                        filterItem={filterItem}
-                                        setItem={setItems}
-                                        projectCategories={projectCategories}
-                                    />
+                                    <Buttons filterItem={filterItem} />
                                 </Col>
                             </Row>
                             <Row className={classes.main_row}>
