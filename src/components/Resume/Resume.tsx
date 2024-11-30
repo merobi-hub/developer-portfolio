@@ -9,7 +9,7 @@ import { ThemeProvider } from '@material-ui/core';
 import { createTheme } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import { Helmet } from 'react-helmet';
-import resume_pdf from '../../assets/files/Robinson_TechCommMng_Resume_web.pdf';
+import resume_pdf from '../../assets/files/Robinson_DevAdv_Resume_web.pdf';
 import { FaFileDownload } from "react-icons/fa";
 
 interface ResumeProps{
@@ -31,8 +31,7 @@ const useStyles = makeStyles({
         backgroundSize: 'fill',
         backgroundRepeat: 'repeat-y',
         backgroundPosition: 'center center',
-        width: '100%',
-        height: '100%',
+        backgroundAttachment: 'fixed',
         zIndex: 0
     },
     root: {
@@ -130,11 +129,11 @@ const useStyles = makeStyles({
         textDecorationLine: 'none'
     },
     bookLink: {
-        color: 'black',
+        color: 'white',
         textDecorationLine: 'none'
     },
     articlesLink: {
-        color: 'black',
+        color: 'white',
         textDecorationLine: 'none'
     },
     download_col: {
@@ -186,7 +185,7 @@ export const Resume = ( props:ResumeProps ) => {
                                                 Michael Robinson
                                             </Typography>
                                             <Typography className={classes.nameCardSpacing} variant="h5">
-                                                Technical Community Manager
+                                                Developer Advocate
                                             </Typography>
                                         </CardContent>
                                     </Card>
@@ -324,10 +323,19 @@ export const Resume = ( props:ResumeProps ) => {
                                                 Astronomer
                                             </Typography>
                                             <Typography variant="h6">
-                                                Community Manager (promotion with add'l responsibilities), May 2023-present
+                                                Developer Advocate, May 2024-present
+                                            </Typography>
+                                            <Typography variant="body2" component="p">
+                                            <ul>
+                                                <li>Author guides, tutorials, and blog posts</li>
+                                                <li>Deliver webinars and conference presentations</li>
+                                                <li>Answer technical questions in the community</li>
+                                                <li>Create videos</li>
+                                                <li>DRI for Astro Observe content</li>
+                                                </ul>
                                             </Typography>
                                             <Typography variant="h6">
-                                                Software Engineer, Developer Relations, March 2022-May 2023
+                                                Community Manager, May 2023-April 2024
                                             </Typography>
                                             <Typography variant="body2" component="p">
                                                 <ul>
@@ -341,6 +349,17 @@ export const Resume = ( props:ResumeProps ) => {
                                                 <li>Launched, edit and publish monthly newsletter</li>
                                                 <li>Facilitate discussions and answer technical questions in the community</li>
                                                 <li>Improve the developer and user experience on projects</li>
+                                                </ul>
+                                            </Typography>
+                                            <Typography variant="h6">
+                                                Software Engineer, Developer Relations, March 2022-May 2023
+                                            </Typography>
+                                            <Typography variant="body2" component="p">
+                                            <ul>
+                                                <li>Advocate for OpenSource initiatives in conferences and blog posts</li>
+                                                <li>Facilitate discussions and answer technical questions in the community</li>
+                                                <li>Improve the developer and user experience on projects</li>
+                                                <li>Datakin was acquired by Astronomer in March 2022</li>
                                                 </ul>
                                             </Typography>
                                             <Typography variant="h5">

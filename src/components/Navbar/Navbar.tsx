@@ -1,10 +1,10 @@
 import { makeStyles } from '@material-ui/core';
-import { Nav, NavItem, NavLink } from 'reactstrap';
+import { Nav, NavItem } from 'reactstrap';
+import { NavLink } from 'react-router-dom';
 import { ThemeProvider } from '@material-ui/core';
 import { createTheme } from '@material-ui/core/styles';
 
 const theme = createTheme({});
-
 const useStyles = makeStyles({
     root: {
         backgroundColor: 'black',
@@ -17,23 +17,28 @@ const useStyles = makeStyles({
     nav: {
         backgroundColor: 'black',
         borderRadius: 5,
-        margin: '0.25em 0',
+        margin: '0.75em 0.75em',
         textTransform: 'uppercase',
     },
     nav_a: {
         borderRadius: 5,
-        margin: '0.25em 0',
-        padding: '0 1em',
+        margin: '0.15em 0.5em',
+        padding: '0.5em 1em',
         "&:hover": {
             background: '#2e2e2e'
         },
     },
     nav_link: {
         color: 'white',
+        textDecoration: 'None',
+    },
+    active_link: {
+        color: 'white',
+        textDecoration: 'None',
     },
     outer: {
         display: 'flex',
-        width: '100%'
+        width: '100%',
     },
     nav_div: {
         margin: '0 auto',
@@ -54,29 +59,30 @@ export const Navbar = () => {
                                 vertical={theme.breakpoints.down('sm')}
                             >
                                 <NavItem className={classes.nav_a}>
-                                    <NavLink className={classes.nav_link}
-                                        href="/"
+                                    <NavLink className={classes.nav_link} activeClassName={classes.active_link}
+                                        to="/"
                                     >
                                         Home
                                     </NavLink>
                                 </NavItem>
                                 <NavItem className={classes.nav_a}>
-                                    <NavLink className={classes.nav_link} 
-                                        href="/portfolio"
+                                    <NavLink className={classes.nav_link} activeClassName={classes.active_link}
+                                        to="/portfolio"
                                     >
                                         Portfolio
+
                                     </NavLink>
                                 </NavItem>
                                 <NavItem className={classes.nav_a}>
-                                    <NavLink className={classes.nav_link} 
-                                        href="/resume"
+                                    <NavLink className={classes.nav_link} activeClassName={classes.active_link}
+                                        to="/resume"
                                     >
                                         Resume
                                     </NavLink>
                                 </NavItem>
                                 <NavItem className={classes.nav_a}>
-                                    <NavLink className={classes.nav_link}
-                                        href="/contact"
+                                    <NavLink className={classes.nav_link} activeClassName={classes.active_link}
+                                        to="/contact"
                                     >
                                         Contact
                                     </NavLink>

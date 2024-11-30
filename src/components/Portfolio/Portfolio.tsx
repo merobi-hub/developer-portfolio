@@ -12,17 +12,18 @@ import karma_typewriter from '../../assets/images/karma_typewriter.webp';
 import { Navbar } from '../../components';
 import { ThemeProvider } from '@material-ui/core';
 import { createTheme } from '@material-ui/core/styles';
-import { Projects } from '../../static/projects';
+import { Projects, Project } from '../../static/projects';
+import { useState } from "react";
 
 interface PortfolioProps{
     history: RouteComponentProps['history'], //stores info needed for user navigation of site
     location: RouteComponentProps['location'],
-    match: RouteComponentProps['match']
+    match: RouteComponentProps['match'],
 }
 
 const theme = createTheme({
     typography: { 
-        fontFamily: 'Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace'
+        fontFamily: 'Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace',
     },
   });
 
@@ -34,8 +35,7 @@ const useStyles = makeStyles({
         backgroundSize: 'fill',
         backgroundRepeat: 'repeat-y',
         backgroundPosition: 'center center',
-        width: '100%',
-        height: '100%',
+        backgroundAttachment: 'fixed',
         zIndex: 0
     },
     root: {
@@ -43,14 +43,14 @@ const useStyles = makeStyles({
         margin: '0',
     },
     main: {
-        display: 'flex',
         width: '100%',
         height: '100%',
-        position: 'relative',
         zIndex: 1,
-        marginBottom: 75
+        marginBottom: 150
     },
-    container: {},
+    main_container: {
+        width: '100',
+    },
     card_dims: {
         backgroundColor: 'black',
         color: 'white',
@@ -71,6 +71,7 @@ const useStyles = makeStyles({
         borderColor: 'light gray',
     },
     pos: {
+        color: '#9E9E9E',
         marginBottom: 12,
     },
     actions: {
@@ -89,60 +90,129 @@ const useStyles = makeStyles({
         display: 'flex',
         width: '100%',
     },
-  });
-
+    buttons_row: {
+        width: '100%',
+        display: 'flex',
+    },
+    buttons_div: {
+        display: 'flex',
+        justifyContent: 'space-around',
+        marginTop: 75,
+    },
+    buttons: {
+        padding: '1em 1em',
+    },
+    main_row: {
+        width: '100%',
+    },
+    selected_cat: {
+        color: 'white',
+        padding: '2px 4px',
+        margin: '16px 16px',
+        borderColor: 'white',
+    },
+    unselected_cat: {
+        color: 'white',
+        padding: '2px 4px',
+        margin: '16px 16px',
+    }
+});
 
 export const Portfolio = ( props:PortfolioProps ) => {
     const classes = useStyles();
+    const [items, setItems] = useState(Projects);
+    const projectCategories = [...new Set(Projects.map((Val) => Val.category))];
+    const [cat, setCat] = useState<string>('');
+    const filterItem = (currCat: any) => {
+        const newItem = Projects.filter((newVal) => {
+            setCat(currCat);
+            return newVal.category === currCat;
+        });
+        currCat === "all" ? setItems(Projects) : setItems(newItem);
+    };
+    const Buttons = ({ filterItem, setItem, projectCategories }: any) => {
+      return (
+        <div>
+            {projectCategories.map((Val: any) => {
+              return (
+                <Button
+                  className={Val === cat ? classes.selected_cat : classes.unselected_cat}
+                  onClick={() => filterItem(Val)}
+                  size="small"
+                  variant="outlined"
+                >
+                  {Val}
+                </Button>
+              );
+            })}
+            <Button
+              className={Projects.length === items.length ? classes.selected_cat : classes.unselected_cat}
+              onClick={() => filterItem("all")}
+              size="small"
+              variant="outlined"
+            >
+              ALL
+            </Button>
+        </div>
+      );
+    };
     return (
         <div className={classes.root}>
             <Helmet>
                 <title>Robinson | Portfolio</title>
             </Helmet>
-                <Navbar />
-                    <div className={classes.body}>
-                        <div className={classes.main}>
+            <Navbar />
+            <div className={classes.body}>
+                <div className={classes.main}>
+                    <Container className={classes.main_container}>
                         <ThemeProvider theme={theme}>
-                            <Container className={classes.container}>
-                                <Row>
-                                    {Projects.map(project => 
-                                        <Col className={classes.col}>
-                                            <Card className={classes.card_dims}>                                  
-                                                <CardMedia 
-                                                    className={classes.media}
-                                                    image={project.img_path}
-                                                    title="Screenshot of app"
-                                                />
-                                                <CardContent>
-                                                    <Typography className={classes.title} color="textSecondary" gutterBottom>
-                                                        {project.description_general}
-                                                    </Typography>
-                                                    <Typography variant="h5" component="h2">
-                                                        {project.title}
-                                                    </Typography>
-                                                    <Typography className={classes.pos} color="textSecondary">
-                                                        {project.description_specific}
-                                                    </Typography>
-                                                    <Typography variant="body2" component="p">
-                                                        {project.tools_1}
-                                                        <br />
-                                                        {project.tools_2}
-                                                    </Typography>
-                                                </CardContent>
-                                                <CardActions>
-                                                    {Object.entries(project.links).map(([key, value]) =>
-                                                        <Button className={classes.actions} size="small" href={value}>{key}</Button>
-                                                    )}
-                                                </CardActions>
-                                            </Card>
-                                        </Col>
-                                    )}
-                                </Row>
-                            </Container>
+                            <Row className={classes.buttons_row}>
+                                <Col md sm  className={classes.buttons_div}>
+                                    <Buttons 
+                                        filterItem={filterItem}
+                                        setItem={setItems}
+                                        projectCategories={projectCategories}
+                                    />
+                                </Col>
+                            </Row>
+                            <Row className={classes.main_row}>
+                                {items.map(project => 
+                                    <Col className={classes.col}>
+                                        <Card className={classes.card_dims}>                                  
+                                            <CardMedia 
+                                                className={classes.media}
+                                                image={project.img_path}
+                                                title="Screenshot of app"
+                                            />
+                                            <CardContent>
+                                                <Typography className={classes.title} gutterBottom>
+                                                    {project.description_general}
+                                                </Typography>
+                                                <Typography variant="h5" component="h2">
+                                                    {project.title}
+                                                </Typography>
+                                                <Typography className={classes.pos}>
+                                                    {project.description_specific}
+                                                </Typography>
+                                                <Typography variant="body2" component="p">
+                                                    {project.tools_1}
+                                                    <br />
+                                                    {project.tools_2}
+                                                </Typography>
+                                            </CardContent>
+                                            <CardActions>
+                                                {Object.entries(project.links).map(([key, value]) =>
+                                                    <Button className={classes.actions} size="small" href={value}>{key}</Button>
+                                                )}
+                                            </CardActions>
+                                        </Card>
+                                    </Col>
+                                )}
+                            </Row>                            
                         </ThemeProvider>
-                        </div>
-                    </div>
+                    </Container>
+                </div>
+            </div>
         </div>
-    
     );
 }

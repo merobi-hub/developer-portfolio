@@ -5,10 +5,51 @@ export type Project = {
   "description_specific": string,
   "tools_1": string,
   "tools_2": string,
-  "links":  { [key: string]: string }
+  "links":  { [key: string]: string },
+  "category": string,
 };
 
 export const Projects: Array<Project> = [
+  {
+    img_path: './images/slas_video.png',
+    description_general: 'Videos - Product',
+    title: 'Astronomer SLAs Video',
+    description_specific: 'Highlight video on Astro Observe',
+    tools_1: 'Astro Observe, Airflow',
+    tools_2: 'OBS, Google Slides',
+    links: {'YouTube': 'https://www.youtube.com/watch?v=JylYDyxyabU'},
+    category: 'Videos',
+  },
+  {
+    img_path: './images/youtube_data_prods.png',
+    description_general: 'Videos - Product',
+    title: 'Astronomer Data Products Videos',
+    description_specific: 'Highlight video on Astro Observe',
+    tools_1: 'Astro Observe, Airflow',
+    tools_2: 'OBS, Google Slides',
+    links: {'YouTube': 'https://youtu.be/iUl9OGZ3o58?si=8gs-5v6992sXaeeH'},
+    category: 'Videos',
+  },
+  {
+    img_path: './images/astronomer_learn.png',
+    description_general: 'Guides & tutorials - OSS & Product',
+    title: 'Astronomer Observability Content',
+    description_specific: 'Guides & tutorials on Astro Observe & Airflow',
+    tools_1: 'Astro Observe, Airflow, Docusaurus',
+    tools_2: 'Astro CLI, OpenLineage, Python, Markdown',
+    links: {'Astronomer': 'https://www.astronomer.io/docs/learn/category/observability-concepts'},
+    category: 'Docs',
+  },
+  {
+    img_path: './images/airflow_quickstart_lrg.png',
+    description_general: 'Tutorials - Product',
+    title: 'Apache Airflow Quickstart',
+    description_specific: 'Quickstart with ETL and Gen-AI paths',
+    tools_1: 'Astro CLI, Airflow, Postgres, Docusaurus',
+    tools_2: 'DuckDB, SBERT, GitHub, Python, Markdown, Docker',
+    links: {'Astronomer': 'https://www.astronomer.io/docs/learn/airflow-quickstart'},
+    category: 'Docs',
+  },
   {
     img_path: './images/youtube.png',
     description_general: 'Presentation - Community',
@@ -16,7 +57,8 @@ export const Projects: Array<Project> = [
     description_specific: 'Project update, config guidance, and demo',
     tools_1: 'Astro, Airflow, Postgres, S3',
     tools_2: 'Marquez, Colima, Zoom',
-    links: {'youtube': 'https://youtu.be/dm1Jqa0EGKE?feature=shared'}
+    links: {'youtube': 'https://youtu.be/dm1Jqa0EGKE?feature=shared'},
+    category: 'Presentations',
   },
   {
     img_path: './images/astro-best-practices.png',
@@ -25,7 +67,8 @@ export const Projects: Array<Project> = [
     description_specific: 'Create & maintain Astro Best Practices guides',
     tools_1: 'Astro, Airflow',
     tools_2: 'Markdown, Docusaurus',
-    links: {'website': 'https://www.astronomer.io/docs/astro/'}
+    links: {'website': 'https://www.astronomer.io/docs/astro/'},
+    category: 'Docs',
   },
   {
     img_path: './images/marquez_screenshot.svg',
@@ -34,7 +77,8 @@ export const Projects: Array<Project> = [
     description_specific: 'Webpage redesign and project marketing improvements',
     tools_1: 'React, Typescript',
     tools_2: 'MaterialUI, Docusaurus',
-    links: {'github': 'https://github.com/MarquezProject/marquez/tree/main/docs/v2', 'website': 'https://marquezproject.ai'}
+    links: {'github': 'https://github.com/MarquezProject/marquez/tree/main/docs/v2', 'website': 'https://marquezproject.ai'},
+    category: 'Web',
   },
   {
     img_path: './images/OL_ecosystem.svg',
@@ -43,7 +87,8 @@ export const Projects: Array<Project> = [
     description_specific: 'Responsive webpage for displaying integrations',
     tools_1: 'React, Typescript',
     tools_2: 'MaterialUI, Docusaurus',
-    links: {'github': 'https://github.com/OpenLineage/docs/blob/main/src/pages/ecosystem.tsx', 'website': 'https://openlineage.io/ecosystem'}
+    links: {'github': 'https://github.com/OpenLineage/docs/blob/main/src/pages/ecosystem.tsx', 'website': 'https://openlineage.io/ecosystem'},
+    category: 'Web',
   },
   {
     img_path: './images/openlineage_quickstart.svg',
@@ -52,7 +97,8 @@ export const Projects: Array<Project> = [
     description_specific: 'Guide for getting started with OpenLineage+Marquez',
     tools_1: 'Docker, OpenLineage, Marquez, Astro',
     tools_2: 'Markdown, Docusaurus',
-    links: {'github': 'https://github.com/OpenLineage/docs/blob/main/docs/guides/airflow-quickstart.md', 'website': 'https://openlineage.io/docs/guides/airflow-quickstart'}
+    links: {'github': 'https://github.com/OpenLineage/docs/blob/main/docs/guides/airflow-quickstart.md', 'website': 'https://openlineage.io/docs/guides/airflow-quickstart'},
+    category: 'Docs',
   },
   {
     img_path: './images/slack_archive.svg',
@@ -61,7 +107,8 @@ export const Projects: Array<Project> = [
     description_specific: 'Slack history site created using OSS tools',
     tools_1: 'slack-export-viewer, GitHub',
     tools_2: 'Slack',
-    links: {'github': 'https://github.com/OpenLineage/slack-archives', 'website': 'https://openlineage.github.io/slack-archives/'}
+    links: {'github': 'https://github.com/OpenLineage/slack-archives', 'website': 'https://openlineage.github.io/slack-archives/'},
+    category: 'Web',
   },
   {
     img_path: './images/ol_survey_form.svg',
@@ -70,25 +117,8 @@ export const Projects: Array<Project> = [
     description_specific: 'Annual community survey',
     tools_1: 'Google forms',
     tools_2: 'Slack',
-    links: {'blog': 'https://openlineage.io/blog/ecosystem-survey', 'survey': 'https://docs.google.com/forms/d/e/1FAIpQLSd967NQ6avQcbkXGVy5I5X549yzDJUXsjeOvt9u1ENepkWwXg/viewform?pli=1'}
-  },
-  {
-    img_path: './images/ol_survey_page.svg',
-    description_general: 'Landing Page - OSS Contribution',
-    title: 'Ecosystem Survey Results Page',
-    description_specific: 'Static webpage for displaying infographic',
-    tools_1: 'Typescript, Docusaurus',
-    tools_2: 'CSS',
-    links: {'github': 'https://github.com/OpenLineage/docs/blob/main/src/pages/survey/index.tsx', 'website': 'https://openlineage.io/survey'}
-  },
-  {
-    img_path: './images/survey_crop.svg',
-    description_general: 'Landing Page - OSS Contribution',
-    title: 'Airflow Survey Results Page',
-    description_specific: 'Static webpage for displaying infographic',
-    tools_1: 'Javascript, Hugo',
-    tools_2: 'CSS',
-    links: {'github': 'https://github.com/apache/airflow-site/blob/main/landing-pages/site/content/en/survey/_index.html', 'website': 'https://airflow.apache.org/survey'}
+    links: {'blog': 'https://openlineage.io/blog/ecosystem-survey', 'survey': 'https://docs.google.com/forms/d/e/1FAIpQLSd967NQ6avQcbkXGVy5I5X549yzDJUXsjeOvt9u1ENepkWwXg/viewform?pli=1'},
+    category: 'Community',
   },
   {
     img_path: './images/airflow_community_crop.svg',
@@ -97,7 +127,8 @@ export const Projects: Array<Project> = [
     description_specific: 'Redesign of static webpage employing CSS grid ',
     tools_1: 'Javascript, Hugo',
     tools_2: 'CSS',
-    links: {'github': 'https://github.com/apache/airflow-site/blob/main/landing-pages/site/content/en/community/_index.html', 'website': 'https://airflow.apache.org/community'}
+    links: {'github': 'https://github.com/apache/airflow-site/blob/main/landing-pages/site/content/en/community/_index.html', 'website': 'https://airflow.apache.org/community'},
+    category: 'Web',
   },
   {
     img_path: './images/changes_screenshot.svg',
@@ -106,7 +137,8 @@ export const Projects: Array<Project> = [
     description_specific: 'Script for adding changes to a changelog',
     tools_1: 'Python, GitHub API',
     tools_2: 'Click, Typing',
-    links: {'github': 'https://github.com/OpenLineage/OpenLineage/blob/main/dev/get_changes.py'}
+    links: {'github': 'https://github.com/OpenLineage/OpenLineage/blob/main/dev/get_changes.py'},
+    category: 'Dev tools',
   },
   {
     img_path: './images/contributors_screenshot.svg',
@@ -115,7 +147,8 @@ export const Projects: Array<Project> = [
     description_specific: 'Script for getting & exporting contributor stats',
     tools_1: 'Python, GitHub API',
     tools_2: 'Pendulum, CSV',
-    links: {'github': 'https://github.com/OpenLineage/OpenLineage/blob/main/dev/get_contributor_stats.py'}
+    links: {'github': 'https://github.com/OpenLineage/OpenLineage/blob/main/dev/get_contributor_stats.py'},
+    category: 'Dev tools',
   },
   {
     img_path: './images/flights_screenshot.svg',
@@ -124,7 +157,8 @@ export const Projects: Array<Project> = [
     description_specific: 'Script for streaming IFOs with the OpenSky API',
     tools_1: 'Python, Requests, Click, Datetime',
     tools_2: 'OpenSky API, country-bounding-boxes',
-    links: {'github': 'https://github.com/merobi-hub/get-local-flights'}
+    links: {'github': 'https://github.com/merobi-hub/get-local-flights'},
+    category: 'Apps',
   },
   {
     img_path: '/images/library_scrnshot.svg',
@@ -133,7 +167,8 @@ export const Projects: Array<Project> = [
     description_specific: 'Catalog with data from Google Books API, Blog',
     tools_1: 'Python, Flask, Bootstrap, Gunicorn, Postgres',
     tools_2: 'SQLAlchemy, Werkzeug, Google Books API, Great Expectations',
-    links: {'github': 'https://github.com/merobi-hub/lantern-library-online', 'website': 'https://lantern-library-online.herokuapp.com'}
+    links: {'github': 'https://github.com/merobi-hub/lantern-library-online', 'website': 'https://lantern-library-online.herokuapp.com'},
+    category: 'Apps',
   },
   {
     img_path: '/images/portfolio.svg',
@@ -142,7 +177,8 @@ export const Projects: Array<Project> = [
     description_specific: 'Personal portfolio website with form',
     tools_1: 'TypeScript, React, Bootstrap',
     tools_2: 'MaterialUI, Emailjs, Firebase',
-    links: {'github': 'https://github.com/merobi-hub/portfolio'}
+    links: {'github': 'https://github.com/merobi-hub/portfolio'},
+    category: 'Apps',
   },
   {
     img_path: '/images/add_copyright.svg',
@@ -151,7 +187,8 @@ export const Projects: Array<Project> = [
     description_specific: 'Script for adding a copyright to a project',
     tools_1: 'Python, OS, Sys',
     tools_2: 'Bash, Markdown',
-    links: {'github': 'https://github.com/merobi-hub/add-copyright'}
+    links: {'github': 'https://github.com/merobi-hub/add-copyright'},
+    category: 'Dev tools',
   },
   {
     img_path: '/images/license_updater.svg',
@@ -160,7 +197,8 @@ export const Projects: Array<Project> = [
     description_specific: "Script for updating an open-source project's license",
     tools_1: 'Python, OS',
     tools_2: 'Bash, Markdown',
-    links: {'github': 'https://github.com/merobi-hub/license-updater'}
+    links: {'github': 'https://github.com/merobi-hub/license-updater'},
+    category: 'Dev tools',
   },
   {
     img_path: '/images/car_api.svg',
@@ -169,7 +207,8 @@ export const Projects: Array<Project> = [
     description_specific: 'User-generated API for collectors',
     tools_1: 'TypeScript, MaterialUI',
     tools_2: 'Firebase, Insomnia, React',
-    links: {'github': 'https://github.com/merobi-hub/operators61-week8-car-inventory-react', 'heroku': 'https://car-inventory-mr.web.app/'}
+    links: {'github': 'https://github.com/merobi-hub/operators61-week8-car-inventory-react', 'heroku': 'https://car-inventory-mr.web.app/'},
+    category: 'Apps',
   },
   {
     img_path: '/images/attendance_home.svg',
@@ -178,7 +217,8 @@ export const Projects: Array<Project> = [
     description_specific: 'Lightweight attendance tracker with Google login',
     tools_1: 'OAuthLib, Python, Flask, SQLAlchemy, Psycopg2, Datetime',
     tools_2: 'Jinja, Bootstrap, WTF, Werkzeug, Login, Flash, Heroku',
-    links: {'github': 'https://github.com/merobi-hub/attendance_tracker', 'heroku': 'https://attendance-keeper.herokuapp.com/'}
+    links: {'github': 'https://github.com/merobi-hub/attendance_tracker', 'heroku': 'https://attendance-keeper.herokuapp.com/'},
+    category: 'Apps',
   },
   {
     img_path: '/images/weather_app_screenshot.svg',
@@ -187,7 +227,8 @@ export const Projects: Array<Project> = [
     description_specific: 'Searchable weather app',
     tools_1: 'JavaScript, Axios, React',
     tools_2: 'Regex, Firebase, OpenWeatherMap API',
-    links: {'github': 'https://github.com/merobi-hub/operators-week7-weather-api', 'firebase': 'https://weather-df750.web.app/'}
+    links: {'github': 'https://github.com/merobi-hub/operators-week7-weather-api', 'firebase': 'https://weather-df750.web.app/'},
+    category: 'Apps',
   },
   {
     img_path: '/images/racer.svg',
@@ -196,6 +237,7 @@ export const Projects: Array<Project> = [
     description_specific: 'Searchable sports data app',
     tools_1: 'JavaScript, Axios, React, Regex',
     tools_2: 'Firebase, Ergast Developer API',
-    links: {'github': 'https://github.com/merobi-hub/operators-week7-day3-hw', 'firebase': 'https://racer-data-b0f20.web.app/'}
+    links: {'github': 'https://github.com/merobi-hub/operators-week7-day3-hw', 'firebase': 'https://racer-data-b0f20.web.app/'},
+    category: 'Apps',
   },
 ]

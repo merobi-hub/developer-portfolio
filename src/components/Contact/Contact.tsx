@@ -42,6 +42,7 @@ const useStyles = makeStyles({
         backgroundSize: 'fill',
         backgroundRepeat: 'repeat',
         backgroundPosition: 'center center',
+        backgroundAttachment: 'fixed',
         position: 'absolute'
     },
     submain: {
