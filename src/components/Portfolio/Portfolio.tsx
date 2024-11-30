@@ -124,37 +124,37 @@ export const Portfolio = ( props:PortfolioProps ) => {
     const projectCategories = [...new Set(Projects.map((Val) => Val.category))];
     const [cat, setCat] = useState<string>('');
     const filterItem = (currCat: any) => {
-        const newItem = Projects.filter((newVal) => {
+        const selection = Projects.filter((val) => {
             setCat(currCat);
-            return newVal.category === currCat;
+            return val.category === currCat;
         });
-        currCat === "all" ? setItems(Projects) : setItems(newItem);
+        currCat === "all" ? setItems(Projects) : setItems(selection);
     };
     const Buttons = ({ filterItem, setItem, projectCategories }: any) => {
-      return (
-        <div>
-            {projectCategories.map((Val: any) => {
-              return (
+        return (
+            <div>
+                {projectCategories.map((val: any) => {
+                    return (
+                        <Button
+                            className={val === cat ? classes.selected_cat : classes.unselected_cat}
+                            onClick={() => filterItem(val)}
+                            size="small"
+                            variant="outlined"
+                        >
+                        {val}
+                        </Button>
+                    );
+                })}
                 <Button
-                  className={Val === cat ? classes.selected_cat : classes.unselected_cat}
-                  onClick={() => filterItem(Val)}
-                  size="small"
-                  variant="outlined"
+                    className={Projects.length === items.length ? classes.selected_cat : classes.unselected_cat}
+                    onClick={() => filterItem("all")}
+                    size="small"
+                    variant="outlined"
                 >
-                  {Val}
+                ALL
                 </Button>
-              );
-            })}
-            <Button
-              className={Projects.length === items.length ? classes.selected_cat : classes.unselected_cat}
-              onClick={() => filterItem("all")}
-              size="small"
-              variant="outlined"
-            >
-              ALL
-            </Button>
-        </div>
-      );
+            </div>
+        );
     };
     return (
         <div className={classes.root}>
