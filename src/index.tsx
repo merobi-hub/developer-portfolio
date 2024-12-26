@@ -6,9 +6,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles.css';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import ReactGA from 'react-ga4';
-// import { createRoot } from 'react-dom/client';
-import { ThemeProvider } from '@mui/material';
-import { createTheme } from '@mui/material/styles';
 
 // dotenv
 require('dotenv').config()
@@ -19,8 +16,6 @@ ReactGA.initialize(
     gaOptions: {cookie_flags: 'SameSite=none; Secure'}
   }
 );
-
-const theme = createTheme();
 
 ReactDOM.render(
   <React.StrictMode>

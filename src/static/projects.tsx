@@ -1,16 +1,18 @@
 export type Project = {
+  "id": string,
   "img_path": string,
   "description_general": string,
   "title": string, 
   "description_specific": string,
   "tools_1": string,
   "tools_2": string,
-  "links":  { [key: string]: string },
+  "links":  {[key: string]: string },
   "category": string,
 };
 
 export const Projects: Array<Project> = [
   {
+    id: 'sbert_blog',
     img_path: './images/sbert_blog_3.png',
     description_general: 'Tutorial - OSS',
     title: 'SBERT & NLTK Medium Article',
@@ -21,6 +23,7 @@ export const Projects: Array<Project> = [
     category: 'AI',
   },
   {
+    id: 'sbert_gh',
     img_path: './images/similarity_checker.png',
     description_general: 'AI Dev Tool - OSS',
     title: 'Semantic Similarity Evaluation Script',
@@ -31,6 +34,7 @@ export const Projects: Array<Project> = [
     category: 'AI',
   },
   {
+    id: 'mqz_tutorial',
     img_path: './images/marquez_tutorial.png',
     description_general: 'Tutorial - OSS',
     title: 'Marquez+Airflow Tutorial',
@@ -41,6 +45,7 @@ export const Projects: Array<Project> = [
     category: 'Tutorials',
   },
   {
+    id: 'sla_vid',
     img_path: './images/slas_video.png',
     description_general: 'Videos - Product',
     title: 'Astronomer SLAs Video',
@@ -51,6 +56,7 @@ export const Projects: Array<Project> = [
     category: 'Videos',
   },
   {
+    id: 'dp_vid',
     img_path: './images/youtube_data_prods.png',
     description_general: 'Videos - Product',
     title: 'Astronomer Data Products Videos',
@@ -61,6 +67,7 @@ export const Projects: Array<Project> = [
     category: 'Videos',
   },
   {
+    id: 'observe_guides',
     img_path: './images/astronomer_learn.png',
     description_general: 'Guides & tutorials - OSS & Product',
     title: 'Astronomer Observability Content',
@@ -71,6 +78,7 @@ export const Projects: Array<Project> = [
     category: 'Guides',
   },
   {
+    id: 'airflow_quick',
     img_path: './images/airflow_quickstart_lrg.png',
     description_general: 'Tutorials - Product',
     title: 'Apache Airflow Quickstart',
@@ -81,6 +89,7 @@ export const Projects: Array<Project> = [
     category: 'Tutorials',
   },
   {
+    id: 'webinar',
     img_path: './images/obsv_webinar.png',
     description_general: 'Presentation - Product',
     title: 'Astronomer Observability Webinar',
@@ -91,6 +100,7 @@ export const Projects: Array<Project> = [
     category: 'Presentations',
   },
   {
+    id: 'ol_update',
     img_path: './images/youtube.png',
     description_general: 'Presentation - Community',
     title: 'OpenLineage Update & Demo',
@@ -101,6 +111,7 @@ export const Projects: Array<Project> = [
     category: 'Presentations',
   },
   {
+    id: 'astro_bp',
     img_path: './images/astro-best-practices.png',
     description_general: 'Docs - Public Contribution',
     title: 'Astro Best Practices Guides',
@@ -111,6 +122,7 @@ export const Projects: Array<Project> = [
     category: 'Guides',
   },
   {
+    id: 'maqz_site',
     img_path: './images/marquez_screenshot.svg',
     description_general: 'Landing Page - OSS Contribution',
     title: 'Marquez Header & Messaging Upgrades',
@@ -121,6 +133,7 @@ export const Projects: Array<Project> = [
     category: 'Web dev',
   },
   {
+    id: 'eco_page',
     img_path: './images/OL_ecosystem.svg',
     description_general: 'Landing Page - OSS Contribution',
     title: 'OpenLineage Ecosystem Page',
@@ -131,6 +144,7 @@ export const Projects: Array<Project> = [
     category: 'Web dev',
   },
   {
+    id: 'ol_quick',
     img_path: './images/openlineage_quickstart.svg',
     description_general: 'Quickstart - OSS Contribution',
     title: 'Upgraded User Guide for OpenLineage',
@@ -141,6 +155,7 @@ export const Projects: Array<Project> = [
     category: 'Guides',
   },
   {
+    id: 'slack_archive',
     img_path: './images/slack_archive.svg',
     description_general: 'Community Management Tool - OSS Contribution',
     title: 'Website for Browsing Slack Archive',
@@ -151,6 +166,7 @@ export const Projects: Array<Project> = [
     category: 'Web dev',
   },
   {
+    id: 'eco_survey',
     img_path: './images/ol_survey_form.svg',
     description_general: 'User Survey - OSS Contribution',
     title: 'OpenLineage Ecosystem Survey 2023',
@@ -161,6 +177,7 @@ export const Projects: Array<Project> = [
     category: 'Community',
   },
   {
+    id: 'airflow_comm',
     img_path: './images/airflow_community_crop.svg',
     description_general: 'Landing Page - OSS Contribution',
     title: 'Improved Airflow Community Page',
@@ -171,6 +188,7 @@ export const Projects: Array<Project> = [
     category: 'Web dev',
   },
   {
+    id: 'get_changes',
     img_path: './images/changes_screenshot.svg',
     description_general: 'Dev Tool - OSS Contribution',
     title: 'Get Changes',
@@ -181,6 +199,7 @@ export const Projects: Array<Project> = [
     category: 'Dev tools',
   },
   {
+    id: 'get_conts',
     img_path: './images/contributors_screenshot.svg',
     description_general: 'Community Management Tool - OSS Contribution',
     title: 'Get Contributor Stats',
@@ -191,6 +210,7 @@ export const Projects: Array<Project> = [
     category: 'Dev tools',
   },
   {
+    id: 'get_flights',
     img_path: './images/flights_screenshot.svg',
     description_general: 'Console Application - Individual Project',
     title: 'Get Local Flights',
@@ -201,6 +221,7 @@ export const Projects: Array<Project> = [
     category: 'Apps',
   },
   {
+    id: 'lantern',
     img_path: '/images/library_scrnshot.svg',
     description_general: 'Flask Web Application - Individual Project',
     title: 'Lantern Free Library Online',
@@ -211,6 +232,7 @@ export const Projects: Array<Project> = [
     category: 'Apps',
   },
   {
+    id: 'portfolio_app',
     img_path: '/images/portfolio.svg',
     description_general: 'React Web Application - Individual Project',
     title: 'Web Developer Portfolio',
@@ -221,6 +243,7 @@ export const Projects: Array<Project> = [
     category: 'Apps',
   },
   {
+    id: 'copyright',
     img_path: '/images/add_copyright.svg',
     description_general: 'Dev Tool - Individual Project',
     title: 'Add Copyright Tool',
@@ -231,6 +254,7 @@ export const Projects: Array<Project> = [
     category: 'Dev tools',
   },
   {
+    id: 'license',
     img_path: '/images/license_updater.svg',
     description_general: 'Dev Tool - Individual Project',
     title: 'License Updater Tool',
@@ -241,6 +265,7 @@ export const Projects: Array<Project> = [
     category: 'Dev tools',
   },
   {
+    id: 'car',
     img_path: '/images/car_api.svg',
     description_general: 'React Web Application - Individual Project',
     title: 'Car Inventory',
@@ -251,6 +276,7 @@ export const Projects: Array<Project> = [
     category: 'Apps',
   },
   {
+    id: 'atten',
     img_path: '/images/attendance_home.svg',
     description_general: 'Flask Web Application - Individual Project',
     title: 'Attendance Keeper',
@@ -261,6 +287,7 @@ export const Projects: Array<Project> = [
     category: 'Apps',
   },
   {
+    id: 'weather',
     img_path: '/images/weather_app_screenshot.svg',
     description_general: 'React Web Application - Individual Project',
     title: "Today's Weather",
@@ -271,6 +298,7 @@ export const Projects: Array<Project> = [
     category: 'Apps',
   },
   {
+    id: 'f1',
     img_path: '/images/racer.svg',
     description_general: 'React Web Application - Individual Project',
     title: 'F1 Driver Data',

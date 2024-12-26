@@ -90,8 +90,18 @@ export const Home = ( props:Props ) => {
                             <Avatar 
                                 alt="Michael Robinson thumbnail pic" 
                                 src={pic} 
-                                classes={classes.profile_pic}
-                                sx={{ width: 150, height: 150 }}
+                                // classes={classes.profile_pic}
+                                sx={{ 
+                                    width: 150, 
+                                    height: 150,
+                                    position: 'absolute',
+                                    top: '35%',
+                                    left: '50%',
+                                    transform: 'translate(-50%, -50%)',
+                                    '&:hover': {
+                                        filter: 'drop-shadow(3px 3px 2px #FFFFFF)' 
+                                    },
+                                }}
                                 onMouseEnter={() => setPic(neg_profile_pic)} 
                                 onMouseLeave={() => setPic(profile_pic)}>
                             </Avatar>

@@ -74,11 +74,6 @@ const useStyles = makeStyles({
         color: '#9E9E9E',
         marginBottom: 12,
     },
-    actions: {
-        "&:hover": {
-            background: '#2e2e2e'
-        },
-    },
     media: {
         height: '20em',
         [theme.breakpoints.down('sm')]: {
@@ -104,21 +99,6 @@ const useStyles = makeStyles({
     main_row: {
         width: '100%',
     },
-    selected_cat: {
-        color: 'white',
-        padding: '2px 4px',
-        margin: '16px 16px',
-        borderColor: 'white',
-        fontWeight: 'bold',
-    },
-    unselected_cat: {
-        color: 'white',
-        padding: '2px 4px',
-        margin: '16px 16px',
-        "&:hover": {
-            borderColor: 'gray'
-        },
-    }
 });
 
 export const Portfolio = ( props:PortfolioProps ) => {
@@ -140,7 +120,7 @@ export const Portfolio = ( props:PortfolioProps ) => {
                     {projectCategories.map((val: any) => {
                         return (
                             <Button
-                                className={val === cat ? classes.selected_cat : classes.unselected_cat}
+                                key={val}
                                 sx={ val === cat ? { 
                                     color: "white", 
                                     padding: "2px 4px", 
@@ -163,7 +143,7 @@ export const Portfolio = ( props:PortfolioProps ) => {
                         );
                     })}
                     <Button
-                        className={Projects.length === items.length ? classes.selected_cat : classes.unselected_cat}
+                        key={'all_button'}
                         sx={ Projects.length === items.length ? { 
                             color: "white", 
                             padding: "2px 4px", 
@@ -205,8 +185,8 @@ export const Portfolio = ( props:PortfolioProps ) => {
                             <Row className={classes.main_row}>
                                 <>
                                     {items.map(project => 
-                                        <Col className={classes.col}>
-                                            <Card 
+                                        <Col key={project.id} className={classes.col}>
+                                            <Card
                                                 className={classes.card_dims}
                                                 sx={{ bgcolor: "black", color: "white" }}
                                             >                                  
@@ -233,7 +213,19 @@ export const Portfolio = ( props:PortfolioProps ) => {
                                                 </CardContent>
                                                 <CardActions>
                                                     {Object.entries(project.links).map(([key, value]) =>
-                                                        <Button className={classes.actions} sx={{ color: "white" }} size="small" href={value}>{key}</Button>
+                                                        <Button 
+                                                            key={value}
+                                                            sx={{ 
+                                                                color: "white",
+                                                                "&:hover": {
+                                                                    background: '#2e2e2e'
+                                                                }, 
+                                                            }} 
+                                                            size="small" 
+                                                            href={value}
+                                                        >
+                                                        {key}
+                                                        </Button>
                                                     )}
                                                 </CardActions>
                                             </Card>
