@@ -23,8 +23,9 @@ ReactDOM.render(
         <Route path='/thanks' component={Thanks} />
       </Switch>
       <CookieConsent 
-        cookieName='gacookie' 
+        enableDeclineButton 
         buttonText={'Accept'}
+        declineButtonText={'Decline'}
         onAccept={() => {
           ReactGA.initialize(
             "G-R4RZ145T3T", {
@@ -33,6 +34,9 @@ ReactDOM.render(
               }
             }
           );
+        }}
+        onDecline={() => {
+          alert("Cookie preferences saved.");
         }}
       >
         This website uses cookies.
