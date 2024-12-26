@@ -10,6 +10,7 @@ import GitHubIcon from '@mui/icons-material/GitHub.js';
 import { Helmet } from 'react-helmet';
 import { Col, Row } from 'reactstrap';
 import Avatar from '@mui/material/Avatar';
+import CookieConsent from "react-cookie-consent";
 
 interface Props{
     title: string;
@@ -135,6 +136,7 @@ export const Home = ( props:Props ) => {
                             </Row>
                         </div>
                     </div>
+                    <CookieConsent>This website uses cookies.</CookieConsent>
                 </main>
         </div>
     )
