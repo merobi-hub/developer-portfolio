@@ -1,20 +1,20 @@
 import { useRef } from 'react';
 import { Helmet } from 'react-helmet';
 import { useForm } from 'react-hook-form';
-import { makeStyles, Card } from '@material-ui/core';
+import { makeStyles } from '@mui/styles';
 import { RouteComponentProps } from 'react-router-dom';
 import karma_typewriter from '../../assets/images/karma_typewriter.webp';
 import { Navbar } from '../../components';
 import { Col } from 'reactstrap';
-import CardContent from '@material-ui/core/CardContent';
-import { ThemeProvider } from '@material-ui/core';
-import { createTheme } from '@material-ui/core/styles';
-import Typography from '@material-ui/core/Typography';
+import CardContent from '@mui/material/CardContent';
+import { ThemeProvider, Card } from '@mui/material';
+import { createTheme } from '@mui/material/styles';
+import Typography from '@mui/material/Typography';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from "yup";
 import emailjs from '@emailjs/browser';
 import { init } from 'emailjs-com';
-init("PYuvALLMBhd_vI3FU");
+init(process.env.EMAILJS!)
 
 
 interface ContactProps{
@@ -31,8 +31,8 @@ const theme = createTheme({
 
 const useStyles = makeStyles({
     root: {
-        padding: '0',
-        margin: '0',
+        padding: 0,
+        margin: 0,
     },
     main: {
         display: 'flex',
@@ -122,45 +122,53 @@ export const Contact = ( props:ContactProps ) => {
                         <div className="justify-content-md-center">
                             <Col md sm className={classes.contact_col}>
                                 <Card className={classes.formCardDims}>
-                                    <CardContent>
+                                    <CardContent sx={{ bgcolor: "black", color: "white" }}>
                                         <form ref={form} onSubmit={sendEmail}>
-                                            <Typography className={classes.formTitle} variant="h4" component="h2">
-                                                Contact
-                                            </Typography>
-                                            <Typography className={classes.formSpacing} variant="h5" component="h2">
-                                                <label htmlFor="from_name">Name</label>
-                                                <br />
-                                                <input
-                                                    className={classes.input}
-                                                    id="from_name"
-                                                    placeholder="name"
-                                                    {...register("name", { required: true, maxLength: 60, pattern: /^[ A-Za-z]+$/i })} 
-                                                /> 
-                                                { errors.name?.message }                                           
-                                            </Typography>
-                                            <Typography className={classes.formSpacing} variant="h5" component="h2">
-                                                <label htmlFor="from_email">E-mail</label>
-                                                <br />
-                                                <input
-                                                    className={classes.input} 
-                                                    id="from_email"
-                                                    type="email"
-                                                    placeholder="e-mail address" 
-                                                    {...register("email", { required: true })} 
-                                                />
-                                                { errors.email?.message }
-                                            </Typography>
-                                            <Typography className={classes.formSpacing} variant="h5" component="h2">
-                                                <label htmlFor="message">Message</label>
-                                                <br />
-                                                <textarea
-                                                    className={classes.input}
-                                                    id="message"
-                                                    placeholder="message"
-                                                    {...register("message", { required: true, maxLength: 1500, pattern: /^[ A-Za-z]+$/i })}
-                                                />
-                                                { errors.message?.message }
-                                            </Typography>
+                                            <div className={classes.formTitle}>
+                                                <Typography  variant="h4" component="h2">
+                                                    Contact
+                                                </Typography>
+                                            </div>
+                                            <div className={classes.formSpacing}>
+                                                <Typography  variant="h5" component="h2">
+                                                    <label htmlFor="from_name">Name</label>
+                                                    <br />
+                                                    <input
+                                                        className={classes.input}
+                                                        id="from_name"
+                                                        placeholder="name"
+                                                        {...register("name", { required: true, maxLength: 60, pattern: /^[ A-Za-z]+$/i })} 
+                                                    /> 
+                                                    { errors.name?.message }                                           
+                                                </Typography>
+                                            </div>
+                                            <div className={classes.formSpacing}>
+                                                <Typography  variant="h5" component="h2">
+                                                    <label htmlFor="from_email">E-mail</label>
+                                                    <br />
+                                                    <input
+                                                        className={classes.input} 
+                                                        id="from_email"
+                                                        type="email"
+                                                        placeholder="e-mail address" 
+                                                        {...register("email", { required: true })} 
+                                                    />
+                                                    { errors.email?.message }
+                                                </Typography>
+                                            </div>
+                                            <div className={classes.formSpacing}>
+                                                <Typography  variant="h5" component="h2">
+                                                    <label htmlFor="message">Message</label>
+                                                    <br />
+                                                    <textarea
+                                                        className={classes.input}
+                                                        id="message"
+                                                        placeholder="message"
+                                                        {...register("message", { required: true, maxLength: 1500, pattern: /^[ A-Za-z]+$/i })}
+                                                    />
+                                                    { errors.message?.message }
+                                                </Typography>
+                                            </div>
                                             <input
                                                 type="submit"
                                                 className="btn btn-primary"
@@ -178,9 +186,7 @@ export const Contact = ( props:ContactProps ) => {
                 src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
             </script>
             <script type="text/javascript">
-                {/*(function(){*/}
-                    emailjs.init("PYuvALLMBhd_vI3FU");
-                {/*})();*/}
+                emailjs.init(process.env.EMAILJS!);
             </script>
         </div>
     );

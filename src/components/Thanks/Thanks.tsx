@@ -1,12 +1,12 @@
 import { Helmet } from 'react-helmet';
 import { Container, Row, Col } from 'reactstrap';
-import { makeStyles } from '@material-ui/core/styles';
+import { makeStyles } from '@mui/styles';
 import { RouteComponentProps } from 'react-router-dom';
 import { Navbar } from '../../components';
-import { ThemeProvider } from '@material-ui/core';
-import { createTheme } from '@material-ui/core/styles';
+import { ThemeProvider } from '@mui/material';
+import { createTheme } from '@mui/material/styles';
 import karma_typewriter from '../../assets/images/karma_typewriter.webp';
-import Typography from '@material-ui/core/Typography';
+import Typography from '@mui/material/Typography';
 
 interface ThanksProps{
     history: RouteComponentProps['history'], //stores info needed for user navigation of site

@@ -2,14 +2,14 @@ import { Container, Row, Col } from 'reactstrap';
 import { RouteComponentProps } from 'react-router-dom';
 import karma_typewriter from '../../assets/images/karma_typewriter.webp';
 import { Navbar } from '../../components';
-import { makeStyles } from '@material-ui/core/styles';
-import Card from '@material-ui/core/Card';
-import CardContent from '@material-ui/core/CardContent';
-import { ThemeProvider } from '@material-ui/core';
-import { createTheme } from '@material-ui/core/styles';
-import Typography from '@material-ui/core/Typography';
+import { makeStyles } from '@mui/styles';
+import Card from '@mui/material/Card';
+import CardContent from '@mui/material/CardContent';
+import { ThemeProvider } from '@mui/material';
+import { createTheme } from '@mui/material/styles';
+import Typography from '@mui/material/Typography';
 import { Helmet } from 'react-helmet';
-import resume_pdf from '../../assets/files/Robinson_DevAdv_Resume_web.pdf';
+import resume_pdf from '../../assets/files/Robinson_DevAdv_Resume_nwfmt_web.pdf';
 import { FaFileDownload } from "react-icons/fa";
 
 interface ResumeProps{
@@ -35,8 +35,8 @@ const useStyles = makeStyles({
         zIndex: 0
     },
     root: {
-        padding: '0',
-        margin: '0',
+        padding: 0,
+        margin: 0,
     },
     main: {
         display: 'flex',
@@ -83,7 +83,7 @@ const useStyles = makeStyles({
     contactCardContent: {
         backgroundColor: 'black',
         color: 'white',
-        paddingTop: '3em'
+        paddingTop: '1.8em'
     },
     skillsCardDims: {
         backgroundColor: 'black',
@@ -179,29 +179,32 @@ export const Resume = ( props:ResumeProps ) => {
                             </Row>
                             <Row>
                                 <Col md sm>
-                                    <Card className={classes.nameCardDims}>
+                                    <Card 
+                                        className={classes.nameCardDims}
+                                        sx={{ bgcolor: "black", color: "white" }}
+                                    >
                                         <CardContent>
                                             <Typography className={classes.nameCardSpacing} variant="h3" component="h2">
                                                 Michael Robinson
                                             </Typography>
                                             <Typography className={classes.nameCardSpacing} variant="h5">
-                                                Developer Advocate
+                                                Developer Advocate & Community Manager
                                             </Typography>
                                         </CardContent>
                                     </Card>
                                 </Col>
                                 <Col md sm>
-                                    <Card className={classes.contactCardDims}>
-                                        <CardContent className={classes.contactCardContent}>
+                                    <Card 
+                                        className={classes.contactCardDims}
+                                        sx={{ bgcolor: "black", color: "white" }}
+                                    >
+                                        <CardContent 
+                                            className={classes.contactCardContent}
+                                            sx={{ paddingTop: "5.5em" }}
+                                        >
                                             <Typography className={classes.contactCardSpacing} variant="h4" component="h2">
                                                 Contact
                                             </Typography>
-{/*                                            <Typography variant="body2" component="p">
-                                                213.215.1897
-                                            </Typography>
-                                            <Typography variant="body2" component="p">
-                                                <a href="mailto:merobi@gmail.com" className={classes.contactText}>merobi@gmail.com</a>
-                                            </Typography>*/}
                                             <Typography variant="body2" component="p">
                                                 <a href="https://www.linkedin.com/in/michael-robinson/" className={classes.contactText}>linkedin.com/in/michael-robinson</a>
                                             </Typography>
@@ -214,7 +217,10 @@ export const Resume = ( props:ResumeProps ) => {
                             </Row>
                             <Row>
                                 <Col md sm>
-                                    <Card className={classes.skillsCardDims}>
+                                    <Card 
+                                        className={classes.skillsCardDims}
+                                        sx={{ bgcolor: "black", color: "white" }}
+                                    >
                                         <CardContent>
                                             <Typography className={classes.skillsCardSpacing} variant="h4" component="h2">
                                                 Technical Skills
@@ -287,7 +293,13 @@ export const Resume = ( props:ResumeProps ) => {
 
                                                     <li>Slack</li>
 
-                                                    <li>Orbit</li>
+                                                    <li>Common Room</li>
+
+                                                    <li>OBS</li>
+
+                                                    <li>YouTube</li>
+
+                                                    <li>Zapier</li>
                                                 </ul>
                                             </Typography>
                                             <Typography className={classes.skillsCardSpacing} variant="h4" component="h2">
@@ -314,28 +326,19 @@ export const Resume = ( props:ResumeProps ) => {
                                     </Card>
                                 </Col>
                                 <Col md sm>
-                                    <Card className={classes.experienceCardDims}>
+                                    <Card 
+                                        className={classes.experienceCardDims}
+                                        sx={{ bgcolor: "black", color: "white" }}
+                                    >
                                         <CardContent>
                                             <Typography className={classes.experienceTitle} variant="h4" component="h2">
                                                 Experience
                                             </Typography>
                                             <Typography variant="h5">
-                                                Astronomer
+                                                OpenLineage & Marquez
                                             </Typography>
                                             <Typography variant="h6">
-                                                Developer Advocate, May 2024-present
-                                            </Typography>
-                                            <Typography variant="body2" component="p">
-                                            <ul>
-                                                <li>Author guides, tutorials, and blog posts</li>
-                                                <li>Deliver webinars and conference presentations</li>
-                                                <li>Answer technical questions in the community</li>
-                                                <li>Create videos</li>
-                                                <li>DRI for Astro Observe content</li>
-                                                </ul>
-                                            </Typography>
-                                            <Typography variant="h6">
-                                                Community Manager, May 2023-April 2024
+                                                Committer, November 2021-present
                                             </Typography>
                                             <Typography variant="body2" component="p">
                                                 <ul>
@@ -351,15 +354,21 @@ export const Resume = ( props:ResumeProps ) => {
                                                 <li>Improve the developer and user experience on projects</li>
                                                 </ul>
                                             </Typography>
+                                            <Typography variant="h5">
+                                                Astronomer
+                                            </Typography>
                                             <Typography variant="h6">
-                                                Software Engineer, Developer Relations, March 2022-May 2023
+                                                Developer Advocate, March 2022-December 2024
                                             </Typography>
                                             <Typography variant="body2" component="p">
                                             <ul>
-                                                <li>Advocate for OpenSource initiatives in conferences and blog posts</li>
-                                                <li>Facilitate discussions and answer technical questions in the community</li>
-                                                <li>Improve the developer and user experience on projects</li>
-                                                <li>Datakin was acquired by Astronomer in March 2022</li>
+                                                <li>Author guides, tutorials, and blog posts</li>
+                                                <li>Deliver webinars and conference presentations</li>
+                                                <li>Answer technical questions in the community</li>
+                                                <li>Create videos</li>
+                                                <li>Serve as community manager on open source projects</li>
+                                                <li>Contribute to Apache Airflow landing pages</li>
+                                                <li>DRI for Astro Observe content</li>
                                                 </ul>
                                             </Typography>
                                             <Typography variant="h5">
@@ -424,7 +433,7 @@ export const Resume = ( props:ResumeProps ) => {
                                                 USC, Los Angeles, CA
                                             </Typography>
                                             <Typography variant="body2" component="p">
-                                                Honors: Andrew M. Mellon grantee, Department dissertation fellow
+                                                Honors: Andrew M. Mellon fellow, Department dissertation fellow
                                             </Typography>
                                             <Typography className={classes.capstoneSpacing} variant="h5">
                                                 M.A. in English

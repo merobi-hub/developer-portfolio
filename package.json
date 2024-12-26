@@ -4,29 +4,33 @@
   "private": true,
   "dependencies": {
     "@emailjs/browser": "^3.11.0",
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.0",
     "@hookform/resolvers": "^2.6.0",
-    "@material-ui/core": "^4.11.4",
-    "@material-ui/icons": "^4.11.2",
+    "@mui/icons-material": "^6.3.0",
+    "@mui/material": "^6.3.0",
+    "@mui/styles": "^6.3.0",
     "@popperjs/core": "^2.9.2",
     "@testing-library/jest-dom": "^5.13.0",
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
     "@types/jest": "^26.0.23",
     "@types/node": "^12.20.14",
-    "@types/react": "^18.2.74",
-    "@types/react-dom": "^18.2.24",
+    "@types/react": "^17.0.0",
+    "@types/react-dom": "^17.0.0",
     "@types/react-redux": "^7.1.16",
     "@types/react-router-dom": "^5.1.7",
     "babel": "^6.23.0",
     "bootstrap": "^5.0.1",
     "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
     "emailjs": "^3.4.0",
     "emailjs-com": "^3.1.0",
     "express": "^4.17.1",
     "firebase": "^8.6.8",
     "nodemailer": "^6.6.2",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.0",
     "react-ga4": "^2.1.0",
     "react-helmet": "^6.1.0",
     "react-hook-form": "^7.9.0",
@@ -39,11 +43,15 @@
     "web-vitals": "^1.1.2",
     "yup": "^0.32.9"
   },
+  "peerDependencies": {
+    "react-dom": "^17.0.0"
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "npx": "npx"
   },
   "eslintConfig": {
     "extends": [
@@ -51,18 +59,11 @@
       "react-app/jest"
     ]
   },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not op_mini all"
+  ],
   "devDependencies": {
     "@types/react-helmet": "^6.1.11"
   }

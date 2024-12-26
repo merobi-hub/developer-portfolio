@@ -1,14 +1,15 @@
 import { useState } from 'react';
-import { makeStyles, Avatar } from '@material-ui/core';
+import { makeStyles } from '@mui/styles';
 import karma_typewriter from '../../assets/images/karma_typewriter.webp';
 import profile_pic from '../../assets/images/li_profile_pic.jpg';
 import neg_profile_pic from '../../assets/images/li_profile_pic_negative.jpg';
 import { Navbar } from '../../components';
-import LinkedInIcon from '@material-ui/icons/LinkedIn';
-import EmailIcon from '@material-ui/icons/Email';
-import GitHubIcon from '@material-ui/icons/GitHub.js';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import EmailIcon from '@mui/icons-material/Email';
+import GitHubIcon from '@mui/icons-material/GitHub.js';
 import { Helmet } from 'react-helmet';
 import { Col, Row } from 'reactstrap';
+import Avatar from '@mui/material/Avatar';
 
 interface Props{
     title: string;
@@ -16,8 +17,8 @@ interface Props{
 
 const useStyles = makeStyles({
     root: {
-        padding: '0',
-        margin: '0'
+        padding: 0,
+        margin: 0,
     },
     main_text: {
         color: 'white',
@@ -43,21 +44,19 @@ const useStyles = makeStyles({
         position: 'absolute',
         width: '100%',
         display: 'flex',
-        top: '52%' 
+        top: '47%' 
     },
     links_outer: {
         width: '100%',
         display: 'flex',
         position: 'absolute',
-        top: '62%',
+        top: '57%',
     },
     profile_pic: {
         position: 'absolute',
-        top: '40%',
+        top: '35%',
         left: '50%',
         transform: 'translate(-50%, -50%)',
-        height: '150px',
-        width: '150px',
         '&:hover': {
             filter: 'drop-shadow(3px 3px 2px #FFFFFF)' 
         },
@@ -71,7 +70,7 @@ const useStyles = makeStyles({
         '&:hover': {
             color: '#525252'
         }
-    }
+    },
 });
 
 export const Home = ( props:Props ) => {
@@ -82,48 +81,51 @@ export const Home = ( props:Props ) => {
             <Helmet>
                 <title>Robinson | Home</title>
             </Helmet>
-            <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
-            <Navbar />  
-            <main className={classes.main}>
-                <Row>
-                    <Col className={'w-100%'}>
-                <Avatar 
-                    alt="Michael Robinson thumbnail pic" 
-                    className={classes.profile_pic} 
-                    src={pic} 
-                    onMouseEnter={() => setPic(neg_profile_pic)} 
-                    onMouseLeave={() => setPic(profile_pic)}>
-                </Avatar>
-                    </Col>
-                </Row>
-                <div className={classes.text_outer}>
-                    <div className={classes.main_text}>
-                        <h1>{ props.title }</h1>
-                        <p>Developer Advocate and Technical Community Manager</p>
+            {/*<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />*/}
+            <Navbar />
+                <main className={classes.main}>
+                    <Row>
+                        <Col className={'w-100%'}>
+                        <div className={classes.profile_pic}>
+                            <Avatar 
+                                alt="Michael Robinson thumbnail pic" 
+                                src={pic} 
+                                classes={classes.profile_pic}
+                                sx={{ width: 150, height: 150 }}
+                                onMouseEnter={() => setPic(neg_profile_pic)} 
+                                onMouseLeave={() => setPic(profile_pic)}>
+                            </Avatar>
+                        </div>
+                        </Col>
+                    </Row>
+                    <div className={classes.text_outer}>
+                        <div className={classes.main_text}>
+                            <h1>{ props.title }</h1>
+                            <p>Developer Advocate and Technical Community Manager</p>
+                        </div>
                     </div>
-                </div>
-                <div className={classes.links_outer}>
-                    <div className={classes.main_text_links}>
-                        <Row>
-                            <Col>
-                                <a href="https://github.com/merobi-hub" className={classes.links}>
-                                    <GitHubIcon className={classes.icons} />
-                                </a>
-                            </Col>
-                            <Col>
-                                <a href="https://www.linkedin.com/in/michael-robinson/" className={classes.links}>
-                                    <LinkedInIcon className={classes.icons} />
-                                </a>
-                            </Col>
-                            <Col>
-                                <a href="mailto:merobi@gmail.com" className={classes.links}>
-                                    <EmailIcon className={classes.icons}/>
-                                </a>
-                            </Col>
-                        </Row>
+                    <div className={classes.links_outer}>
+                        <div className={classes.main_text_links}>
+                            <Row>
+                                <Col>
+                                    <a href="https://github.com/merobi-hub" className={classes.links}>
+                                        <GitHubIcon className={classes.icons} />
+                                    </a>
+                                </Col>
+                                <Col>
+                                    <a href="https://www.linkedin.com/in/michael-robinson/" className={classes.links}>
+                                        <LinkedInIcon className={classes.icons} />
+                                    </a>
+                                </Col>
+                                <Col>
+                                    <a href="mailto:merobi@gmail.com" className={classes.links}>
+                                        <EmailIcon className={classes.icons}/>
+                                    </a>
+                                </Col>
+                            </Row>
+                        </div>
                     </div>
-                </div>
-            </main>
+                </main>
         </div>
     )
 }

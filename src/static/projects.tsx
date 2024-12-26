@@ -11,6 +11,36 @@ export type Project = {
 
 export const Projects: Array<Project> = [
   {
+    img_path: './images/sbert_blog_3.png',
+    description_general: 'Tutorial - OSS',
+    title: 'SBERT & NLTK Medium Article',
+    description_specific: 'Tutorial on semantic similarity eval using an LLM',
+    tools_1: 'SBERT, NLTK, difflib',
+    tools_2: 'Hugging Face, Python, GitHub',
+    links: {'Medium': 'https://medium.com/@merobi/evaluating-semantic-text-similarity-using-sbert-and-nltk-18f08e51566d'},
+    category: 'AI',
+  },
+  {
+    img_path: './images/similarity_checker.png',
+    description_general: 'AI Dev Tool - OSS',
+    title: 'Semantic Similarity Evaluation Script',
+    description_specific: 'Script for evaluating semantic similarity using an LLM',
+    tools_1: 'SBERT, NLTK, difflib',
+    tools_2: 'Hugging Face, Python, GitHub',
+    links: {'GitHub': 'https://github.com/merobi-hub/text-similarity-checker'},
+    category: 'AI',
+  },
+  {
+    img_path: './images/marquez_tutorial.png',
+    description_general: 'Tutorial - OSS',
+    title: 'Marquez+Airflow Tutorial',
+    description_specific: 'Tutorial on getting started with Airflow+Marquez',
+    tools_1: 'Marquez, OpenLineage',
+    tools_2: 'OSS Airflow, Markdown',
+    links: {'Marquez': 'https://marquezproject.ai/docs/tutorials/airflow_tutorial/'},
+    category: 'Tutorials',
+  },
+  {
     img_path: './images/slas_video.png',
     description_general: 'Videos - Product',
     title: 'Astronomer SLAs Video',
@@ -38,7 +68,7 @@ export const Projects: Array<Project> = [
     tools_1: 'Astro Observe, Airflow, Docusaurus',
     tools_2: 'Astro CLI, OpenLineage, Python, Markdown',
     links: {'Astronomer': 'https://www.astronomer.io/docs/learn/category/observability-concepts'},
-    category: 'Docs',
+    category: 'Guides',
   },
   {
     img_path: './images/airflow_quickstart_lrg.png',
@@ -48,7 +78,17 @@ export const Projects: Array<Project> = [
     tools_1: 'Astro CLI, Airflow, Postgres, Docusaurus',
     tools_2: 'DuckDB, SBERT, GitHub, Python, Markdown, Docker',
     links: {'Astronomer': 'https://www.astronomer.io/docs/learn/airflow-quickstart'},
-    category: 'Docs',
+    category: 'Tutorials',
+  },
+  {
+    img_path: './images/obsv_webinar.png',
+    description_general: 'Presentation - Product',
+    title: 'Astronomer Observability Webinar',
+    description_specific: 'Webinar on observability and Astro Observe',
+    tools_1: 'Astro Observe, Airflow',
+    tools_2: 'Google Slides',
+    links: {'Astronomer': 'https://www.astronomer.io/events/webinars/introduction-to-observability-for-data-pipelines-video/'},
+    category: 'Presentations',
   },
   {
     img_path: './images/youtube.png',
@@ -68,7 +108,7 @@ export const Projects: Array<Project> = [
     tools_1: 'Astro, Airflow',
     tools_2: 'Markdown, Docusaurus',
     links: {'website': 'https://www.astronomer.io/docs/astro/'},
-    category: 'Docs',
+    category: 'Guides',
   },
   {
     img_path: './images/marquez_screenshot.svg',
@@ -78,7 +118,7 @@ export const Projects: Array<Project> = [
     tools_1: 'React, Typescript',
     tools_2: 'MaterialUI, Docusaurus',
     links: {'github': 'https://github.com/MarquezProject/marquez/tree/main/docs/v2', 'website': 'https://marquezproject.ai'},
-    category: 'Web',
+    category: 'Web dev',
   },
   {
     img_path: './images/OL_ecosystem.svg',
@@ -88,7 +128,7 @@ export const Projects: Array<Project> = [
     tools_1: 'React, Typescript',
     tools_2: 'MaterialUI, Docusaurus',
     links: {'github': 'https://github.com/OpenLineage/docs/blob/main/src/pages/ecosystem.tsx', 'website': 'https://openlineage.io/ecosystem'},
-    category: 'Web',
+    category: 'Web dev',
   },
   {
     img_path: './images/openlineage_quickstart.svg',
@@ -98,7 +138,7 @@ export const Projects: Array<Project> = [
     tools_1: 'Docker, OpenLineage, Marquez, Astro',
     tools_2: 'Markdown, Docusaurus',
     links: {'github': 'https://github.com/OpenLineage/docs/blob/main/docs/guides/airflow-quickstart.md', 'website': 'https://openlineage.io/docs/guides/airflow-quickstart'},
-    category: 'Docs',
+    category: 'Guides',
   },
   {
     img_path: './images/slack_archive.svg',
@@ -108,7 +148,7 @@ export const Projects: Array<Project> = [
     tools_1: 'slack-export-viewer, GitHub',
     tools_2: 'Slack',
     links: {'github': 'https://github.com/OpenLineage/slack-archives', 'website': 'https://openlineage.github.io/slack-archives/'},
-    category: 'Web',
+    category: 'Web dev',
   },
   {
     img_path: './images/ol_survey_form.svg',
@@ -128,7 +168,7 @@ export const Projects: Array<Project> = [
     tools_1: 'Javascript, Hugo',
     tools_2: 'CSS',
     links: {'github': 'https://github.com/apache/airflow-site/blob/main/landing-pages/site/content/en/community/_index.html', 'website': 'https://airflow.apache.org/community'},
-    category: 'Web',
+    category: 'Web dev',
   },
   {
     img_path: './images/changes_screenshot.svg',
@@ -167,7 +207,7 @@ export const Projects: Array<Project> = [
     description_specific: 'Catalog with data from Google Books API, Blog',
     tools_1: 'Python, Flask, Bootstrap, Gunicorn, Postgres',
     tools_2: 'SQLAlchemy, Werkzeug, Google Books API, Great Expectations',
-    links: {'github': 'https://github.com/merobi-hub/lantern-library-online', 'website': 'https://lantern-library-online.herokuapp.com'},
+    links: {'github': 'https://github.com/merobi-hub/lantern-library-online'},
     category: 'Apps',
   },
   {
@@ -207,7 +247,7 @@ export const Projects: Array<Project> = [
     description_specific: 'User-generated API for collectors',
     tools_1: 'TypeScript, MaterialUI',
     tools_2: 'Firebase, Insomnia, React',
-    links: {'github': 'https://github.com/merobi-hub/operators61-week8-car-inventory-react', 'heroku': 'https://car-inventory-mr.web.app/'},
+    links: {'github': 'https://github.com/merobi-hub/operators61-week8-car-inventory-react'},
     category: 'Apps',
   },
   {
@@ -217,7 +257,7 @@ export const Projects: Array<Project> = [
     description_specific: 'Lightweight attendance tracker with Google login',
     tools_1: 'OAuthLib, Python, Flask, SQLAlchemy, Psycopg2, Datetime',
     tools_2: 'Jinja, Bootstrap, WTF, Werkzeug, Login, Flash, Heroku',
-    links: {'github': 'https://github.com/merobi-hub/attendance_tracker', 'heroku': 'https://attendance-keeper.herokuapp.com/'},
+    links: {'github': 'https://github.com/merobi-hub/attendance_tracker'},
     category: 'Apps',
   },
   {

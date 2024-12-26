@@ -1,8 +1,8 @@
-import { makeStyles } from '@material-ui/core';
+import { makeStyles } from '@mui/styles';
 import { Nav, NavItem } from 'reactstrap';
 import { NavLink } from 'react-router-dom';
-import { ThemeProvider } from '@material-ui/core';
-import { createTheme } from '@material-ui/core/styles';
+import { ThemeProvider } from '@mui/material';
+import { createTheme } from '@mui/material/styles';
 
 const theme = createTheme({});
 const useStyles = makeStyles({

@@ -1,18 +1,18 @@
 import { Helmet } from 'react-helmet';
 import { Container, Row, Col } from 'reactstrap';
-import { makeStyles } from '@material-ui/core/styles';
-import Card from '@material-ui/core/Card';
+import { makeStyles } from '@mui/styles';
+import Card from '@mui/material/Card';
 import { RouteComponentProps } from 'react-router-dom';
-import CardActions from '@material-ui/core/CardActions';
-import CardContent from '@material-ui/core/CardContent';
-import CardMedia from '@material-ui/core/CardMedia';
-import Button from '@material-ui/core/Button';
-import Typography from '@material-ui/core/Typography';
+import CardActions from '@mui/material/CardActions';
+import CardContent from '@mui/material/CardContent';
+import CardMedia from '@mui/material/CardMedia';
+import Button from '@mui/material/Button';
+import Typography from '@mui/material/Typography';
 import karma_typewriter from '../../assets/images/karma_typewriter.webp';
 import { Navbar } from '../../components';
-import { ThemeProvider } from '@material-ui/core';
-import { createTheme } from '@material-ui/core/styles';
-import { Projects, Project } from '../../static/projects';
+import { ThemeProvider } from '@mui/material';
+import { createTheme } from '@mui/material/styles';
+import { Projects } from '../../static/projects';
 import { useState } from "react";
 
 interface PortfolioProps{
@@ -36,7 +36,9 @@ const useStyles = makeStyles({
         backgroundRepeat: 'repeat-y',
         backgroundPosition: 'center center',
         backgroundAttachment: 'fixed',
-        zIndex: 0
+        zIndex: 0,
+        margin: 0,
+        padding: 0,
     },
     root: {
         padding: '0',
@@ -52,8 +54,6 @@ const useStyles = makeStyles({
         width: '100',
     },
     card_dims: {
-        backgroundColor: 'black',
-        color: 'white',
         minWidth: 550,
         minHeight: 550,
         marginTop: 75,
@@ -75,7 +75,6 @@ const useStyles = makeStyles({
         marginBottom: 12,
     },
     actions: {
-        color: 'white',
         "&:hover": {
             background: '#2e2e2e'
         },
@@ -116,6 +115,9 @@ const useStyles = makeStyles({
         color: 'white',
         padding: '2px 4px',
         margin: '16px 16px',
+        "&:hover": {
+            borderColor: 'gray'
+        },
     }
 });
 
@@ -134,26 +136,54 @@ export const Portfolio = ( props:PortfolioProps ) => {
     const Buttons = ({ filterItem }: any) => {
         return (
             <div>
-                {projectCategories.map((val: any) => {
-                    return (
-                        <Button
-                            className={val === cat ? classes.selected_cat : classes.unselected_cat}
-                            onClick={() => filterItem(val)}
-                            size="small"
-                            variant="outlined"
-                        >
-                        {val}
-                        </Button>
-                    );
-                })}
-                <Button
-                    className={Projects.length === items.length ? classes.selected_cat : classes.unselected_cat}
-                    onClick={() => filterItem("all")}
-                    size="small"
-                    variant="outlined"
-                >
-                ALL
-                </Button>
+                <>
+                    {projectCategories.map((val: any) => {
+                        return (
+                            <Button
+                                className={val === cat ? classes.selected_cat : classes.unselected_cat}
+                                sx={ val === cat ? { 
+                                    color: "white", 
+                                    padding: "2px 4px", 
+                                    margin: "16px 16px", 
+                                    borderColor: "white", 
+                                    fontWeight: "bold" 
+                                } : { 
+                                    color: "white", 
+                                    padding: "2px 4px", 
+                                    margin: "16px 16px", "&:hover": {
+                                        borderColor: 'gray'
+                                    }, 
+                                }}
+                                onClick={() => filterItem(val)}
+                                size="small"
+                                variant="outlined"
+                            >
+                            {val}
+                            </Button>
+                        );
+                    })}
+                    <Button
+                        className={Projects.length === items.length ? classes.selected_cat : classes.unselected_cat}
+                        sx={ Projects.length === items.length ? { 
+                            color: "white", 
+                            padding: "2px 4px", 
+                            margin: "16px 16px", 
+                            borderColor: "white", 
+                            fontWeight: "bold" 
+                        } : { 
+                            color: "white", 
+                            padding: "2px 4px", 
+                            margin: "16px 16px", "&:hover": {
+                                borderColor: 'gray'
+                            }, 
+                        }}
+                        onClick={() => filterItem("all")}
+                        size="small"
+                        variant="outlined"
+                    >
+                    ALL
+                    </Button>
+                </>
             </div>
         );
     };
@@ -173,38 +203,43 @@ export const Portfolio = ( props:PortfolioProps ) => {
                                 </Col>
                             </Row>
                             <Row className={classes.main_row}>
-                                {items.map(project => 
-                                    <Col className={classes.col}>
-                                        <Card className={classes.card_dims}>                                  
-                                            <CardMedia 
-                                                className={classes.media}
-                                                image={project.img_path}
-                                                title="Screenshot of app"
-                                            />
-                                            <CardContent>
-                                                <Typography className={classes.title} gutterBottom>
-                                                    {project.description_general}
-                                                </Typography>
-                                                <Typography variant="h5" component="h2">
-                                                    {project.title}
-                                                </Typography>
-                                                <Typography className={classes.pos}>
-                                                    {project.description_specific}
-                                                </Typography>
-                                                <Typography variant="body2" component="p">
-                                                    {project.tools_1}
-                                                    <br />
-                                                    {project.tools_2}
-                                                </Typography>
-                                            </CardContent>
-                                            <CardActions>
-                                                {Object.entries(project.links).map(([key, value]) =>
-                                                    <Button className={classes.actions} size="small" href={value}>{key}</Button>
-                                                )}
-                                            </CardActions>
-                                        </Card>
-                                    </Col>
-                                )}
+                                <>
+                                    {items.map(project => 
+                                        <Col className={classes.col}>
+                                            <Card 
+                                                className={classes.card_dims}
+                                                sx={{ bgcolor: "black", color: "white" }}
+                                            >                                  
+                                                <CardMedia 
+                                                    className={classes.media}
+                                                    image={project.img_path}
+                                                    title="Screenshot of app"
+                                                />
+                                                <CardContent>
+                                                    <Typography className={classes.title} gutterBottom>
+                                                        {project.description_general}
+                                                    </Typography>
+                                                    <Typography variant="h5" component="h2">
+                                                        {project.title}
+                                                    </Typography>
+                                                    <Typography className={classes.pos}>
+                                                        {project.description_specific}
+                                                    </Typography>
+                                                    <Typography variant="body2" component="p">
+                                                        {project.tools_1}
+                                                        <br />
+                                                        {project.tools_2}
+                                                    </Typography>
+                                                </CardContent>
+                                                <CardActions>
+                                                    {Object.entries(project.links).map(([key, value]) =>
+                                                        <Button className={classes.actions} sx={{ color: "white" }} size="small" href={value}>{key}</Button>
+                                                    )}
+                                                </CardActions>
+                                            </Card>
+                                        </Col>
+                                    )}
+                                </>
                             </Row>                            
                         </ThemeProvider>
                     </Container>
