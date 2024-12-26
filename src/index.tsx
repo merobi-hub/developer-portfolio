@@ -6,16 +6,9 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles.css';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import ReactGA from 'react-ga4';
+import CookieConsent, { getCookieConsentValue } from "react-cookie-consent";
 
-// dotenv
 require('dotenv').config()
-console.log(process.env) // remove this after you've
-
-ReactGA.initialize(
-  "G-R4RZ145T3T", {
-    gaOptions: {cookie_flags: 'SameSite=none; Secure'}
-  }
-);
 
 ReactDOM.render(
   <React.StrictMode>
@@ -29,9 +22,25 @@ ReactDOM.render(
         <Route path='/contact' component={Contact} />
         <Route path='/thanks' component={Thanks} />
       </Switch>
+      <CookieConsent 
+        cookieName='gacookie' 
+        buttonText={'I accept.'}
+      >
+        This website uses cookies.
+      </CookieConsent>
     </Router>
   </React.StrictMode>,
   document.getElementById('root')
 );
+
+console.log(getCookieConsentValue("gacookie"));
+
+if (getCookieConsentValue('gacookie')) {
+  ReactGA.initialize(
+    "G-R4RZ145T3T", {
+      gaOptions: {cookie_flags: 'SameSite=none; Secure'}
+    }
+  );
+};
 
 reportWebVitals(console.log);
