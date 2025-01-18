@@ -13,9 +13,6 @@ import Typography from '@mui/material/Typography';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from "yup";
 import emailjs from '@emailjs/browser';
-import { init } from 'emailjs-com';
-init(process.env.EMAILJS!)
-
 
 interface ContactProps{
     history: RouteComponentProps['history'], //stores info needed for user navigation of site
@@ -95,9 +92,10 @@ export const Contact = ( props:ContactProps ) => {
 
     // Send the form data via email
     function sendEmail(e: any) {
+        
         e.preventDefault();
 
-        emailjs.sendForm('service_ofbf6mt', 'template_58ca9cw', form.current, 'PYuvALLMBhd_vI3FU')
+        emailjs.sendForm('service_ofbf6mt', 'template_58ca9cw', form.current, process.env.REACT_APP_EMAILJS)
             .then(function(response: any) {
             console.log('SUCCESS!', response.text);
             

@@ -40,7 +40,6 @@
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
     "reactstrap": "^8.9.0",
-    "typescript": "^4.3.2",
     "web-vitals": "^1.1.2",
     "yup": "^0.32.9"
   },
@@ -54,12 +53,6 @@
     "eject": "react-scripts eject",
     "npx": "npx"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
   "browserslist": [
     ">0.2%",
     "not dead",
@@ -67,6 +60,7 @@
   ],
   "devDependencies": {
     "@babel/plugin-proposal-private-property-in-object": "*",
-    "@types/react-helmet": "^6.1.11"
+    "@types/react-helmet": "^6.1.11",
+    "typescript": "^4.9.5"
   }
 }
