@@ -12,6 +12,42 @@ export type Project = {
 
 export const Projects: Project[] = [
   {
+    id: 'hf_profile',
+    img_path: './images/hf-profile.png',
+    description_general: 'AI projects - OSS',
+    title: 'AI Agents and Tools',
+    description_specific: 'AI Chatbots, Agents, and Tools',
+    tools_1: 'Python, SBERT, Hugging Face',
+    tools_2: 'Smolagents, NLTK, Airflow, OpenLineage',
+    links: {'huggingface': 'https://huggingface.co/merobi-hub'},
+    category: 'AI',
+  },
+  {
+    id: 'airflow_quick',
+    img_path: './images/airflow_quickstart_lrg.png',
+    description_general: 'Tutorials - Product',
+    title: 'Apache Airflow Quickstart',
+    description_specific: 'Quickstart with ETL and GenAI paths',
+    tools_1: 'Astro CLI, Airflow, Postgres, Docusaurus',
+    tools_2: 'DuckDB, SBERT, GitHub, Python, Markdown, Docker',
+    links: {'Astronomer': 'https://www.astronomer.io/docs/learn/airflow-quickstart'},
+    category: 'AI',
+  },
+  {
+    id: 'openlineage_preflight_class',
+    img_path: './images/preflight_check_class.png',
+    description_general: 'Dev Tool - OSS',
+    title: 'OpenLineage Airflow Validator',
+    description_specific: 'Class for checking OpenLineage configuration in Airflow',
+    tools_1: 'Python, Airflow, OpenLineage',
+    tools_2: 'Docusaurus, Markdown',
+    links: {
+      'Website': 'https://openlineage.io/docs/next/integrations/airflow/preflight-check-class', 
+      'GitHub': 'https://github.com/OpenLineage/OpenLineage/blob/main/website/docs/integrations/airflow/preflight-check-class.md'
+    },
+    category: 'Dev tools',
+  },
+  {
     id: 'openlineage_community_page',
     img_path: './images/ol_community.png',
     description_general: 'Webpage - OSS',
@@ -19,7 +55,10 @@ export const Projects: Project[] = [
     description_specific: 'Stateful React TypeScript component of Docusaurus site',
     tools_1: 'React, TypeScript',
     tools_2: 'Docusaurus',
-    links: {'Website': 'https://openlineage.io/community/', 'Github': 'https://github.com/OpenLineage/OpenLineage/blob/main/website/src/pages/community.tsx'},
+    links: {
+      'Website': 'https://openlineage.io/community/', 
+      'GitHub': 'https://github.com/OpenLineage/OpenLineage/blob/main/website/src/pages/community.tsx'
+    },
     category: 'Web dev',
   },
   {
@@ -30,7 +69,10 @@ export const Projects: Project[] = [
     description_specific: 'Interactive demo using Arcade',
     tools_1: 'Marquez, Airflow, Postgres',
     tools_2: 'Arcade',
-    links: {'Demo': 'https://app.arcade.software/share/jvl9klSzforNlap3HWxS'},
+    links: {
+      'Website': 'https://marquezproject.ai',
+      'GitHub': 'https://github.com/MarquezProject/marquez/pull/3009'
+    },
     category: 'Demos',
   },
   {
@@ -107,7 +149,8 @@ export const Projects: Project[] = [
     description_specific: 'Highlight video on Astro Observe',
     tools_1: 'Astro Observe, Airflow',
     tools_2: 'OBS, Google Slides',
-    links: {'YouTube': 'https://www.youtube.com/watch?v=JylYDyxyabU'},
+    // links: {'YouTube': 'https://www.youtube.com/watch?v=JylYDyxyabU'},
+    links: {},
     category: 'Videos',
   },
   {
@@ -118,7 +161,8 @@ export const Projects: Project[] = [
     description_specific: 'Highlight video on Astro Observe',
     tools_1: 'Astro Observe, Airflow',
     tools_2: 'OBS, Google Slides',
-    links: {'YouTube': 'https://youtu.be/iUl9OGZ3o58?si=8gs-5v6992sXaeeH'},
+    // links: {'YouTube': 'https://youtu.be/iUl9OGZ3o58?si=8gs-5v6992sXaeeH'},
+    links: {},  
     category: 'Videos',
   },
   {
@@ -131,17 +175,6 @@ export const Projects: Project[] = [
     tools_2: 'Astro CLI, OpenLineage, Python, Markdown',
     links: {'Astronomer': 'https://www.astronomer.io/docs/learn/category/observability-concepts'},
     category: 'Guides',
-  },
-  {
-    id: 'airflow_quick',
-    img_path: './images/airflow_quickstart_lrg.png',
-    description_general: 'Tutorials - Product',
-    title: 'Apache Airflow Quickstart',
-    description_specific: 'Quickstart with ETL and Gen-AI paths',
-    tools_1: 'Astro CLI, Airflow, Postgres, Docusaurus',
-    tools_2: 'DuckDB, SBERT, GitHub, Python, Markdown, Docker',
-    links: {'Astronomer': 'https://www.astronomer.io/docs/learn/airflow-quickstart'},
-    category: 'Tutorials',
   },
   {
     id: 'webinar',
@@ -184,7 +217,10 @@ export const Projects: Project[] = [
     description_specific: 'Webpage redesign and project marketing improvements',
     tools_1: 'React, Typescript',
     tools_2: 'MaterialUI, Docusaurus',
-    links: {'github': 'https://github.com/MarquezProject/marquez/tree/main/docs/v2', 'website': 'https://marquezproject.ai'},
+    links: {
+      'github': 'https://github.com/MarquezProject/marquez/tree/main/docs/v2', 
+      'website': 'https://marquezproject.ai'
+    },
     category: 'Web dev',
   },
   {
@@ -195,7 +231,10 @@ export const Projects: Project[] = [
     description_specific: 'Responsive webpage for displaying integrations',
     tools_1: 'React, Typescript',
     tools_2: 'MaterialUI, Docusaurus',
-    links: {'github': 'https://github.com/OpenLineage/docs/blob/main/src/pages/ecosystem.tsx', 'website': 'https://openlineage.io/ecosystem'},
+    links: {
+      'github': 'https://github.com/OpenLineage/docs/blob/main/src/pages/ecosystem.tsx', 
+      'website': 'https://openlineage.io/ecosystem'
+    },
     category: 'Web dev',
   },
   {
@@ -206,7 +245,10 @@ export const Projects: Project[] = [
     description_specific: 'Guide for getting started with OpenLineage+Marquez',
     tools_1: 'Docker, OpenLineage, Marquez, Astro',
     tools_2: 'Markdown, Docusaurus',
-    links: {'github': 'https://github.com/OpenLineage/docs/blob/main/docs/guides/airflow-quickstart.md', 'website': 'https://openlineage.io/docs/guides/airflow-quickstart'},
+    links: {
+      'github': 'https://github.com/OpenLineage/docs/blob/main/docs/guides/airflow-quickstart.md', 
+      'website': 'https://openlineage.io/docs/guides/airflow-quickstart'
+    },
     category: 'Guides',
   },
   {
@@ -217,7 +259,10 @@ export const Projects: Project[] = [
     description_specific: 'Slack history site created using OSS tools',
     tools_1: 'slack-export-viewer, GitHub',
     tools_2: 'Slack',
-    links: {'github': 'https://github.com/OpenLineage/slack-archives', 'website': 'https://openlineage.github.io/slack-archives/'},
+    links: {
+      'github': 'https://github.com/OpenLineage/slack-archives', 
+      'website': 'https://openlineage.github.io/slack-archives/'
+    },
     category: 'Web dev',
   },
   {
@@ -228,7 +273,10 @@ export const Projects: Project[] = [
     description_specific: 'Annual community survey',
     tools_1: 'Google forms',
     tools_2: 'Slack',
-    links: {'blog': 'https://openlineage.io/blog/ecosystem-survey', 'survey': 'https://docs.google.com/forms/d/e/1FAIpQLSd967NQ6avQcbkXGVy5I5X549yzDJUXsjeOvt9u1ENepkWwXg/viewform?pli=1'},
+    links: {
+      'blog': 'https://openlineage.io/blog/ecosystem-survey', 
+      'survey': 'https://docs.google.com/forms/d/e/1FAIpQLSd967NQ6avQcbkXGVy5I5X549yzDJUXsjeOvt9u1ENepkWwXg/viewform?pli=1'
+    },
     category: 'Community',
   },
   {
@@ -239,7 +287,10 @@ export const Projects: Project[] = [
     description_specific: 'Redesign of static webpage employing CSS grid ',
     tools_1: 'Javascript, Hugo',
     tools_2: 'CSS',
-    links: {'github': 'https://github.com/apache/airflow-site/blob/main/landing-pages/site/content/en/community/_index.html', 'website': 'https://airflow.apache.org/community'},
+    links: {
+      'github': 'https://github.com/apache/airflow-site/blob/main/landing-pages/site/content/en/community/_index.html', 
+      'website': 'https://airflow.apache.org/community'
+    },
     category: 'Web dev',
   },
   {
@@ -338,7 +389,10 @@ export const Projects: Project[] = [
     description_specific: 'Lightweight attendance tracker with Google login',
     tools_1: 'OAuthLib, Python, Flask, SQLAlchemy, Psycopg2, Datetime',
     tools_2: 'Jinja, Bootstrap, WTF, Werkzeug, Login, Flash, Heroku',
-    links: {'github': 'https://github.com/merobi-hub/attendance_tracker'},
+    links: {
+      'github': 'https://github.com/merobi-hub/attendance_tracker',
+      'whoshowed.com': 'https://whoshowed.com'
+    },
     category: 'Apps',
   },
   {
@@ -349,7 +403,10 @@ export const Projects: Project[] = [
     description_specific: 'Searchable weather app',
     tools_1: 'JavaScript, Axios, React',
     tools_2: 'Regex, Firebase, OpenWeatherMap API',
-    links: {'github': 'https://github.com/merobi-hub/operators-week7-weather-api', 'firebase': 'https://weather-df750.web.app/'},
+    links: {
+      'github': 'https://github.com/merobi-hub/operators-week7-weather-api', 
+      'firebase': 'https://weather-df750.web.app/'
+    },
     category: 'Apps',
   },
   {
@@ -360,7 +417,10 @@ export const Projects: Project[] = [
     description_specific: 'Searchable sports data app',
     tools_1: 'JavaScript, Axios, React, Regex',
     tools_2: 'Firebase, Ergast Developer API',
-    links: {'github': 'https://github.com/merobi-hub/operators-week7-day3-hw', 'firebase': 'https://racer-data-b0f20.web.app/'},
+    links: {
+      'github': 'https://github.com/merobi-hub/operators-week7-day3-hw', 
+      'firebase': 'https://racer-data-b0f20.web.app/'
+    },
     category: 'Apps',
   },
 ]
